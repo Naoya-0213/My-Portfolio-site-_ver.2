@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Oswald } from "next/font/google";
+
 import "./styles/globals.css";
 
 const noto = Noto_Sans_JP({ subsets: ["latin"], variable: "--font-noto" });
