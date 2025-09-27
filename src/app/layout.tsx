@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Oswald } from "next/font/google";
-import "./globals.css";
+import "./styles/globals.css";
 
 const noto = Noto_Sans_JP({ subsets: ["latin"], variable: "--font-noto" });
 const oswald = Oswald({ subsets: ["latin"], variable: "--font-oswald" });
@@ -42,7 +42,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={`${noto.variable} ${oswald.variable}`}>
+    <html
+      lang="ja"
+      className={`bg-[#f3f0eb] text-[#795549] ${noto.variable} ${oswald.variable}`}
+    >
       <body className="font-sans">{children}</body>
     </html>
   );
