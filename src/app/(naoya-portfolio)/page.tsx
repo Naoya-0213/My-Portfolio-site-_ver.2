@@ -10,8 +10,7 @@ import {
 
 const Home = () => {
   return (
-    // TODO body-wrapperでpadding指定？
-    <div className="body-wrapper">
+    <div className="wrapper flex flex-col items-center gap-5 bg-[#f3f0eb] text-base text-[#795549]">
       <Header />
       <main>
         <SectionFv />

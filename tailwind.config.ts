@@ -7,17 +7,17 @@
 // ESLint のルール (import/no-anonymous-default-export) に従うため、
 // 設定オブジェクトを `config` 変数に代入してから export
 
-const config = {
-  content: ["./src/**/*.{ts,tsx}"],
-  theme: {
-    extend: {
-      screens: {
-        tb: { min: "768px", max: "1023px" }, // タブレット
-        pc: "1024px", // PC以上
-      },
-    },
-  },
-  plugins: [],
-};
+// const config = {
+//   content: ["./src/**/*.{ts,tsx}"],
+//   theme: {
+//     extend: {
+//       screens: {
+//         tb: { min: "768px", max: "899px" }, // タブレット
+//         pc: "768px", // PC以上
+//       },
+//     },
+//   },
+//   plugins: [],
+// };
 
-export default config;
+// export default config;
