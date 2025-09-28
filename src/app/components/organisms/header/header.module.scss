@@ -77,74 +77,24 @@
     transform: translateY(0%);
   }
 
-  // @media (min-width: 600px) {
-  //   display: none;
-  // }
-}
-
-.drawer__menu__contents {
-  height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.drawer__nav {
-  display: flex;
-  flex-direction: column;
-  gap: 5vh;
-}
-
-.drawer__nav__link {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-
-  // span {
-  // }
-}
-
-.drawer__nav__link_wrapper {
-  width: 135px;
-  display: flex;
-  gap: 30px;
-
-  img {
-    width: 25px;
-    height: 25px;
-    margin-top: 5px;
-
-    // @include breakpoints.mq(pc) {
-    //   margin-top: 0;
-    // }
+  @media (min-width: 600px) {
+    display: none;
   }
 }
 
-// ドロワーメニュー展開：snsリンク
-.sns__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-  margin: 0 auto;
-}
-
-.sns__link_item {
+.sns__icon_animation {
   img {
     width: 25px;
     height: 25px;
     transition: transform 0.3s;
 
-    // @media (min-width: 600px) {
-    //   @media (any-hover: hover) {
-    //     &:hover {
-    //       transform: scale(1.2);
-    //     }
-    //   }
-    // }
+    @media (min-width: 600px) {
+      @media (any-hover: hover) {
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
   }
 }
 
@@ -176,9 +126,9 @@
     transform: translateY(0%);
   }
 
-  // @media (min-width: 600px) {
-  //   display: block;
-  // }
+  @media (min-width: 600px) {
+    display: block;
+  }
 }
 
 .drawer__menu_pc__contents {
@@ -233,23 +183,23 @@
     }
   }
 
-  // @media (any-hover: hover) {
-  //   &:hover {
-  //     cursor: pointer;
-  //     span {
-  //       transform: scale(1.15);
+  @media (any-hover: hover) {
+    &:hover {
+      cursor: pointer;
+      span {
+        transform: scale(1.15);
 
-  //       &::after {
-  //         scale: 1;
-  //         transform-origin: left center;
-  //         transition: scale 0.5s ease;
-  //       }
-  //     }
+        &::after {
+          scale: 1;
+          transform-origin: left center;
+          transition: scale 0.5s ease;
+        }
+      }
 
-  //     img {
-  //       transform: scale(1.15);
-  //     }
-  //   }
-  // }
+      img {
+        transform: scale(1.15);
+      }
+    }
+  }
 }
 // }

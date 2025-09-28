@@ -10,7 +10,7 @@ import {
 
 const Home = () => {
   return (
-    <div className="wrapper flex flex-col gap-5 bg-[#f3f0eb] text-base text-[#795549]">
+    <div className="flex flex-col bg-[#f3f0eb] text-base text-[#795549]">
       <Header />
       <main>
         <SectionFv />

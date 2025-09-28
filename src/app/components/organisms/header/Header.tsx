@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import Image from "next/image";
+
 import { NAV, SNS } from "@/app/constants/nav";
 import { useMedia } from "@/app/hooks/useMedia";
 
@@ -21,8 +23,8 @@ export default function Header() {
 
   // body スクロール固定
   useEffect(() => {
-    document.body.classList.toggle("is-lock", open);
-    return () => document.body.classList.remove("is-lock");
+    document.body.classList.toggle("is_lock", open);
+    return () => document.body.classList.remove("is_lock");
   }, [open]);
 
   // ESCで閉じる
@@ -53,23 +55,23 @@ export default function Header() {
       <div
         id="js-drawer__menu"
         ref={spMenuRef}
-        className={`drawer__menu ${open ? "is-checked" : ""}`}
+        className={`${styles.drawer__menu} ${open ? "is_checked" : ""}`}
         hidden={!open} // FOUC防止
       >
-        <div className={styles.drawer__menu__contents}>
+        <div className="flex h-dvh flex-col items-center justify-center gap-10">
           <NavList
-            classNameNav={styles.drawer__nav}
-            classNameLink={styles.drawer__nav__link}
-            classNameWrapper={styles.drawer__nav__link_wrapper}
+            classNameNav="flex flex-col gap-[5vh]"
+            classNameLink="w-full flex items-center justify-center gap-7"
+            classNameWrapper="w-36 flex gap-[30px] items-center"
             items={NAV}
           />
+
           {/* SNSリンク（簡略版） */}
-          <div className={styles.sns__link}>
+          <div className="flex items-center justify-center gap-7">
             {SNS.map((s) => (
-              <div key={s.label} className={styles.sns__link_item}>
+              <div key={s.label} className={styles.sns__icon_animation}>
                 <a href={s.href} target="_blank" rel="nofollow noopener">
-                  {/* アイコンはimgでもImageでもOK。ここはimgで簡潔に */}
-                  <img
+                  <Image
                     src={s.icon}
                     alt={`${s.label} icon`}
                     width={25}
