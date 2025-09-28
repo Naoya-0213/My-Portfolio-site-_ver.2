@@ -1,0 +1,21 @@
+// @use "../styles/variables" as v;
+
+:root {
+  --header-height: 65px;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family:
+    var(--font-noto),
+    system-ui,
+    -apple-system,
+    "Noto Sans JP",
+    sans-serif;
+}
+
+body.is-lock {
+  overflow: hidden; // SPメニュー表示時のスクロール固定
+}
