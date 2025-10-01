@@ -1,25 +1,17 @@
-import {
-  Footer,
-  Header,
-  SectionAbout,
-  SectionFv,
-  SectionLike,
-  SectionSkill,
-  SectionWork,
-} from "../components/organisms";
+import { Header, SectionFv } from "../components/organisms";
 
 const Home = () => {
   return (
-    <div className="flex flex-col bg-[#f3f0eb] text-base text-[#795549]">
+    <div className="flex flex-col overflow-hidden bg-[#f3f0eb] text-base text-[#795549]">
       <Header />
       <main>
         <SectionFv />
-        <SectionSkill />
+        {/* <SectionSkill />
         <SectionWork />
         <SectionAbout />
-        <SectionLike />
+        <SectionLike /> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

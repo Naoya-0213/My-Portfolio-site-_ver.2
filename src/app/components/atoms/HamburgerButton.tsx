@@ -18,6 +18,7 @@ export default function HamburgerButton({ open, onClick }: Props) {
     >
       <span className={styles.drawer_icon__bar} />
       <span className={styles.drawer_icon__bar} />
+      {/* tailwindに変更も動作せず。 */}
     </button>
   );
 }

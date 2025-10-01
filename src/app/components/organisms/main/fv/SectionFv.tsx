@@ -1,50 +1,154 @@
+"use client";
+
 import Image from "next/image";
+
+import styles from "@/app/components/organisms/main/fv/fv.module.scss";
 
 const SectionFv = () => {
   return (
-    <div>
-      <div className="w-full">
-        <div className="pc:aspect-[900/660] relative aspect-[375/562] w-screen max-w-none">
-          {/* fv画像 */}
+    <section className="relative pb-20" id="fv">
+      <div className={styles.fv__inner}>
+        <div className={styles.fv__contents}>
+          {/* fv画像（背景でSP/PC切替） */}
+          <div className={styles.fv__img}>
+            {/* デコレーション */}
+            <div className={styles.fv_decoration} />
+          </div>
 
-          {/* sp */}
+          {/* sp）logo */}
           <Image
-            src="/img/fv/fv-sp.png"
-            alt="sp版fv"
-            fill
-            className="pc:hidden object-cover"
-            priority
-          />
-          {/* pc */}
-          <Image
-            src="/img/fv/fv-pc.png"
-            alt="sp版fv"
-            fill
-            className="pc:block hidden object-cover"
-            priority
+            src="/img/logo/logo-white.png"
+            alt="ロゴ画像"
+            width={200}
+            height={120}
+            className={styles.fv__logo_sp}
           />
 
-          {/* ロゴ */}
-          <div className="absolute top-5 left-5">
-            <Image
-              src="/img/logo/logo-white.png"
-              alt="ロゴ"
-              width={250}
-              height={220}
-              style={{ width: "45vw", height: "auto" }}
-              className="pc:hidden -rotate-12"
-            />
-            <Image
-              src="/img/logo/logo-brown.png"
-              alt="ロゴ"
-              width={250}
-              height={220}
-              className="pc:block hidden"
-            />
+          {/* pc）menu */}
+          <div className={styles.fv__menu_pc}>
+            {/* pc）logo */}
+            <div className={styles.fv__logo_pc}>
+              <Image
+                src="/img/logo/logo-brown.png"
+                alt="ロゴ画像"
+                width={200}
+                height={120}
+              />
+            </div>
+
+            {/* pc）nav */}
+            <div className={styles.fv__menu__nav_pc}>
+              <nav className={styles.nav_pc}>
+                {/* menu1：home */}
+                <a href="#fv" className={styles.nav__link_pc}>
+                  <div className={styles.nav__link_wrapper_pc}>
+                    <Image
+                      src="/img/icon/home/paper-plane_icon-brown.png"
+                      alt="icon"
+                      width={25}
+                      height={25}
+                    />
+                    <span>Home -</span>
+                  </div>
+                </a>
+
+                {/* menu2：skill */}
+                <a href="#skill" className={styles.nav__link_pc}>
+                  <div className={styles.nav__link_wrapper_pc}>
+                    <Image
+                      src="/img/icon/skill/skill_icon-brown.png"
+                      alt="icon"
+                      width={25}
+                      height={25}
+                    />
+                    <span>Skill -</span>
+                  </div>
+                </a>
+
+                {/* menu3：work */}
+                <a href="#work" className={styles.nav__link_pc}>
+                  <div className={styles.nav__link_wrapper_pc}>
+                    <Image
+                      src="/img/icon/work/pc_icon-brown.png"
+                      alt="icon"
+                      width={25}
+                      height={25}
+                    />
+                    <span>Work -</span>
+                  </div>
+                </a>
+
+                {/* menu4：About me */}
+                <a href="#about-me" className={styles.nav__link_pc}>
+                  <div className={styles.nav__link_wrapper_pc}>
+                    <Image
+                      src="/img/icon/about-me/user_icon-brown.png"
+                      alt="icon"
+                      width={25}
+                      height={25}
+                    />
+                    <span>About me -</span>
+                  </div>
+                </a>
+
+                {/* menu5：contact */}
+                <a href="#contact" className={styles.nav__link_pc}>
+                  <div className={styles.nav__link_wrapper_pc}>
+                    <Image
+                      src="/img/icon/mail/email_icon-brown.png"
+                      alt="icon"
+                      width={25}
+                      height={25}
+                    />
+                    <span>Contact -</span>
+                  </div>
+                </a>
+
+                {/* snsリンク */}
+                <div className={styles.sns__link_pc}>
+                  <div className={styles.sns__link_pc_item}>
+                    <a href="#" target="_blank" rel="nofollow noopener">
+                      <Image
+                        src="/img/icon/line/line_icon-brown.png"
+                        alt="sns-icon"
+                        width={25}
+                        height={25}
+                      />
+                    </a>
+                  </div>
+
+                  <div className={styles.sns__link_pc_item}>
+                    <a
+                      href="https://x.com/Naoya__in_web"
+                      target="_blank"
+                      rel="nofollow noopener"
+                    >
+                      <Image
+                        src="/img/icon/x/x_icon-brown.png"
+                        alt="sns-icon"
+                        width={25}
+                        height={25}
+                      />
+                    </a>
+                  </div>
+
+                  <div className={styles.sns__link_pc_item}>
+                    <a href="#" target="_blank" rel="nofollow noopener">
+                      <Image
+                        src="/img/icon/instagram/instagram_icon-brown.png"
+                        alt="sns-icon"
+                        width={25}
+                        height={25}
+                      />
+                    </a>
+                  </div>
+                </div>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
