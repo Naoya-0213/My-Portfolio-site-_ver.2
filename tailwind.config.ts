@@ -5,6 +5,7 @@
 // 設定オブジェクトを `config` 変数に代入してから export
 
 const config = {
+  content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
       // フォント

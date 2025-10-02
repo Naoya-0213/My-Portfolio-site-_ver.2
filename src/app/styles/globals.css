@@ -1,22 +1,14 @@
 @import "tailwindcss";
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-} */
-
-/* @layer utilities { */
-/* TODO PC css */
-/* .pc_wrapper {
-    @apply pc:min-w-[768px] text-base;
-  }
-} */
-
-/* globals.css など */
-@import "tailwindcss";
-
-/* @theme { */
-/* --breakpoint-sp: (max-width: 767px); */
-/* --breakpoint-tb: (min-width: 768px) and (max-width: 899px);
+/* v4 ではここでトークン定義する */
+@theme {
+  /* ブレークポイント */
   --breakpoint-pc: 768px;
-} */
+  --breakpoint-ssp: (max-width: 374px);
+  --breakpoint-sp: (max-width: 767px);
+  --breakpoint-sm: 640px; /* min-width:640px */
+  --breakpoint-tb: (min-width: 768px) and (max-width: 899px);
+
+  /* フォント（v3の fontFamily.extend 相当） */
+  --font-en: "Oswald", serif;
+}
