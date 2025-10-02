@@ -38,23 +38,20 @@ ver.2
 
 ---
 
-## 📐 Breakpoints 一覧（Sass & Tailwind）
+# 📐 Breakpoints 対応表 (Sass / Tailwind)
 
-| 名前  | Sass定義 | 意味 | Tailwind対応 |
-|-------|----------|------|--------------|
-| `ssp` | `not screen and (min-width: 375px)` | **375px以下**（超小型SP向け） | なし |
-| `sm`  | `screen and (min-width: 640px)` | **640px以上**（Tailwind `sm` と同じ） | `sm:` |
-| `sp`  | `not screen and (min-width: 767px)` | **767px以下**（スマホ全般） | なし |
-| `pc`  | `screen and (min-width: 768px)` | **768px以上**（PC表示） | `md:` |
-| `tb`  | `screen and (min-width: 768px) and (max-width: 899px)` | **768〜899px**（タブレット表示） | `min-[768px] max-[899px]` |
+| 名前  | 幅の範囲   | Sass指定           | Tailwind指定 |
+| ----- | ---------- | ------------------ | ------------ |
+| `ssp` | 375px以下  | `@include mq(ssp)` | `ssp:`       |
+| `sm`  | 640px以上  | `@include mq(sm)`  | `sm:`        |
+| `sp`  | 767px以下  | `@include mq(sp)`  | `sp:`        |
+| `pc`  | 768px以上  | `@include mq(pc)`  | `pc:`        |
+| `tb`  | 768〜899px | `@include mq(tb)`  | `tb:`        |
 
 ---
 
-### ✅ Sassでの使い方
-```scss
-@include breakpoints.mq(sm) {
-  margin-top: 40px;
-}
-@include breakpoints.mq(pc) {
-  margin-top: 50px;
-}
+📌 **補足**
+
+- `sm` は Sass / Tailwind 共通で **640px以上** に統一。
+- `ssp` や `sp` は **max指定**。
+- `tb` は **768〜899px** の範囲指定。
