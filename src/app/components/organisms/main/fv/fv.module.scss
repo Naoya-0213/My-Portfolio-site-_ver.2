@@ -1,38 +1,12 @@
 @use "../../../../styles/breakpoints";
 @use "../../../../styles/common-css";
 
-/* ================================================
-   fv
-   ================================================ */
-// .fv {
-//   position: relative;
-// }
-
-.fv__inner {
-  margin: 0 auto;
-
-  @media (min-width: 600px) {
-    max-width: calc(1080px + 40px * 2);
-  }
-}
-
-.fv__contents {
-  position: relative;
-  z-index: 1;
-
-  @media (min-width: 600px) {
-    display: flex;
-    flex-direction: row-reverse;
-    height: auto;
-  }
-}
-
 .fv__img {
   width: 100%;
   aspect-ratio: 375 / 562;
   background: url(/img/fv/fv-sp.png) no-repeat center center / cover;
 
-  @media (min-width: 600px) {
+  @media (min-width: 640px) {
     aspect-ratio: 900 / 660;
     background: url(/img/fv/fv-pc.png) no-repeat center center / cover;
     flex: 7;
@@ -53,7 +27,7 @@
   top: 0;
   left: 5px;
 
-  @media (min-width: 600px) {
+  @media (min-width: 640px) {
     display: none;
   }
 }
@@ -61,18 +35,6 @@
 /* ================================================
    pc）menu
    ================================================ */
-.fv__menu_pc {
-  display: none;
-
-  @media (min-width: 600px) {
-    flex: 3;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
 
 /* pc）logo */
 .fv__logo_pc {
@@ -97,7 +59,7 @@
 .fv__menu__nav_pc {
   display: none;
 
-  @media (min-width: 600px) {
+  @media (min-width: 640px) {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -248,7 +210,7 @@
 
   background: common-css.$color2;
 
-  @media (min-width: 600px) {
+  @media (min-width: 640px) {
     display: block;
   }
 

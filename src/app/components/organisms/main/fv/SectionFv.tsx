@@ -7,8 +7,8 @@ import styles from "@/app/components/organisms/main/fv/fv.module.scss";
 const SectionFv = () => {
   return (
     <section className="relative pb-20" id="fv">
-      <div className={styles.fv__inner}>
-        <div className={styles.fv__contents}>
+      <div className="mx-auto max-w-[1160px]">
+        <div className="relative z-[1] sm:flex sm:h-auto sm:flex-row-reverse">
           {/* fv画像（背景でSP/PC切替） */}
           <div className={styles.fv__img}>
             {/* デコレーション */}
@@ -25,7 +25,7 @@ const SectionFv = () => {
           />
 
           {/* pc）menu */}
-          <div className={styles.fv__menu_pc}>
+          <div className="hidden sm:flex sm:flex-[3] sm:flex-col sm:items-center sm:justify-center">
             {/* pc）logo */}
             <div className={styles.fv__logo_pc}>
               <Image
