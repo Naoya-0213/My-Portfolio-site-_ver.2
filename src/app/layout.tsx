@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html
       lang="ja"
-      className={`bg-[#f3f0eb] font-normal text-[#795549] ${noto.variable} ${oswald.variable}`}
+      className={`bg-[#f3f0eb] font-normal text-[#795549] leading-relaxed ${noto.variable} ${oswald.variable}`}
     >
       <body className="pc:text-[15px] text-sm">{children}</body>
     </html>

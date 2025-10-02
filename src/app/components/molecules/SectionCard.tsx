@@ -16,8 +16,7 @@ const SectionCard = ({ title, subTitle, children }: SectionCardProps) => {
       </div>
 
       {/* コンテンツ */}
-
-      {children}
+      <div className="common_font_size">{children}</div>
     </div>
   );
 };
