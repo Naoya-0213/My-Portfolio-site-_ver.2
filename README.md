@@ -37,3 +37,23 @@ ver.2
 - 今後の Web エンジニアとしての成長を記録・公開する場
 
 ---
+
+## 📐 Breakpoints (Sass ↔ Tailwind)
+
+プロジェクトで使用するブレークポイント一覧です。  
+SassとTailwindの両方で共通認識を持つために記載しています。
+
+| 名前 | px範囲                          | Sass指定例                 | Tailwind指定例                    |
+| ---- | ------------------------------- | -------------------------- | --------------------------------- |
+| ssp  | 375px以下                       | `@include mq(ssp) { ... }` | `max-[374px]:...`                 |
+| sm   | 640px以上（Tailwindデフォルト） | `@include mq(sm) { ... }`  | `sm:...`                          |
+| sp   | 767px以下                       | `@include mq(sp) { ... }`  | `max-[767px]:...`                 |
+| pc   | 768px以上                       | `@include mq(pc) { ... }`  | `md:...` or `pc:...`              |
+| tb   | 768px〜899px                    | `@include mq(tb) { ... }`  | `min-[768px]:... max-[899px]:...` |
+
+### メモ
+
+- `sm` は Tailwind のデフォルト（640px以上）に揃えています。
+- `pc` は Sassの `"screen and (min-width: 768px)"` と一致。
+- `tb` のような範囲指定は Tailwindではカスタムブレークポイント（`min-[768px]` や `max-[899px]`）を使用します。
+- SassとTailwindの両方で同じプロパティを重複定義しないよう注意。

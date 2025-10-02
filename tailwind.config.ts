@@ -5,9 +5,20 @@
 // 設定オブジェクトを `config` 変数に代入してから export
 
 const config = {
-  extend: {
-    fontFamily: {
-      en: ["Oswald", "serif"],
+  theme: {
+    extend: {
+      // フォント
+      fontFamily: {
+        en: ["Oswald", "serif"],
+      },
+
+      // ブレイクポイント
+      screens: {
+        ssp: { max: "374px" }, // 375px以下
+        sp: { max: "767px" }, // 767px以下
+        pc: "768px", // 768px以上
+        tb: { min: "768px", max: "899px" }, // 768〜899px
+      },
     },
   },
 };

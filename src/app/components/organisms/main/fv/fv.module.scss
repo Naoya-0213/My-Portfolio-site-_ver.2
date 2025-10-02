@@ -40,7 +40,7 @@
 .fv__logo_pc {
   display: none;
 
-  @media (min-width: 600px) {
+  @media (min-width: 640px) {
     width: 100%;
     display: flex;
     justify-content: center;
