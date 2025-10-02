@@ -6,7 +6,7 @@ type SectionCardProps = {
 
 const SectionCard = ({ title, subTitle, children }: SectionCardProps) => {
   return (
-    <div className="px-5">
+    <div className="pc:px-10 m-auto max-w-5xl px-5">
       {/* タイトル */}
       <div className="flex flex-col">
         <h2 className="text-en font-[Oswald,serif] text-2xl font-bold">

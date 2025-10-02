@@ -1,4 +1,4 @@
-import SectionCard from "../../../atoms/SectionCard";
+import SectionCard from "../../../molecules/SectionCard";
 
 const SectionSkill = () => {
   return (
