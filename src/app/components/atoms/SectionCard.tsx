@@ -12,7 +12,7 @@ const SectionCard = ({ title, subTitle, children }: SectionCardProps) => {
         <h2 className="text-en font-[Oswald,serif] text-2xl font-bold">
           {title}
         </h2>
-        <p className="text-sm">{subTitle}</p>
+        <p className="common_font_size">{subTitle}</p>
       </div>
 
       {/* コンテンツ */}

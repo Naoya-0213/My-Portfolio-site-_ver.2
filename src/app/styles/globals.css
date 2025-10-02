@@ -5,18 +5,18 @@
   --foreground: #171717;
 } */
 
-@layer utilities {
-  /* TODO PC css */
-  .pc_wrapper {
+/* @layer utilities { */
+/* TODO PC css */
+/* .pc_wrapper {
     @apply pc:min-w-[768px] text-base;
   }
-}
+} */
 
 /* globals.css など */
 @import "tailwindcss";
 
-@theme {
-  /* --breakpoint-sp: (max-width: 767px); */
-  --breakpoint-tb: (min-width: 768px) and (max-width: 899px);
+/* @theme { */
+/* --breakpoint-sp: (max-width: 767px); */
+/* --breakpoint-tb: (min-width: 768px) and (max-width: 899px);
   --breakpoint-pc: 768px;
-}
+} */

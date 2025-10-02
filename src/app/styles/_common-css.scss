@@ -34,12 +34,20 @@ $color5: #96b3d1;
 }
 
 body {
-  font-family: $font-family-jp;
+  // font-family: $font-family-jp;
+  // font-size: $font-size-sp;
+  // font-weight: $font-weight-base;
+  // line-height: $line-height;
+  // background: $color1;
+  // color: $color3;
+
+  // @media (min-width: 900px) {
+  //   font-size: $font-size-pc;
+  // }
+}
+
+.common_font_size {
   font-size: $font-size-sp;
-  font-weight: $font-weight-base;
-  line-height: $line-height;
-  background: $color1;
-  color: $color3;
 
   @media (min-width: 900px) {
     font-size: $font-size-pc;
@@ -172,7 +180,9 @@ body {
 .fade-in-up {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 1s, transform 1s;
+  transition:
+    opacity 1s,
+    transform 1s;
 
   &.js-in-view {
     opacity: 1;
@@ -183,7 +193,9 @@ body {
 .fade-in-down {
   opacity: 0;
   transform: translateY(-24px);
-  transition: opacity 1s, transform 1s;
+  transition:
+    opacity 1s,
+    transform 1s;
 
   &.js-in-view {
     opacity: 1;
