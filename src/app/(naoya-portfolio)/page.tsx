@@ -1,4 +1,11 @@
-import { Header, SectionFv, SectionSkill } from "../components/organisms";
+import {
+  Header,
+  SectionAbout,
+  SectionFv,
+  SectionLike,
+  SectionSkill,
+  SectionWork,
+} from "../components/organisms";
 
 const Home = () => {
   return (
@@ -7,9 +14,9 @@ const Home = () => {
       <main>
         <SectionFv />
         <SectionSkill />
-        {/* <SectionWork />
+        <SectionWork />
         <SectionAbout />
-        <SectionLike /> */}
+        <SectionLike />
       </main>
       {/* <Footer /> */}
     </div>
