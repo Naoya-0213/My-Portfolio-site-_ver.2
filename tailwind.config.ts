@@ -15,10 +15,9 @@ const config = {
 
       // ブレイクポイント
       screens: {
-        ssp: { max: "374px" }, // 375px以下
         sm: { min: "640px" }, // 640px以上
         sp: { max: "767px" }, // 767px以下
-        pc: "768px", // 768px以上
+        pc: { min: "768px" }, // 768px以上
         tb: { min: "768px", max: "899px" }, // 768〜899px
       },
     },

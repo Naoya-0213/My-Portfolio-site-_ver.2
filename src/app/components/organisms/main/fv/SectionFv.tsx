@@ -6,7 +6,7 @@ import styles from "@/app/components/organisms/main/fv/fv.module.scss";
 
 const SectionFv = () => {
   return (
-    <section className="pc:pb-10 relative pb-7" id="fv">
+    <section className="pc:pb-10 relative pb-7 max-[374px]:pb-2" id="fv">
       <div className="mx-auto max-w-[1160px]">
         <div className="relative z-[1] sm:flex sm:h-auto sm:flex-row-reverse">
           {/* fv画像（背景でSP/PC切替） */}
