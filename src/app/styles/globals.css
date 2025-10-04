@@ -3,7 +3,7 @@
 /* v4 ではここでトークン定義する */
 @theme {
   /* ブレークポイント */
-  /* --breakpoint-pc: 768px; */
+  --breakpoint-pc: 768px;
   /* --breakpoint-ssp: (max-width: 374px);
   --breakpoint-sp: (max-width: 767px); */
   /* --breakpoint-sm: 640px; min-width:640px */
