@@ -4,6 +4,8 @@ import { useEffect, useRef } from "react";
 
 import Image from "next/image";
 
+import styles from "./modal.module.scss";
+
 type ModalProps = {
   title: string;
   children: React.ReactNode;
@@ -35,15 +37,19 @@ export default function Modal({ title, children, onClose, open }: ModalProps) {
   if (!open) return null;
 
   return (
-    <div onClick={(e) => e.target === e.currentTarget && onClose()}>
+    <div
+      onClick={(e) => e.target === e.currentTarget && onClose()}
+      className={`${styles.backdrop}`}
+    >
       {/* タイトル */}
-      <div className="flex justify-between">
+      <div className={`flex items-center justify-between ${styles.dialog}`}>
         <h2 className="text-base font-bold">{title}</h2>
         <button
-          className="outline: none; cursor-pointer transition-transform duration-300 hover:scale-110"
+          className={`outline: none; cursor-pointer transition-transform duration-300 hover:scale-110 ${styles.close}`}
           type="button"
           onClick={onClose}
         >
+          {/* TODO　ボタンをabsoluteで変更予定 */}
           <Image
             src="/img/section_aboutme/modal-close-icon.png"
             alt="モーダル閉じるボタン"
