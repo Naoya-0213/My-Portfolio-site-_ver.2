@@ -6,9 +6,9 @@ const SectionAbout = () => {
   return (
     <div>
       <SectionCard title="About Me -" subTitle="私について">
-        <div className="m-auto flex max-w-3xl flex-col items-center justify-center gap-5 px-2 pt-8 sm:flex-row pc:gap-10">
+        <div className="pc:gap-10 m-auto flex max-w-3xl flex-col items-center justify-center gap-5 px-2 pt-8 sm:flex-row">
           {/* 画像と名前 */}
-          <div className="flex sm:w-1/3 flex-col items-center gap-5">
+          <div className="relative flex flex-col items-center sm:w-1/3">
             <Image
               src="/img/section_aboutme/about-me__picture.png"
               alt="自己紹介写真"
@@ -17,14 +17,25 @@ const SectionAbout = () => {
               className="rounded-xl"
             />
 
-            <div className="flex flex-col items-center gap-1">
+            <div className="mt-5 flex flex-col items-center gap-1">
               <h2 className="font-en text-xl font-bold">Naoya Noguchi</h2>
               <p>野口 直也</p>
+            </div>
+
+            {/* デコレーション */}
+            <div>
+              <Image
+                src="/img/section_aboutme/about-me__decoration.png"
+                alt="デコレーション"
+                width={100}
+                height={100}
+                className="pc:-right-[30px] absolute -top-[50px] -right-[50px] animate-[rotate_20s_linear_infinite]"
+              ></Image>
             </div>
           </div>
 
           {/* 紹介文 */}
-          <div className="sm:w-2/3 p-3">
+          <div className="p-3 sm:w-2/3">
             <p>
               1999年東京都生まれ。中央大学商学部を卒業後、新卒でFA機器を扱う専門商社に入社。4年間、ルート営業を担当し、顧客ニーズに寄り添った提案や業務効率化のサポートを通じて信頼を築き、売上成長に貢献。
               <br></br>
