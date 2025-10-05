@@ -1,0 +1,45 @@
+@use "../../../styles/breakpoints";
+@use "../../../styles/common-css";
+
+.header_open {
+  // tb時の幅 自動調整
+  width: calc(45px / 375px * 100%);
+  min-width: 32px;
+  max-width: 50px;
+  aspect-ratio: 45 / 15;
+
+  // 上部配置
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  // ハンバーガーアイコン均等配置
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  // 最前に配置
+  z-index: 999;
+
+  // クリック時のバツボタン
+  &.is_checked {
+    .drawer_icon__bar {
+      &:nth-of-type(1) {
+        transform: rotate(18deg);
+      }
+
+      &:nth-of-type(2) {
+        transform: rotate(-18deg);
+      }
+    }
+  }
+}
+
+.drawer_icon__bar {
+  width: 100%;
+  height: 1px;
+  background: #795549;
+  transition: transform 0.9s;
+  transform-origin: left;
+}
+

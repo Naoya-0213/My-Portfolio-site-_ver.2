@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import ButtonBrown from "@/app/components/atoms/ButtonBrown";
+import ButtonBrown from "@/app/components/atoms/button/ButtonBrown";
 import Modal from "@/app/components/atoms/modal/modal";
 
 const SectionAboutModal = () => {

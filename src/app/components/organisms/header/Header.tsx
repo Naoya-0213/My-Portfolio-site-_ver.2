@@ -7,7 +7,7 @@ import Image from "next/image";
 import { NAV, SNS } from "@/app/constants/nav";
 import { useMedia } from "@/app/hooks/useMedia";
 
-import HamburgerButton from "../../atoms/HamburgerButton";
+import HamburgerButton from "../../atoms/hamburger_buttton/HamburgerButton";
 import NavList from "../../molecules/NavList";
 import styles from "./header.module.scss";
 
@@ -48,6 +48,7 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
+      {/* TODO　PC版どうする？ */}
       {/* SP: ハンバーガーボタン（Sassの @media で出し分け） */}
       <HamburgerButton open={open} onClick={() => setOpen((v) => !v)} />
 
