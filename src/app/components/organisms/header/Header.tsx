@@ -13,7 +13,7 @@ import styles from "./header.module.scss";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const isPc = useMedia("(min-width: 600px)");
+  const isPc = useMedia("(min-width: 640px)");
   const spMenuRef = useRef<HTMLDivElement | null>(null);
 
   // PC幅に移行したらSPメニューは必ず閉じる
@@ -47,17 +47,18 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={styles.header}>
+    <header className="">
       {/* TODO　PC版どうする？ */}
       {/* SP: ハンバーガーボタン（Sassの @media で出し分け） */}
       <HamburgerButton open={open} onClick={() => setOpen((v) => !v)} />
 
       {/* SPメニュー（上から降りる） */}
+
       <div
-        id="js-drawer__menu"
+        // id="js-drawer__menu"
         ref={spMenuRef}
-        className={`${styles.drawer__menu} ${open ? "is_checked" : ""}`}
-        hidden={!open} // FOUC防止
+        className={`${styles.drawer__menu} ${open ? styles.is_checked : ""}`}
+        // hidden={!open} // FOUC防止
       >
         <div className="flex h-dvh flex-col items-center justify-center gap-10">
           <NavList

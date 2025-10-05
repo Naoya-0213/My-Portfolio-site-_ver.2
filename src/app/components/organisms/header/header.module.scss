@@ -8,24 +8,34 @@
 .drawer__menu {
   width: 100%;
   height: 100dvh;
-  background: #795549;
+  background: #d7cdbe;
   font-family: "Oswald", serif;
   color: #795549;
   font-size: 20px;
 
   transform: translateY(-100%);
-  transition: transform 1s;
+  transition:
+    transform 1s,
+    visibility 1s;
   position: fixed;
   top: 0;
 
   z-index: 100;
   opacity: 0.9;
 
+  // 追加_20251005
+  visibility: hidden;
+  pointer-events: none;
+
   &.is_checked {
     transform: translateY(0%);
+
+    // 追加_20251005
+    visibility: visible;
+    pointer-events: auto;
   }
 
-  @media (min-width: 600px) {
+  @include breakpoints.mq(sm) {
     display: none;
   }
 }
@@ -74,7 +84,7 @@
     transform: translateY(0%);
   }
 
-  @media (min-width: 600px) {
+  @include breakpoints.mq(sm) {
     display: block;
   }
 }
