@@ -19,6 +19,8 @@ export default function Header() {
   // PCメニュー管理
   const [pcOpen, setPcOpen] = useState(false);
   const isPc = useMedia("(min-width: 640px)");
+  // PCメニュー：480以下での表示
+  // const [showPcHamburger, setShowPcHamburger] = useState(false);
 
   const spMenuRef = useRef<HTMLDivElement | null>(null);
 
@@ -76,10 +78,8 @@ export default function Header() {
 
       {/* SPメニュー */}
       <div
-        // id="js-drawer__menu"
         ref={spMenuRef}
         className={`${styles.drawer__menu} ${open ? styles.is_checked : ""}`}
-        // hidden={!open} // FOUC防止
       >
         <div className="flex h-dvh flex-col items-center justify-center gap-10">
           <NavList
@@ -107,13 +107,12 @@ export default function Header() {
         </div>
       </div>
 
+      {/* TODO ヘッダー表示分スクロール後に表示 */}
       {isPc && (
         <HamburgerButton open={pcOpen} onClick={() => setPcOpen((v) => !v)} />
       )}
-
       {/* PCメニュー */}
       <div
-        // id="js-drawer__menu-pc"
         ref={spMenuRef}
         className={`${styles.drawer__menu_pc} ${pcOpen ? styles.is_checked : ""}`}
       >
