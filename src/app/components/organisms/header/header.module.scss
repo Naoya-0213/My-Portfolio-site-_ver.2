@@ -71,7 +71,9 @@
   border-radius: 0px 0px 0px 40px;
 
   transform: translateY(-105%);
-  transition: transform 1s;
+  transition:
+    transform 1s,
+    visibility 1s;
   position: fixed;
   top: 0;
   right: 0;
@@ -80,8 +82,16 @@
 
   box-shadow: -7px 7px 15px 0px rgba(0, 0, 0, 0.25);
 
+  // 追加_20251005
+  visibility: hidden;
+  pointer-events: none;
+
   &.is_checked {
     transform: translateY(0%);
+
+    // 追加_20251005
+    visibility: visible;
+    pointer-events: auto;
   }
 
   @include breakpoints.mq(sm) {

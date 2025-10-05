@@ -12,16 +12,29 @@ import NavList from "../../molecules/NavList";
 import styles from "./header.module.scss";
 
 export default function Header() {
+  // SPメニュー管理
   const [open, setOpen] = useState(false);
+  const isSp = useMedia("(max-width: 639px)");
+
+  // PCメニュー管理
+  const [pcOpen, setPcOpen] = useState(false);
   const isPc = useMedia("(min-width: 640px)");
+
   const spMenuRef = useRef<HTMLDivElement | null>(null);
 
-  // PC幅に移行したらSPメニューは必ず閉じる
+  // 幅ブレイクに応じて片方を必ず閉じる
   useEffect(() => {
-    if (isPc) setOpen(false);
-  }, [isPc]);
+    if (isPc) {
+      // PC幅に入ったらSPメニューを閉じる
+      setOpen(false);
+    }
+    if (isSp) {
+      // SP幅に入ったらPCメニューを閉じる
+      setPcOpen(false);
+    }
+  }, [isPc, isSp]);
 
-  // body スクロール固定
+  // body スクロール固定（SPのみ）
   useEffect(() => {
     document.body.classList.toggle("is_lock", open);
     return () => document.body.classList.remove("is_lock");
@@ -29,10 +42,14 @@ export default function Header() {
 
   // ESCで閉じる
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") return;
+      if (open) setOpen(false);
+      if (pcOpen) setPcOpen(false);
+    };
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
-  }, []);
+  }, [open, pcOpen]);
 
   // SPメニュー内のリンククリックで閉じる
   useEffect(() => {
@@ -40,7 +57,11 @@ export default function Header() {
     if (!el) return;
     const onClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement | null;
-      if (target?.closest("a")) setOpen(false);
+
+      if (target?.closest("a")) {
+        setOpen(false);
+        setPcOpen(false);
+      }
     };
     el.addEventListener("click", onClick);
     return () => el.removeEventListener("click", onClick);
@@ -48,11 +69,12 @@ export default function Header() {
 
   return (
     <header className="">
-      {/* TODO　PC版どうする？ */}
       {/* SP: ハンバーガーボタン */}
-      <HamburgerButton open={open} onClick={() => setOpen((v) => !v)} />
+      {isSp && (
+        <HamburgerButton open={open} onClick={() => setOpen((v) => !v)} />
+      )}
 
-      {/* SPメニュー（上から降りる） */}
+      {/* SPメニュー */}
       <div
         // id="js-drawer__menu"
         ref={spMenuRef}
@@ -85,8 +107,16 @@ export default function Header() {
         </div>
       </div>
 
-      {/* PCメニュー（常時表示） */}
-      <div id="js-drawer__menu-pc" className={styles.drawer__menu_pc}>
+      {isPc && (
+        <HamburgerButton open={pcOpen} onClick={() => setPcOpen((v) => !v)} />
+      )}
+
+      {/* PCメニュー */}
+      <div
+        // id="js-drawer__menu-pc"
+        ref={spMenuRef}
+        className={`${styles.drawer__menu_pc} ${pcOpen ? styles.is_checked : ""}`}
+      >
         <div className={styles.drawer__menu_pc__contents}>
           <NavList
             classNameNav={styles.drawer__nav_pc}
