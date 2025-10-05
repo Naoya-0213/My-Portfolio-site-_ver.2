@@ -49,11 +49,10 @@ export default function Header() {
   return (
     <header className="">
       {/* TODO　PC版どうする？ */}
-      {/* SP: ハンバーガーボタン（Sassの @media で出し分け） */}
+      {/* SP: ハンバーガーボタン */}
       <HamburgerButton open={open} onClick={() => setOpen((v) => !v)} />
 
       {/* SPメニュー（上から降りる） */}
-
       <div
         // id="js-drawer__menu"
         ref={spMenuRef}
