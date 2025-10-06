@@ -2,11 +2,11 @@ import { learningHistory } from "@/const/learningHistory";
 
 const ModalContent = () => {
   return (
-    <div className="pc:gap-3 flex flex-col gap-2">
+    <div className="pc:gap-4 flex flex-col gap-2">
       {learningHistory.map((item, index) => (
         <div
           key={index}
-          className="flex flex-col gap-2 border-b border-[#d7cdbe] p-2"
+          className="pc:p-4 pc:mx-2 pc:pt-0 flex flex-col gap-2 border-b border-[#d7cdbe] p-2 pt-0"
         >
           {/* 時期＋タイトル */}
           <div className="pc:flex-row pc:items-center pc:gap-5 flex flex-col gap-2">
