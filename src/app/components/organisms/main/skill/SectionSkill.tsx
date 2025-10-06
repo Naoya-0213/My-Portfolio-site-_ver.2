@@ -1,4 +1,4 @@
-import ItemCard from "@/app/components/molecules/itemcard/ItemCard";
+import ItemCard from "@/app/components/molecules/section_card/itemcard/ItemCard";
 
 import SectionCard from "../../../molecules/section_card/SectionCard";
 

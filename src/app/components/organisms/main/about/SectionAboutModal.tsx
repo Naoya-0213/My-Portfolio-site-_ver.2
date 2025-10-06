@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 import ButtonBrown from "@/app/components/atoms/button/ButtonBrown";
-import Modal from "@/app/components/atoms/modal/modal";
+import Modal from "@/app/components/atoms/modal/Modal";
 
 const SectionAboutModal = () => {
   const [openWhich, setOpenWhich] = useState<null | "past" | "next">(null);
