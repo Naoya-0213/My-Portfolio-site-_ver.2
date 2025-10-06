@@ -1,13 +1,30 @@
+import { learningHistory } from "@/const/learningHistory";
+
 const ModalContent = () => {
   return (
-    <div>
-      {/* 時期 */}
-      <div className="common_font_size">2023年5月</div>
+    <div className="pc:gap-3 flex flex-col gap-2">
+      {learningHistory.map((item, index) => (
+        <div
+          key={index}
+          className="flex flex-col gap-2 border-b border-[#d7cdbe] p-2"
+        >
+          {/* 時期＋タイトル */}
+          <div className="pc:flex-row pc:items-center pc:gap-5 flex flex-col gap-2">
+            {/* 時期 */}
+            <div className="h-fit w-fit rounded-2xl bg-[#795549] px-4 py-1 text-xs text-[#f3f0eb]">
+              {item.date}
+            </div>
+            {/* タイトル */}
+            <div className="font-bold">{item.title}</div>
+          </div>
 
-      {/* 内容 */}
-      <div>
-        <div></div>
-        <div></div>
+          {/* 内容 */}
+          <div>{item.description}</div>
+        </div>
+      ))}
+
+      <div className="text-right font-[Oswald,serif] font-bold">
+        To be continued...
       </div>
     </div>
   );

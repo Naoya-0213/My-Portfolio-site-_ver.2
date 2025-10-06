@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import ButtonBrown from "@/app/components/atoms/button/ButtonBrown";
 import Modal from "@/app/components/atoms/modal/Modal";
+import ModalContent from "@/app/components/atoms/modal/modal_content/ModalContent";
 
 const SectionAboutModal = () => {
   const [openWhich, setOpenWhich] = useState<null | "past" | "next">(null);
@@ -27,84 +28,7 @@ const SectionAboutModal = () => {
         onClose={() => setOpenWhich(null)}
         title="これまでの学習内容"
       >
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
-        <div>テキスト</div>
+        <ModalContent />
       </Modal>
     </>
   );

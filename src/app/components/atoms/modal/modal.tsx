@@ -43,7 +43,7 @@ export default function Modal({ title, children, onClose, open }: ModalProps) {
     >
       {/* タイトル */}
       <div className={`${styles.dialog}`}>
-        <div className="pb-6">
+        <div className="pb-4">
           <h2 className="text-base font-bold">{title}</h2>
         </div>
 

@@ -11,7 +11,8 @@
 // モーダル全体
 .dialog {
   position: relative;
-  width: min(92vw, 780px);
+  // width: min(92vw, 780px);
+  width: min(600px, 95%);
   // max-height: 80vh;
   background: #f3f0eb;
   border-radius: 14px;
