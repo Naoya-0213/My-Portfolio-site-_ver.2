@@ -1,4 +1,4 @@
-import SectionCard from "@/app/components/molecules/SectionCard";
+import SectionCard from "@/app/components/molecules/section_card/SectionCard";
 
 const SectionLike = () => {
   return (

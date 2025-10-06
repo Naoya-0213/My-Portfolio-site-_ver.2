@@ -39,13 +39,16 @@ export default function Modal({ title, children, onClose, open }: ModalProps) {
   return (
     <div
       onClick={(e) => e.target === e.currentTarget && onClose()}
-      className={`${styles.backdrop}`}
+      className={`${styles.backdrop} `}
     >
       {/* タイトル */}
-      <div className={`flex items-center justify-between ${styles.dialog}`}>
-        <h2 className="text-base font-bold">{title}</h2>
+      <div className={`${styles.dialog}`}>
+        <div className="pb-6">
+          <h2 className="text-base font-bold">{title}</h2>
+        </div>
+
         <button
-          className={`outline: none; cursor-pointer transition-transform duration-300 hover:scale-110 ${styles.close}`}
+          className={`absolute top-4 right-4 z-50 cursor-pointer transition-transform duration-300 outline-none hover:scale-110 ${styles.close}`}
           type="button"
           onClick={onClose}
         >
@@ -57,10 +60,9 @@ export default function Modal({ title, children, onClose, open }: ModalProps) {
             height={40}
           ></Image>
         </button>
+        {/* 内容 */}
+        <div className={styles.dialogBody}>{children}</div>
       </div>
-
-      {/* 内容 */}
-      <div>{children}</div>
     </div>
   );
 }

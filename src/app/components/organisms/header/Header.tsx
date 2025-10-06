@@ -8,7 +8,7 @@ import { NAV, SNS } from "@/app/constants/nav";
 import { useMedia } from "@/app/hooks/useMedia";
 
 import HamburgerButton from "../../atoms/hamburger_buttton/HamburgerButton";
-import NavList from "../../molecules/NavList";
+import NavList from "../../molecules/nav_list/NavList";
 import styles from "./header.module.scss";
 
 export default function Header() {

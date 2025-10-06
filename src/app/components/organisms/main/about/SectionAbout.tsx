@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import SectionCard from "@/app/components/molecules/SectionCard";
+import SectionCard from "@/app/components/molecules/section_card/SectionCard";
 
 import SectionAboutModal from "./SectionAboutModal";
 

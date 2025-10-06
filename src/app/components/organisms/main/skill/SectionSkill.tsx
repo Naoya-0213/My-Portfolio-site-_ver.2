@@ -1,6 +1,6 @@
-import ItemCard from "@/app/components/molecules/ItemCard";
+import ItemCard from "@/app/components/molecules/itemcard/ItemCard";
 
-import SectionCard from "../../../molecules/SectionCard";
+import SectionCard from "../../../molecules/section_card/SectionCard";
 
 const SectionSkill = () => {
   return (
