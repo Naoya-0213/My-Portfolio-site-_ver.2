@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+import { futureLearningPlan } from "@/const/futureLearningPlan";
 import { learningHistory } from "@/const/learningHistory";
 
 import ButtonBrown from "@/app/components/atoms/button/ButtonBrown";
@@ -39,7 +40,7 @@ const SectionAboutModal = () => {
         onClose={() => setOpenWhich(null)}
         title="これから学習したい事"
       >
-        <ModalContent contents={learningHistory} />
+        <ModalContent contents={futureLearningPlan} />
       </Modal>
     </>
   );
