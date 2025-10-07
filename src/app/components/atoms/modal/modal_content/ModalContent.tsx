@@ -8,7 +8,7 @@ type ModalContentProps = {
 
 const ModalContent = ({ contents }: ModalContentProps) => {
   return (
-    <div className="pc:gap-4 flex flex-col gap-2">
+    <div className="pc:gap-4 flex flex-col gap-3">
       {contents.map((item, index) => (
         <div
           key={index}
