@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import { learningHistory } from "@/const/learningHistory";
+
 import ButtonBrown from "@/app/components/atoms/button/ButtonBrown";
 import Modal from "@/app/components/atoms/modal/Modal";
 import ModalContent from "@/app/components/atoms/modal/modal_content/ModalContent";
@@ -22,13 +24,22 @@ const SectionAboutModal = () => {
         ></ButtonBrown>
       </div>
 
-      {/* モーダル */}
+      {/* モーダル（学習した内容） */}
       <Modal
         open={openWhich === "past"}
         onClose={() => setOpenWhich(null)}
         title="これまでの学習内容"
       >
-        <ModalContent />
+        <ModalContent contents={learningHistory} />
+      </Modal>
+
+      {/* モーダル（これから学習したい内容） */}
+      <Modal
+        open={openWhich === "next"}
+        onClose={() => setOpenWhich(null)}
+        title="これから学習したい事"
+      >
+        <ModalContent contents={learningHistory} />
       </Modal>
     </>
   );
