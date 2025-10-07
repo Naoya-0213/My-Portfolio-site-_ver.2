@@ -6,7 +6,7 @@ import { futureLearningPlan } from "@/const/futureLearningPlan";
 import { learningHistory } from "@/const/learningHistory";
 
 import ButtonBrown from "@/app/components/atoms/button/ButtonBrown";
-import Modal from "@/app/components/atoms/modal/Modal";
+import Modal from "@/app/components/atoms/modal/modal";
 import ModalContent from "@/app/components/atoms/modal/modal_content/ModalContent";
 
 const SectionAboutModal = () => {

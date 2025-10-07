@@ -6,18 +6,53 @@
   display: grid;
   place-items: center;
   z-index: 1000;
+
+  animation: fadeInBg 0.3s ease forwards;
+}
+
+@keyframes fadeInBg {
+  from {
+    background: rgba(0, 0, 0, 0);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.35);
+  }
 }
 
 // モーダル全体
 .dialog {
   position: relative;
-  // width: min(92vw, 780px);
   width: min(600px, 95%);
-  // max-height: 80vh;
   background: #f3f0eb;
   border-radius: 14px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-  // padding: 24px 24px 28px;
+
+  /* オープン時のアニメーション */
+  opacity: 0;
+  transform: translateY(8px) scale(0.98);
+  animation: dialogIn 0.3s ease forwards;
+}
+
+@keyframes dialogIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes dialogOut {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
 }
 
 // .close {

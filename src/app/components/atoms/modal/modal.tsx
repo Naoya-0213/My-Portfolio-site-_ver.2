@@ -39,7 +39,7 @@ export default function Modal({ title, children, onClose, open }: ModalProps) {
   return (
     <div
       onClick={(e) => e.target === e.currentTarget && onClose()}
-      className={`${styles.backdrop} `}
+      className={`${styles.backdrop}`}
     >
       {/* タイトル */}
       <div className={`${styles.dialog} pc:p-6 p-4`}>
