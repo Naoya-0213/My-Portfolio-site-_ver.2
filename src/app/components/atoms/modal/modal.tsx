@@ -6,6 +6,8 @@ import Image from "next/image";
 
 import styles from "./modal.module.scss";
 
+// モーダル表示用（About Meで使用）
+
 type ModalProps = {
   title: string;
   children: React.ReactNode;

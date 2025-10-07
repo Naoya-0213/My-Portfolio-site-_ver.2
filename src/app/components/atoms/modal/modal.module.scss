@@ -6,7 +6,7 @@
   display: grid;
   place-items: center;
   z-index: 1000;
-
+  backdrop-filter: blur(6px);
   animation: fadeInBg 0.3s ease forwards;
 }
 
@@ -54,21 +54,6 @@
     transform: translateY(6px) scale(0.98);
   }
 }
-
-// .close {
-//   position: absolute;
-//   top: 14px;
-//   right: 14px;
-//   width: 36px;
-//   height: 36px;
-//   border-radius: 50%;
-//   border: none;
-//   background: #d7cdbe; /* ver.1の雰囲気 */
-//   color: #795549;
-//   cursor: pointer;
-// }
-
-// TODO オープン時クローズ時のアニメーション
 
 // モーダル中身
 .dialogBody {
