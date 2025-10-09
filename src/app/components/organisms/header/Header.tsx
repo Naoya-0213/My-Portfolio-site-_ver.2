@@ -15,14 +15,12 @@ export default function Header() {
   // SPメニュー管理
   const [open, setOpen] = useState(false);
   const isSp = useMedia("(max-width: 639px)");
+  const spMenuRef = useRef<HTMLDivElement | null>(null);
 
   // PCメニュー管理
   const [pcOpen, setPcOpen] = useState(false);
   const isPc = useMedia("(min-width: 640px)");
-  // PCメニュー：480以下での表示
-  // const [showPcHamburger, setShowPcHamburger] = useState(false);
-
-  const spMenuRef = useRef<HTMLDivElement | null>(null);
+  const pcMenuRef = useRef<HTMLDivElement | null>(null);
 
   // 幅ブレイクに応じて片方を必ず閉じる
   useEffect(() => {
@@ -45,7 +43,7 @@ export default function Header() {
   // ESCで閉じる
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") return;
+      if (e.key !== "Escape") return;
       if (open) setOpen(false);
       if (pcOpen) setPcOpen(false);
     };
@@ -53,21 +51,14 @@ export default function Header() {
     return () => document.removeEventListener("keydown", onKey);
   }, [open, pcOpen]);
 
-  // SPメニュー内のリンククリックで閉じる
-  useEffect(() => {
-    const el = spMenuRef.current;
-    if (!el) return;
-    const onClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement | null;
-
-      if (target?.closest("a")) {
-        setOpen(false);
-        setPcOpen(false);
-      }
-    };
-    el.addEventListener("click", onClick);
-    return () => el.removeEventListener("click", onClick);
-  }, []);
+  // メニュー表示中：クリック時の閉じる指定
+  const handleMenuClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLElement | null;
+    if (target?.closest("a")) {
+      setOpen(false);
+      setPcOpen(false);
+    }
+  };
 
   return (
     <header className="">
@@ -80,6 +71,7 @@ export default function Header() {
       <div
         ref={spMenuRef}
         className={`${styles.drawer__menu} ${open ? styles.is_checked : ""}`}
+        onClick={handleMenuClick}
       >
         <div className="flex h-dvh flex-col items-center justify-center gap-10">
           <NavList
@@ -107,14 +99,14 @@ export default function Header() {
         </div>
       </div>
 
-      {/* TODO ヘッダー表示分スクロール後に表示 */}
       {isPc && (
         <HamburgerButton open={pcOpen} onClick={() => setPcOpen((v) => !v)} />
       )}
       {/* PCメニュー */}
       <div
-        ref={spMenuRef}
+        ref={pcMenuRef}
         className={`${styles.drawer__menu_pc} ${pcOpen ? styles.is_checked : ""}`}
+        onClick={handleMenuClick}
       >
         <div className={styles.drawer__menu_pc__contents}>
           <NavList
