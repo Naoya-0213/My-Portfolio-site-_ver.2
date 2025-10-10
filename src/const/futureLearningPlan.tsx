@@ -1,6 +1,6 @@
 // TODO 内容の理解
 
-export const futureLearningPlan = [
+export const FutureLearningPlan = [
   {
     date: "2025年12月",
     title: "AWS学習（デプロイ・インフラ設計）",

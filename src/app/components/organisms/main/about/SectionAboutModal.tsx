@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-import { futureLearningPlan } from "@/const/futureLearningPlan";
-import { learningHistory } from "@/const/learningHistory";
+import { FutureLearningPlan } from "@/const/futureLearningPlan";
+import { LearningHistory } from "@/const/learningHistory";
 
 import ButtonBrown from "@/app/components/atoms/button/ButtonBrown";
 import Modal from "@/app/components/atoms/modal/modal";
@@ -31,7 +31,7 @@ const SectionAboutModal = () => {
         onClose={() => setOpenWhich(null)}
         title="これまでの学習内容"
       >
-        <ModalContent contents={learningHistory} />
+        <ModalContent contents={LearningHistory} />
       </Modal>
 
       {/* モーダル（これから学習したい内容） */}
@@ -40,7 +40,7 @@ const SectionAboutModal = () => {
         onClose={() => setOpenWhich(null)}
         title="これから学習したい事"
       >
-        <ModalContent contents={futureLearningPlan} />
+        <ModalContent contents={FutureLearningPlan} />
       </Modal>
     </>
   );
