@@ -80,7 +80,7 @@ export const learningHistory = [
       "React & Next.jsを用いた記事投稿アプリをチームで開発。GitHubでのレビュー・ブランチ運用を経験し、実務を想定した開発フローを学ぶ。",
   },
   {
-    date: "2025年7月",
+    date: "2025年6月",
     title: "個人開発アプリ「がまん貯金」制作開始",
     description:
       "React & Next.js & Supabase を使用し、節約習慣化アプリを企画・設計・開発。フロント〜バックエンドまで一貫して実装し、UI/UX設計・状態管理・データベース連携などを実践。（詳細はポートフォリオ内「Works」参照）",
