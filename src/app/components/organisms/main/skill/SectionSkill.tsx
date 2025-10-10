@@ -6,7 +6,7 @@ const SectionSkill = () => {
   return (
     <div>
       <SectionCard title="Skill -" subTitle="今の私に出来る事">
-        <div className="pc:flex-row pc:grid pc:grid-cols-3 pc:gap-2 mt-5 flex flex-col px-2 max-[374px]:mt-1">
+        <div className="pc:flex-row pc:grid pc:grid-cols-3 flex flex-col gap-5 px-2 max-[374px]:gap-0">
           <ItemCard title="Web制作" icon="/img/section_skill/code_icon.png">
             <p>
               React・Next.jsを用いたモダンなWebサイト制作に対応。デザインカンプを忠実に再現し、レスポンシブ対応や保守性を意識した分かりやすいコーディングを心がけています。

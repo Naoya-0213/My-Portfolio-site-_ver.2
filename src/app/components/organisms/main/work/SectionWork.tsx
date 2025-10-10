@@ -25,7 +25,7 @@ const SectionWork = () => {
     <div>
       <SectionCard title="Works -" subTitle="これまで作成した実績">
         {/* ページネーション */}
-        <div className="mt-10">
+        <div className="">
           <div className="m-auto max-w-4xl">
             <WorkSwiper />
           </div>

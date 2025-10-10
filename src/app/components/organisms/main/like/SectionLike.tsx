@@ -4,10 +4,10 @@ const SectionLike = () => {
   return (
     <div>
       <SectionCard title="Like -" subTitle="好きな事・趣味">
-        <div className="mt-5 px-2 max-[374px]:mt-1">
+        <div className="px-2">
           <div className="m-auto flex max-w-screen-sm flex-col">
             {/* スノーボード */}
-            <div className="flex flex-col gap-3 border-b border-[#d7cdbe] px-3 py-5 sm:flex-row">
+            <div className="flex flex-col gap-3 border-b border-[#d7cdbe] px-3 pb-5 sm:flex-row">
               {/* タイトル */}
               <div className="flex gap-2 sm:min-w-40">
                 <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[#795549]">
