@@ -8,7 +8,7 @@ const SectionAbout = () => {
   return (
     <div>
       <SectionCard title="About Me -" subTitle="私について">
-        <div className="flex flex-col gap-5 pt-8">
+        <div className="flex flex-col gap-5 mt-10">
           <div className="pc:gap-10 m-auto flex max-w-3xl flex-col items-center justify-center gap-5 px-2 sm:flex-row">
             {/* 画像と名前 */}
             <div className="relative flex flex-col items-center sm:w-1/3">

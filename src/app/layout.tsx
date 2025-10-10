@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Oswald } from "next/font/google";
 
+// app/layout.tsx の先頭あたり
+
 import "./styles/_common-css.scss";
 import "./styles/globals.css";
 

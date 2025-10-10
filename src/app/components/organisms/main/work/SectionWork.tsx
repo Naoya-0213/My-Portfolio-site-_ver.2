@@ -1,55 +1,35 @@
-import { PaginatedItems } from "@/app/components/atoms/pagination/PaginatedItems";
+"use client";
+
+import { WorkSwiperSlideData } from "@/const/WorkSwiperSlideData";
+
+import WorkSwiper from "@/app/components/atoms/swiper/WorkSwiper";
 import WorkSwiperSlide from "@/app/components/atoms/work_swiper_slide/WorkSwiperSlide";
 import SectionCard from "@/app/components/molecules/section_card/SectionCard";
 
 const SectionWork = () => {
   // 仮置きデータ
-  const dummyPosts = Array.from({ length: 9 }).map((_, i) => ({
-    id: i + 1,
-    title: `Post Title ${i + 1}`,
-  }));
+  // const dummyPosts = Array.from({ length: 9 }).map((_, i) => ({
+  //   id: i + 1,
+  //   title: `Post Title ${i + 1}`,
+  // }));
 
-  const slides = [
-    // sabolon
+  const slides = WorkSwiperSlideData.map((slide) => (
     <WorkSwiperSlide
-      key={1}
-      pc_img="/img/section_work/sabolon/sabolon-pc.png"
-      sp_img="/img/section_work/sabolon/sabolon-sp.png"
-    />,
-    // oha
-    <WorkSwiperSlide
-      key={2}
-      pc_img="/img/section_work/oha/oha-pc.png"
-      sp_img="/img/section_work/oha/oha.png"
-    />,
-    // onomichi
-    <WorkSwiperSlide
-      key={3}
-      pc_img="/img/section_work/onomichi/onomichi-pc.png"
-      sp_img="/img/section_work/onomichi/onomichi.png"
-    />,
-    // ポートフォリオサイト
-    <WorkSwiperSlide
-      key={4}
-      pc_img="/img/section_work/naoya-portfolio/naoya-portfolio-pc.png"
-      sp_img="/img/section_work/naoya-portfolio/naoya-portfolio.png"
-    />,
-  ];
+      key={slide.id}
+      pc_img={slide.pc_img}
+      sp_img={slide.sp_img}
+    />
+  ));
 
   return (
     <div>
       <SectionCard title="Works -" subTitle="これまで作成した実績">
         {/* ページネーション */}
-        <div className="mt-5">
-          <div>
-            <WorkSwiperSlide
-              pc_img="/img/section_work/naoya-portfolio/naoya-portfolio-pc.png"
-              sp_img="/img/section_work/naoya-portfolio/naoya-portfolio.png"
-            />
+        <div className="mt-10">
+          <div className="m-auto max-w-4xl">
+            <WorkSwiper />
           </div>
         </div>
-
-        <PaginatedItems items={slides} itemsPerPage={3} />
       </SectionCard>
     </div>
   );
