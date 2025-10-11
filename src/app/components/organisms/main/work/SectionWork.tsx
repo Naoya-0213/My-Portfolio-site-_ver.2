@@ -10,7 +10,7 @@ const SectionWork = () => {
         <></>
       </SectionCard>
 
-      <div className="m-auto max-w-[900]">
+      <div className="max-w-[900] m-auto">
         <WorkSwiper />
       </div>
     </div>

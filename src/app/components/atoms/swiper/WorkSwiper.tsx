@@ -3,6 +3,7 @@
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import WorkSwiperSlide from "../work_swiper_slide/WorkSwiperSlide";
 import styles from "./workSwiper.module.scss";
 
 function App() {
@@ -33,27 +34,45 @@ function App() {
         }}
       >
         <SwiperSlide className={styles.slide}>
-          <div>1</div>
+          <WorkSwiperSlide
+            pc_img="/img/section_work/oha/oha-pc.png"
+            sp_img="/img/section_work/oha/oha.png"
+          />
         </SwiperSlide>
 
         <SwiperSlide className={styles.slide}>
-          <div>2</div>
+          <WorkSwiperSlide
+            pc_img="/img/section_work/sabolon/sabolon-pc.png"
+            sp_img="/img/section_work/sabolon/sabolon.png"
+          />
         </SwiperSlide>
 
         <SwiperSlide className={styles.slide}>
-          <div>3</div>
+          <WorkSwiperSlide
+            pc_img="/img/section_work/onomichi/onomichi-pc.png"
+            sp_img="/img/section_work/onomichi/onomichi.png"
+          />
         </SwiperSlide>
 
         <SwiperSlide className={styles.slide}>
-          <div>4</div>
+          <WorkSwiperSlide
+            pc_img="/img/section_work/naoya-portfolio/naoya-portfolio-pc.png"
+            sp_img="/img/section_work/naoya-portfolio/naoya-portfolio.png"
+          />
         </SwiperSlide>
 
         <SwiperSlide className={styles.slide}>
-          <div>5</div>
+          <WorkSwiperSlide
+            pc_img="/img/section_work/naoya-portfolio/naoya-portfolio-pc.png"
+            sp_img="/img/section_work/naoya-portfolio/naoya-portfolio.png"
+          />
         </SwiperSlide>
 
         <SwiperSlide className={styles.slide}>
-          <div>6</div>
+          <WorkSwiperSlide
+            pc_img="/img/section_work/naoya-portfolio/naoya-portfolio-pc.png"
+            sp_img="/img/section_work/naoya-portfolio/naoya-portfolio.png"
+          />
         </SwiperSlide>
       </Swiper>
     </>

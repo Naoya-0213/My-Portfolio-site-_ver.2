@@ -7,7 +7,7 @@ type WorkSwiperSlideProps = {
 
 const WorkSwiperSlide = ({ pc_img, sp_img }: WorkSwiperSlideProps) => {
   return (
-    <div className="pc:w-70 pc:h-52 relative flex h-60 w-80 items-center justify-center rounded-2xl border border-[#795549] bg-[#D7CDBE] p-3 max-[350px]:h-50 max-[350px]:w-60">
+    <div className="relative flex h-52 w-70 items-center justify-center rounded-2xl border border-[#795549] bg-[#D7CDBE] p-3 max-[350px]:h-50 max-[350px]:w-65">
       {/* PC画像 */}
       <div className="pc:w-80 relative aspect-[260/156] w-80">
         <Image
@@ -19,7 +19,7 @@ const WorkSwiperSlide = ({ pc_img, sp_img }: WorkSwiperSlideProps) => {
       </div>
 
       {/* SP画像 */}
-      <div className="pc:w-17 absolute top-25 right-5 aspect-[60/118] w-16 max-[350px]:top-15 max-[350px]:w-15 pc:top-15 pc:right-3">
+      <div className="absolute top-17 right-5 aspect-[60/118] w-16 max-[350px]:top-15 max-[350px]:w-15">
         <Image
           src={sp_img}
           alt="サイトイメージ画像pc"
