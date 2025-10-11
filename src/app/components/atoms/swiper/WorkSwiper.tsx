@@ -55,10 +55,6 @@ function App() {
         <SwiperSlide className={styles.slide}>
           <div>6</div>
         </SwiperSlide>
-
-        {/* <SwiperSlide className={styles.slide}>
-          <div>7</div>
-        </SwiperSlide> */}
       </Swiper>
     </>
   );
