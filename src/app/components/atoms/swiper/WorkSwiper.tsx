@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -34,31 +36,39 @@ function App() {
         }}
       >
         <SwiperSlide className={styles.slide}>
-          <WorkSwiperSlide
-            pc_img="/img/section_work/oha/oha-pc.png"
-            sp_img="/img/section_work/oha/oha.png"
-          />
+          <Link href="/work/oha">
+            <WorkSwiperSlide
+              pc_img="/img/section_work/oha/oha-pc.png"
+              sp_img="/img/section_work/oha/oha.png"
+            />
+          </Link>
         </SwiperSlide>
 
         <SwiperSlide className={styles.slide}>
-          <WorkSwiperSlide
-            pc_img="/img/section_work/sabolon/sabolon-pc.png"
-            sp_img="/img/section_work/sabolon/sabolon.png"
-          />
+          <Link href="/work/sabolon">
+            <WorkSwiperSlide
+              pc_img="/img/section_work/sabolon/sabolon-pc.png"
+              sp_img="/img/section_work/sabolon/sabolon.png"
+            />
+          </Link>
         </SwiperSlide>
 
         <SwiperSlide className={styles.slide}>
-          <WorkSwiperSlide
-            pc_img="/img/section_work/onomichi/onomichi-pc.png"
-            sp_img="/img/section_work/onomichi/onomichi.png"
-          />
+          <Link href="/work/onomichi">
+            <WorkSwiperSlide
+              pc_img="/img/section_work/onomichi/onomichi-pc.png"
+              sp_img="/img/section_work/onomichi/onomichi.png"
+            />
+          </Link>
         </SwiperSlide>
 
         <SwiperSlide className={styles.slide}>
-          <WorkSwiperSlide
-            pc_img="/img/section_work/naoya-portfolio/naoya-portfolio-pc.png"
-            sp_img="/img/section_work/naoya-portfolio/naoya-portfolio.png"
-          />
+          <Link href="/work/portfolio">
+            <WorkSwiperSlide
+              pc_img="/img/section_work/naoya-portfolio/naoya-portfolio-pc.png"
+              sp_img="/img/section_work/naoya-portfolio/naoya-portfolio.png"
+            />
+          </Link>
         </SwiperSlide>
 
         <SwiperSlide className={styles.slide}>
