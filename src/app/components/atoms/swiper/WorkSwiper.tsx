@@ -40,7 +40,9 @@ function App() {
         }}
         modules={[Pagination]}
         pagination={{
-          type: "fraction",
+          clickable: true, // クリック可能にする（任意）
+          el: ".swiper-pagination", // Swiperが自動生成するpagination要素
+          type: "bullets",
         }}
       >
         {WorkSlides.map((s) => {
@@ -57,10 +59,16 @@ function App() {
           );
         })}
 
+        {/* ボタン */}
         <div>
           <SlidePrevButton />
           <SlideNextButton />
         </div>
+
+        {/* TODOページネーション実装 */}
+        <div
+          className={`${styles["swiper_pagination_bullet"]} ${styles["swiper_pagination_bullet_active"]}`}
+        />
       </Swiper>
     </>
   );

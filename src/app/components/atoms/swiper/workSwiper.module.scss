@@ -7,3 +7,20 @@
   justify-content: center;
   align-items: center;
 }
+
+.swiper_pagination_bullet {
+  opacity: 1;
+  width: 12px;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #d7cdbe;
+  margin-inline: calc(11px / 2);
+}
+
+.swiper_pagination_bullet_active {
+  width: 30px;
+  height: 30px;
+  opacity: 1;
+  background-color: #795549; // アクティブ時に茶色にしたい場合
+}
