@@ -1,0 +1,27 @@
+.peekCarousel {
+  position: relative;
+  overflow: hidden;
+  /* padding-inline は基本なし。offsetBefore/After に任せる */
+}
+
+.slide {
+  flex: 0 0 auto; /* ← 超重要：スライドを縮ませない */
+  width: 80vw; /* SP “中央1枚＋両脇チラ見せ” */
+  min-width: 260px;
+  max-width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .slide {
+    width: 280px; /* TB/PCは固定でスナップ安定 */
+    min-width: 280px;
+    max-width: 280px;
+  }
+}
+
+:global(.swiper-slide) {
+  flex: 0 0 auto; /* 念のための保険 */
+}
