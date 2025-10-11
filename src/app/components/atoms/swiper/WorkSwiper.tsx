@@ -1,43 +1,64 @@
 "use client";
 
+import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import "../../../../../node_modules/swiper/swiper.css";
-import { styles } from "../swiper/workSwiper.module.scss";
-
-const data: string[] = ["Slide 1", "Slide 2", "Slide 3", "Slide 4"];
+import styles from "./workSwiper.module.scss";
 
 function App() {
   return (
     <>
       <Swiper
+        slidesPerView="auto"
         spaceBetween={20}
-        slidesPerView={3}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
         loop
+        observer
+        observeParents
+        centeredSlides={true}
+        loopPreventsSliding={false}
+        onInit={(sw) => sw.update()}
+        onResize={(sw) => sw.update()}
         breakpoints={{
           0: {
-            slidesPerView: 1,
+            slidesOffsetBefore: 20,
+            slidesOffsetAfter: 20,
           },
 
           340: {
-            spaceBetween: 24,
-            slidesOffsetBefore: 24,
-            slidesOffsetAfter: 24,
+            slidesOffsetBefore: 0,
+            slidesOffsetAfter: 0,
           },
         }}
       >
-        {data.map((d, index) => (
-          <SwiperSlide key={index}>
-            <div
-              style={{ background: "grey", height: "300px" }}
-              className={styles.slide}
-            >
-              {d}
-            </div>
-          </SwiperSlide>
-        ))}
+        <SwiperSlide className={styles.slide}>
+          <div>1</div>
+        </SwiperSlide>
+
+        <SwiperSlide className={styles.slide}>
+          <div>2</div>
+        </SwiperSlide>
+
+        <SwiperSlide className={styles.slide}>
+          <div>3</div>
+        </SwiperSlide>
+
+        <SwiperSlide className={styles.slide}>
+          <div>4</div>
+        </SwiperSlide>
+
+        <SwiperSlide className={styles.slide}>
+          <div>5</div>
+        </SwiperSlide>
+
+        <SwiperSlide className={styles.slide}>
+          <div>6</div>
+        </SwiperSlide>
+
+        {/* <SwiperSlide className={styles.slide}>
+          <div>7</div>
+        </SwiperSlide> */}
       </Swiper>
     </>
   );

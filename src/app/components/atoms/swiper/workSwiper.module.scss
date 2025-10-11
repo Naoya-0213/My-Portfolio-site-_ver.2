@@ -1,6 +1,9 @@
 .slide {
-  // min-width: 260px;
-  max-width: 320px;
+  background-color: #d7cdbe;
+  width: 300px;
+  height: 240px;
+
+  flex: 0 0 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,5 +12,13 @@
 @media (min-width: 768px) {
   .slide {
     max-width: 280px;
+    flex-basis: 280px;
+  }
+}
+
+@media (max-width: 339px) {
+  .slide {
+    width: calc(100vw - 40px);
+    flex-basis: calc(100vw - 40px);
   }
 }
