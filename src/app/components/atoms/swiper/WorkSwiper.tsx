@@ -4,9 +4,12 @@ import Link from "next/link";
 
 import { WorkSlides } from "@/const/WorkSlides";
 import "swiper/css";
+import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import WorkSwiperSlide from "../work_swiper_slide/WorkSwiperSlide";
+import { SlideNextButton } from "./swiper_button/SlideNextButton";
+import { SlidePrevButton } from "./swiper_button/SlidePrevButton";
 import styles from "./workSwiper.module.scss";
 
 function App() {
@@ -35,6 +38,10 @@ function App() {
             slidesOffsetAfter: 0,
           },
         }}
+        modules={[Pagination]}
+        pagination={{
+          type: "fraction",
+        }}
       >
         {WorkSlides.map((s) => {
           return (
@@ -49,6 +56,11 @@ function App() {
             </SwiperSlide>
           );
         })}
+
+        <div>
+          <SlidePrevButton />
+          <SlideNextButton />
+        </div>
       </Swiper>
     </>
   );

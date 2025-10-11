@@ -31,21 +31,21 @@ export const WorkSlides: WorkSlides[] = [
   {
     id: "portfolio",
     href: "/work/portfolio",
-    pc_img: "/img/section_work/naoya-portfolio/naoya-portfolio-pc.png",
-    sp_img: "/img/section_work/naoya-portfolio/naoya-portfolio.png",
+    pc_img: "/img/section_work/portfolio/portfolio-pc.png",
+    sp_img: "/img/section_work/portfolio/portfolio.png",
   },
   // TODO がまん貯金追加！
   {
     id: "money_mindful",
     href: "/work/money_mindful",
-    pc_img: "/img/section_work/naoya-portfolio/naoya-portfolio-pc.png",
-    sp_img: "/img/section_work/naoya-portfolio/naoya-portfolio.png",
+    pc_img: "/img/section_work/portfolio/portfolio-pc.png",
+    sp_img: "/img/section_work/portfolio/portfolio.png",
   },
   // coming soon
   {
     id: "coming_soon",
     // href: "",
-    pc_img: "/img/section_work/naoya-portfolio/naoya-portfolio-pc.png",
-    sp_img: "/img/section_work/naoya-portfolio/naoya-portfolio.png",
+    pc_img: "/img/section_work/coming_soon/coming_soon-pc.png",
+    sp_img: "/img/section_work/coming_soon/coming_soon.png",
   },
 ];
