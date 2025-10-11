@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 
+import { WorkSlides } from "@/const/WorkSlides";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -35,7 +36,21 @@ function App() {
           },
         }}
       >
-        <SwiperSlide className={styles.slide}>
+        {WorkSlides.map((s) => {
+          return (
+            <SwiperSlide className={styles.slide} key={s.id}>
+              {s.href ? (
+                <Link href={s.href}>
+                  <WorkSwiperSlide pc_img={s.pc_img} sp_img={s.sp_img} />
+                </Link>
+              ) : (
+                <WorkSwiperSlide pc_img={s.pc_img} sp_img={s.sp_img} />
+              )}
+            </SwiperSlide>
+          );
+        })}
+
+        {/* <SwiperSlide className={styles.slide}>
           <Link href="/work/oha">
             <WorkSwiperSlide
               pc_img="/img/section_work/oha/oha-pc.png"
@@ -83,7 +98,7 @@ function App() {
             pc_img="/img/section_work/naoya-portfolio/naoya-portfolio-pc.png"
             sp_img="/img/section_work/naoya-portfolio/naoya-portfolio.png"
           />
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
     </>
   );
