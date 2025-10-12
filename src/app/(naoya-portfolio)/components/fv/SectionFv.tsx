@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import styles from "@/app/components/organisms/main/fv/fv.module.scss";
+import styles from "./fv.module.scss";
 
 const SectionFv = () => {
   return (

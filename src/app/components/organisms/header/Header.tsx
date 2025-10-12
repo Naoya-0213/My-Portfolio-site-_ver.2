@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 import Image from "next/image";
 
-import { NAV, SNS } from "@/app/constants/nav";
+import { NAV, SNS } from "@/const/nav";
 import { useMedia } from "@/app/hooks/useMedia";
 
 import HamburgerButton from "../../atoms/hamburger_buttton/HamburgerButton";

@@ -1,12 +1,13 @@
 import ItemCard from "@/app/components/molecules/section_card/itemcard/ItemCard";
 
-import SectionCard from "../../../molecules/section_card/SectionCard";
+import SectionCard from "../../../components/molecules/section_card/SectionCard";
 
 const SectionSkill = () => {
   return (
     <div>
       <SectionCard title="Skill -" subTitle="今の私に出来る事">
         <div className="pc:flex-row pc:grid pc:grid-cols-3 flex flex-col gap-5 px-2 max-[374px]:gap-0">
+          {/* TODO 12-16をコンポ化 */}
           <ItemCard title="Web制作" icon="/img/section_skill/code_icon.png">
             <p>
               React・Next.jsを用いたモダンなWebサイト制作に対応。デザインカンプを忠実に再現し、レスポンシブ対応や保守性を意識した分かりやすいコーディングを心がけています。
