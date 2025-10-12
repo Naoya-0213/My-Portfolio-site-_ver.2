@@ -8,19 +8,40 @@
   align-items: center;
 }
 
-.swiper_pagination_bullet {
-  opacity: 1;
-  width: 12px;
-  height: auto;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: #d7cdbe;
-  margin-inline: calc(11px / 2);
+// .swiper_pagination_bullet {
+//   opacity: 1;
+//   width: 12px;
+//   height: auto;
+//   aspect-ratio: 1;
+//   border-radius: 50%;
+//   background: #d7cdbe;
+//   margin-inline: calc(11px / 2);
+// }
+
+// .swiper_pagination_bullet_active {
+//   width: 30px;
+//   height: 30px;
+//   opacity: 1;
+//   background-color: #795549; // アクティブ時に茶色にしたい場合
+// }
+
+/* 器の位置 */
+:global(.swiper-pagination.swiper-pagination-horizontal) {
+  bottom: 8px;
 }
 
-.swiper_pagination_bullet_active {
-  width: 30px;
-  height: 30px;
+/* 通常のドット */
+:global(.swiper-pagination-bullet) {
   opacity: 1;
-  background-color: #795549; // アクティブ時に茶色にしたい場合
+  width: 12px;
+  height: 12px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: #d7cdbe;
+  margin-inline: 5.5px;
+}
+
+/* アクティブのドット */
+:global(.swiper-pagination-bullet-active) {
+  background: #795549;
 }

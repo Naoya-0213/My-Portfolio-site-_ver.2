@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import { WorkSlides } from "@/const/WorkSlides";
 import "swiper/css";
+import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -41,7 +42,8 @@ function App() {
         modules={[Pagination]}
         pagination={{
           clickable: true, // クリック可能にする（任意）
-          el: ".swiper-pagination", // Swiperが自動生成するpagination要素
+          el: ".swiper-pagination",
+          // Swiperが自動生成するpagination要素
           type: "bullets",
         }}
       >
@@ -58,6 +60,8 @@ function App() {
             </SwiperSlide>
           );
         })}
+        {/* TODOページネーション実装 */}
+        <div className="swiper-pagination" />
 
         {/* ボタン */}
         <div>
@@ -65,10 +69,9 @@ function App() {
           <SlideNextButton />
         </div>
 
-        {/* TODOページネーション実装 */}
-        <div
+        {/* <div
           className={`${styles["swiper_pagination_bullet"]} ${styles["swiper_pagination_bullet_active"]}`}
-        />
+        /> */}
       </Swiper>
     </>
   );
