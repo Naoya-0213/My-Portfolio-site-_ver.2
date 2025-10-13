@@ -26,3 +26,7 @@
 .is_lock {
   overflow: hidden;
 }
+
+html {
+  scroll-behavior: smooth;
+}

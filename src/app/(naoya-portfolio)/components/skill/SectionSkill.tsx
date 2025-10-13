@@ -5,7 +5,7 @@ import SectionCard from "../../../components/molecules/section_card/SectionCard"
 const SectionSkill = () => {
   return (
     <div>
-      <SectionCard title="Skill -" subTitle="今の私に出来る事">
+      <SectionCard title="Skill -" subTitle="今の私に出来る事" id="skill">
         <div className="pc:flex-row pc:grid pc:grid-cols-3 flex flex-col gap-5 px-2 max-[374px]:gap-0">
           {/* TODO 12-16をコンポ化 */}
           <ItemCard title="Web制作" icon="/img/section_skill/code_icon.png">

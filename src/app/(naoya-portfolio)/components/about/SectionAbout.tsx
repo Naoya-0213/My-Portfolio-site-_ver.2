@@ -7,7 +7,7 @@ import SectionAboutModal from "./SectionAboutModal";
 const SectionAbout = () => {
   return (
     <div>
-      <SectionCard title="About Me -" subTitle="私について">
+      <SectionCard id="about" title="About Me -" subTitle="私について">
         <div className="flex flex-col gap-5">
           <div className="pc:gap-10 m-auto flex max-w-3xl flex-col items-center justify-center gap-5 px-2 sm:flex-row">
             {/* 画像と名前 */}

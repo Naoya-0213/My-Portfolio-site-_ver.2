@@ -3,7 +3,7 @@ import SectionCard from "@/app/components/molecules/section_card/SectionCard";
 const SectionLike = () => {
   return (
     <div>
-      <SectionCard title="Like -" subTitle="好きな事・趣味">
+      <SectionCard title="Like -" subTitle="好きな事・趣味" id="like">
         <div className="px-2">
           <div className="m-auto flex max-w-screen-sm flex-col">
             {/* スノーボード */}

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { WorkSlides } from "@/const/WorkSlides";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
+import { Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import WorkSwiperSlide from "../../../../components/atoms/work_swiper_slide/WorkSwiperSlide";
@@ -39,12 +39,16 @@ function App() {
             slidesOffsetAfter: 0,
           },
         }}
-        modules={[Pagination, Navigation]}
+        modules={[Pagination, Navigation, Keyboard]}
         pagination={{
           clickable: true, // クリック可能にする（任意）
           el: ".swiper-pagination",
           // Swiperが自動生成するpagination要素
           type: "bullets",
+        }}
+        keyboard={{
+          enabled: true, // ← キーボード操作を有効化
+          onlyInViewport: true, // ← スライダーが画面内にあるときのみ有効
         }}
         navigation={{ prevEl: ".work-prev", nextEl: ".work-next" }}
       >

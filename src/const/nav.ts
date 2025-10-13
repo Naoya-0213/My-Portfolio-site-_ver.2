@@ -11,9 +11,14 @@ export const NAV = [
   },
   { href: "#work", label: "Work -", icon: "/img/icon/work/pc_icon-brown.png" },
   {
-    href: "#about-me",
+    href: "#about",
     label: "About me -",
     icon: "/img/icon/about-me/user_icon-brown.png",
+  },
+  {
+    href: "#like",
+    label: "Like -",
+    icon: "/img/icon/camera/camera.png",
   },
   {
     href: "#contact",

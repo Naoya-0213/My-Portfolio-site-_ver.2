@@ -9,11 +9,12 @@ import styles from "./work.module.scss";
 
 const SectionWork = () => {
   return (
-    <div className="relative">
+    <div>
       <SectionCard
         title="Works -"
         subTitle="これまで作成した実績"
         contentClassName="!mt-0"
+        id="work"
       >
         <></>
       </SectionCard>
