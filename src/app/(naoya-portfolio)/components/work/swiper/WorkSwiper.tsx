@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-import { WorkSlides } from "@/const/WorkSlides";
+import { workSlides } from "@/const/workSlides";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Keyboard, Navigation, Pagination } from "swiper/modules";
@@ -52,7 +52,7 @@ function App() {
         }}
         navigation={{ prevEl: ".work-prev", nextEl: ".work-next" }}
       >
-        {WorkSlides.map((s) => {
+        {workSlides.map((s) => {
           return (
             <SwiperSlide className={styles.slide} key={s.id}>
               {s.href ? (

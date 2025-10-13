@@ -1,11 +1,11 @@
-export type WorkSlides = {
+export type workSlides = {
   id: string;
   href?: string;
   pc_img: string;
   sp_img: string;
 };
 
-export const WorkSlides: WorkSlides[] = [
+export const workSlides: workSlides[] = [
   // sabolon
   {
     id: "sabolon",
