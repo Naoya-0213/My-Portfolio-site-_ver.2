@@ -79,7 +79,7 @@ const SectionFv = () => {
                 </a>
 
                 {/* menu4：About me */}
-                <a href="#about-me" className={styles.nav__link_pc}>
+                <a href="#about" className={styles.nav__link_pc}>
                   <div className={styles.nav__link_wrapper_pc}>
                     <Image
                       src="/img/icon/about-me/user_icon-brown.png"
