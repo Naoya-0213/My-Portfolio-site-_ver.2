@@ -5,7 +5,7 @@ import Link from "next/link";
 import { WorkSlides } from "@/const/WorkSlides";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import WorkSwiperSlide from "../work_swiper_slide/WorkSwiperSlide";
@@ -39,13 +39,15 @@ function App() {
             slidesOffsetAfter: 0,
           },
         }}
-        modules={[Pagination]}
+        modules={[Pagination, Navigation]}
         pagination={{
           clickable: true, // クリック可能にする（任意）
           el: ".swiper-pagination",
           // Swiperが自動生成するpagination要素
           type: "bullets",
         }}
+        navigation={{ prevEl: ".work-prev", nextEl: ".work-next" }}
+        className="pt-5"
       >
         {WorkSlides.map((s) => {
           return (
@@ -60,18 +62,17 @@ function App() {
             </SwiperSlide>
           );
         })}
-        {/* TODOページネーション実装 */}
-        <div className="swiper-pagination" />
 
-        {/* ボタン */}
-        <div>
-          <SlidePrevButton />
-          <SlideNextButton />
+        <div className="relative z-1000 hidden items-center justify-center gap-3 sm:flex">
+          <div className="work-prev absolute -top-75 right-20">
+            <SlidePrevButton />
+          </div>
+          <div className="work-next absolute -top-75 right-10">
+            <SlideNextButton />
+          </div>
         </div>
-
-        {/* <div
-          className={`${styles["swiper_pagination_bullet"]} ${styles["swiper_pagination_bullet_active"]}`}
-        /> */}
+        {/* TODOページネーション実装 */}
+        <div className="swiper-pagination z-1000" />
       </Swiper>
     </>
   );

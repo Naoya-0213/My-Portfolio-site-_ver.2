@@ -2,9 +2,15 @@ type SectionCardProps = {
   title: string;
   subTitle: string;
   children: React.ReactNode;
+  contentClassName?: string;
 };
 
-const SectionCard = ({ title, subTitle, children }: SectionCardProps) => {
+const SectionCard = ({
+  title,
+  subTitle,
+  children,
+  contentClassName = "",
+}: SectionCardProps) => {
   return (
     <div className="pc:px-10 m-auto max-w-[1160px] px-5 max-[374px]:px-2">
       {/* タイトル */}
@@ -16,7 +22,9 @@ const SectionCard = ({ title, subTitle, children }: SectionCardProps) => {
       </div>
 
       {/* コンテンツ */}
-      <div className="common_font_size mt-5 sm:mt-10">{children}</div>
+      <div className={`common_font_size mt-5 sm:mt-10 ${contentClassName}`}>
+        {children}
+      </div>
     </div>
   );
 };

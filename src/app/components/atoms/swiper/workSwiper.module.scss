@@ -1,11 +1,14 @@
 .slide {
   width: 280px;
-  height: 240px;
-
+  height: 280px;
   flex: 0 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 640px) {
+    height: 300px;
+  }
 }
 
 // .swiper_pagination_bullet {
@@ -27,7 +30,7 @@
 
 /* 器の位置 */
 :global(.swiper-pagination.swiper-pagination-horizontal) {
-  bottom: 8px;
+  bottom: -5px;
 }
 
 /* 通常のドット */
