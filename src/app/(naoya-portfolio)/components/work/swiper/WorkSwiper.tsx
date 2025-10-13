@@ -8,14 +8,14 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import WorkSwiperSlide from "../work_swiper_slide/WorkSwiperSlide";
+import WorkSwiperSlide from "../../../../components/atoms/work_swiper_slide/WorkSwiperSlide";
 import { SlideNextButton } from "./swiper_button/SlideNextButton";
 import { SlidePrevButton } from "./swiper_button/SlidePrevButton";
 import styles from "./workSwiper.module.scss";
 
 function App() {
   return (
-    <>
+    <div className="">
       <Swiper
         slidesPerView="auto"
         spaceBetween={20}
@@ -47,7 +47,6 @@ function App() {
           type: "bullets",
         }}
         navigation={{ prevEl: ".work-prev", nextEl: ".work-next" }}
-        className="pt-5"
       >
         {WorkSlides.map((s) => {
           return (
@@ -71,10 +70,10 @@ function App() {
             <SlideNextButton />
           </div>
         </div>
-        {/* TODOページネーション実装 */}
+
         <div className="swiper-pagination z-1000" />
       </Swiper>
-    </>
+    </div>
   );
 }
 

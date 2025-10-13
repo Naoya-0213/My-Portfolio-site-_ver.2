@@ -1,11 +1,15 @@
 "use client";
 
-import WorkSwiper from "@/app/components/atoms/swiper/WorkSwiper";
+import Image from "next/image";
+
+import WorkSwiper from "@/app/(naoya-portfolio)/components/work/swiper/WorkSwiper";
 import SectionCard from "@/app/components/molecules/section_card/SectionCard";
+
+import styles from "./work.module.scss";
 
 const SectionWork = () => {
   return (
-    <div>
+    <div className="relative">
       <SectionCard
         title="Works -"
         subTitle="これまで作成した実績"
@@ -14,8 +18,17 @@ const SectionWork = () => {
         <></>
       </SectionCard>
 
-      <div className="m-auto max-w-[900px]">
+      <div className="relative m-auto max-w-[900px]">
         <WorkSwiper />
+
+        {/* デコレーション */}
+        <div className={styles.decoration}>
+          <Image
+            src="/img/section_work/icon/icon-click.png"
+            alt="デコレーション"
+            fill
+          />
+        </div>
       </div>
     </div>
   );
