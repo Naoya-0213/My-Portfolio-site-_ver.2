@@ -4,6 +4,8 @@
 // ESLint のルール (import/no-anonymous-default-export) に従うため、
 // 設定オブジェクトを `config` 変数に代入してから export
 
+// より小さい画面は、max-[350px]:　で表現
+
 const config = {
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
