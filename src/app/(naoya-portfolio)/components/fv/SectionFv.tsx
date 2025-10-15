@@ -36,8 +36,6 @@ const SectionFv = () => {
               />
             </div>
 
-            {/*  */}
-
             {/* pc）nav */}
             <div className={styles.fv__menu__nav_pc}>
               <nav className={styles.nav_pc}>

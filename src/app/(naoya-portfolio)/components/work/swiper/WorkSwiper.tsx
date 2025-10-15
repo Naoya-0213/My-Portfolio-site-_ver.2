@@ -5,7 +5,7 @@ import Link from "next/link";
 import { workSlides } from "@/const/workSlides";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Keyboard, Pagination } from "swiper/modules";
+import { Autoplay, Keyboard, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import WorkSwiperSlide from "../../../../components/atoms/work_swiper_slide/WorkSwiperSlide";
@@ -39,7 +39,7 @@ function WorkSwiper() {
             slidesOffsetAfter: 0,
           },
         }}
-        modules={[Pagination, Keyboard]}
+        modules={[Pagination, Keyboard, Autoplay]}
         pagination={{
           clickable: true, // クリック可能にする（任意）
           el: ".swiper-pagination",
@@ -50,6 +50,7 @@ function WorkSwiper() {
           enabled: true, // ← キーボード操作を有効化
           onlyInViewport: true, // ← スライダーが画面内にあるときのみ有効
         }}
+        autoplay={{ delay: 3000, disableOnInteraction: true }}
       >
         {workSlides.map((s) => {
           return (
