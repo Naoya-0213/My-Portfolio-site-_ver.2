@@ -1,5 +1,11 @@
+import WorkSectionCard from "../components/WorkSectionCard";
+
 const page = () => {
-  return <div>page</div>;
+  return (
+    <div>
+      <WorkSectionCard />
+    </div>
+  );
 };
 
 export default page;

@@ -1,4 +1,4 @@
-// 学習した内容一覧
+// About Me セクション：モーダル（これまで学習した内容）
 
 export const LearningHistory = [
   {

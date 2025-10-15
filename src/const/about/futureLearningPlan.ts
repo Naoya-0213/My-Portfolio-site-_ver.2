@@ -1,4 +1,4 @@
-// TODO 内容の理解
+// About Me セクション：モーダル（これから学習したい内容）
 
 export const FutureLearningPlan = [
   {

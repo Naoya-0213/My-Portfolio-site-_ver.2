@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-import { FutureLearningPlan } from "@/const/futureLearningPlan";
-import { LearningHistory } from "@/const/learningHistory";
+import { FutureLearningPlan } from "@/const/about/futureLearningPlan";
+import { LearningHistory } from "@/const/about/learningHistory";
 
 import ButtonBrown from "@/app/components/atoms/button/ButtonBrown";
 import Modal from "@/app/components/atoms/modal/Modal";

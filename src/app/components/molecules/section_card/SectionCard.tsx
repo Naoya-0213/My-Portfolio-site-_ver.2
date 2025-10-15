@@ -19,8 +19,8 @@ const SectionCard = ({
       id={id}
     >
       {/* タイトル */}
-      <div className="flex flex-col">
-        <h2 className="font-[Oswald,serif] text-2xl font-bold max-[374px]:text-xl">
+      <div className="flex flex-col gap-1">
+        <h2 className="pc:text-3xl font-[Oswald,serif] text-2xl font-bold max-[374px]:text-xl">
           {title}
         </h2>
         <p className="common_font_size">{subTitle}</p>
