@@ -1,9 +1,11 @@
+import { portfolioContents } from "@/const/work/portfolioContents";
+
 import WorkSectionCard from "../components/WorkSectionCard";
 
 const page = () => {
   return (
     <div>
-      <WorkSectionCard />
+      <WorkSectionCard data={portfolioContents} />
     </div>
   );
 };
