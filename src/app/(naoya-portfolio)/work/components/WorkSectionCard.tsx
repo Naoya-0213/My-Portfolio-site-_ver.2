@@ -17,7 +17,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
           <div></div>
 
           {/* タイトル */}
-          <header className="pc:justify-center mb-5 flex items-center gap-5 max-[350px]:flex-col max-[350px]:items-start max-[350px]:gap-2">
+          <header className="pc:mb-10 m-auto mb-5 flex max-w-2xl items-center gap-5 max-[350px]:flex-col max-[350px]:items-start max-[350px]:gap-2">
             {badge && (
               <span className="h-fit w-fit rounded-2xl bg-[#795549] px-4 py-1 text-xs text-[#f3f0eb]">
                 {badge}
@@ -28,10 +28,17 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
             </h3>
           </header>
 
-          <dl className="space-y-6">
+          {/* 詳細 */}
+
+          <dl className="m-auto max-w-2xl space-y-6">
             {sections.map((s) => (
-              <div key={s.label} className="grid grid-cols-[7rem_1fr] gap-4">
-                <dt className="font-semibold text-[#8B5E3C]">{s.label}</dt>
+              <div
+                key={s.label}
+                className="pc:flex-row flex flex-col gap-2 border-b border-[#d7cdbe] px-2 pb-5"
+              >
+                <dt className="pc:min-w-32 font-semibold text-[#8B5E3C]">
+                  {s.label}
+                </dt>
                 <dd className="leading-relaxed">{s.value}</dd>
               </div>
             ))}

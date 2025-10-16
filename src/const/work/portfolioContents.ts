@@ -21,8 +21,6 @@ export const portfolioContents: WorkContentsData = {
       value:
         "転職活動において書類選考の通過を目指し、採用担当者の方々に向けて実績や今後の学習計画をしっかりと示すことで、実務未経験であっても自分のポテンシャルを感じていただけるようにしたい。",
     },
-    { label: "", value: "" },
-    { label: "", value: "" },
   ],
   scope: [
     "サイトデザイン作成",
