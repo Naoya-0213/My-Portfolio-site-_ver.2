@@ -1,0 +1,14 @@
+@use "../../../styles/breakpoints";
+@use "../../../styles/common-css";
+
+
+// wordセクション内詳細コンテンツの共通css
+.work_contents {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include breakpoints.mq(pc) {
+    flex-direction: row;
+  }
+}

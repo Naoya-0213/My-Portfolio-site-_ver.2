@@ -1,5 +1,6 @@
 import SectionCard from "@/app/components/molecules/section_card/SectionCard";
 
+import styles from "../components/workSection.module.scss";
 import type { WorkContentsData } from "../types/types";
 
 type WorkSectionCardProps = {
@@ -29,12 +30,11 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
           </header>
 
           {/* 詳細 */}
-
-          <dl className="m-auto max-w-2xl space-y-6">
+          <dl className="m-auto max-w-2xl space-y-7">
             {sections.map((s) => (
               <div
                 key={s.label}
-                className="pc:flex-row flex flex-col gap-2 border-b border-[#d7cdbe] px-2 pb-5"
+                className={`${styles.work_contents} border-b border-[#d7cdbe] px-2 pb-7`}
               >
                 <dt className="pc:min-w-32 font-semibold text-[#8B5E3C]">
                   {s.label}
@@ -43,22 +43,33 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
               </div>
             ))}
 
+            {/* 担当領域 */}
             {scope?.length ? (
-              <div className="grid grid-cols-[7rem_1fr] gap-4">
-                <dt className="font-semibold text-[#8B5E3C]">担当領域</dt>
-                <dd className="flex flex-wrap gap-2">
+              <div
+                className={`${styles.work_contents} border-b border-[#d7cdbe] px-2 pb-7`}
+              >
+                <dt className="pc:min-w-32 font-semibold text-[#8B5E3C]">
+                  担当領域
+                </dt>
+                <dd>
                   {scope.map((t) => (
-                    <span key={t} className="rounded border px-2 py-1 text-sm">
+                    <span key={t} className="leading-relaxed">
                       {t}
+                      <br />
                     </span>
                   ))}
                 </dd>
               </div>
             ) : null}
 
+            {/* 使用技術 */}
             {tech?.length ? (
-              <div className="grid grid-cols-[7rem_1fr] gap-4">
-                <dt className="font-semibold text-[#8B5E3C]">技術</dt>
+              <div
+                className={`${styles.work_contents} border-b border-[#d7cdbe] px-2 pb-7`}
+              >
+                <dt className="pc:min-w-32 font-semibold text-[#8B5E3C]">
+                  技術
+                </dt>
                 <dd className="flex flex-wrap gap-2">
                   {tech.map((t) => (
                     <span
@@ -72,9 +83,12 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
               </div>
             ) : null}
 
+            {/* リンク */}
             {links?.length ? (
-              <div className="grid grid-cols-[7rem_1fr] gap-4">
-                <dt className="font-semibold text-[#8B5E3C]">リンク</dt>
+              <div className="flex gap-2 px-2 pb-5">
+                <dt className="pc:min-w-32 font-semibold text-[#8B5E3C]">
+                  リンク
+                </dt>
                 <dd className="flex flex-wrap gap-3">
                   {links.map((l) => (
                     <a
