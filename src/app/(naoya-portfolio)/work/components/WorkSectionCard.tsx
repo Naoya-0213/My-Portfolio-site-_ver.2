@@ -37,11 +37,30 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
                 className={`${styles.work_contents} border-b border-[#d7cdbe] px-2 pb-7`}
               >
                 <dt className={`${styles.contents_label} `}>{s.label}</dt>
-                <dd className="leading-relaxed">{s.value}</dd>
+                <dd className="leading-relaxed whitespace-pre-line">
+                  {s.value}
+                </dd>
               </div>
             ))}
 
             {/* 担当領域 */}
+            {scope?.length ? (
+              <div
+                className={`${styles.work_contents} border-b border-[#d7cdbe] px-2 pb-7`}
+              >
+                <dt className={`${styles.contents_label} `}>担当領域</dt>
+                <dd>
+                  {scope.map((t) => (
+                    <span key={t} className="leading-relaxed">
+                      {t}
+                      <br />
+                    </span>
+                  ))}
+                </dd>
+              </div>
+            ) : null}
+
+            {/* 制作期間 */}
             {scope?.length ? (
               <div
                 className={`${styles.work_contents} border-b border-[#d7cdbe] px-2 pb-7`}

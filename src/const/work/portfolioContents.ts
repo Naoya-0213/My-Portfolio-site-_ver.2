@@ -7,8 +7,7 @@ export const portfolioContents: WorkContentsData = {
   sections: [
     {
       label: "概要",
-      value:
-        "転職活動および実績掲載を目的としたポートフォリオサイトとして、デザイン設計からコーディング、デプロイまで一貫して自作。これまでに学んだ技術を応用し、動きや配色、余白などの細部までこだわりながら、見る人に自分の世界観や制作姿勢が伝わるサイトを目指して制作。",
+      value: `転職活動および実績掲載を目的としたポートフォリオサイトとして、デザイン設計からコーディング、デプロイまで一貫して自作。学んだ技術を応用し、動きや配色、余白など細部までこだわりながら、自分の世界観と制作姿勢を表現した。\n\n2025年10月には ver.2 として、HTML / CSS ベースで構築していた既存サイトを Next.js × React で再構築。`,
     },
     { label: "ターゲット", value: "企業の採用担当者の方々" },
     {
@@ -28,7 +27,22 @@ export const portfolioContents: WorkContentsData = {
     "サーバー取得/サイト公開",
     "サイト更新＆修正",
   ],
+  duration: [
+    {
+      label: "サイトデザイン作成",
+      value: "",
+    },
+    {
+      label: "コーディング",
+      value: "",
+    },
+    {
+      label: "サーバー取得/サイト公開",
+      value: "サイト更新＆修正",
+    },
+  ],
   tech: ["Next.js", "React", "TypeScript", "Tailwind", "Sass", "Swiper"],
+  tools: [],
   github: [
     {
       label: "https://github.com/Naoya-0213/My-Portfolio-site-_ver.2",
