@@ -36,17 +36,3 @@ export const portfolioContents: WorkContentsData = {
     },
   ],
 };
-
-// export const portfolioContents: WorkContentsData = {
-//   id: "portfolio",
-//   title: "ポートフォリオサイト",
-//   badge: "個人制作",
-//   sections: [
-//     { label: "", value: "" },
-//     { label: "", value: "" },
-//     { label: "", value: "" },
-//   ],
-//   scope: [],
-//   tech: [],
-//   links: [{ label: "", href: "" }],
-// };

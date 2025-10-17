@@ -15,9 +15,7 @@ const SectionWork = () => {
         <></>
       </SectionCard>
 
-      <div className="relative m-auto max-w-[900px]">
-        <WorkSwiper />
-      </div>
+      <WorkSwiper />
     </div>
   );
 };
