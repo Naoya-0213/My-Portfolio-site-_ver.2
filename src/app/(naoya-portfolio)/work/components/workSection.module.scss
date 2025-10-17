@@ -1,7 +1,6 @@
 @use "../../../styles/breakpoints";
 @use "../../../styles/common-css";
 
-
 // wordセクション内詳細コンテンツの共通css
 .work_contents {
   display: flex;
@@ -10,5 +9,14 @@
 
   @include breakpoints.mq(pc) {
     flex-direction: row;
+  }
+}
+
+.contents_label {
+  font-weight: 600;
+  color: #8b5e3c;
+
+  @include breakpoints.mq(pc) {
+    min-width: 128px;
   }
 }

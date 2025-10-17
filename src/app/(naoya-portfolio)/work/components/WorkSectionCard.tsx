@@ -36,9 +36,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
                 key={s.label}
                 className={`${styles.work_contents} border-b border-[#d7cdbe] px-2 pb-7`}
               >
-                <dt className="pc:min-w-32 font-semibold text-[#8B5E3C]">
-                  {s.label}
-                </dt>
+                <dt className={`${styles.contents_label} `}>{s.label}</dt>
                 <dd className="leading-relaxed">{s.value}</dd>
               </div>
             ))}
@@ -48,9 +46,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
               <div
                 className={`${styles.work_contents} border-b border-[#d7cdbe] px-2 pb-7`}
               >
-                <dt className="pc:min-w-32 font-semibold text-[#8B5E3C]">
-                  担当領域
-                </dt>
+                <dt className={`${styles.contents_label} `}>担当領域</dt>
                 <dd>
                   {scope.map((t) => (
                     <span key={t} className="leading-relaxed">
@@ -67,9 +63,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
               <div
                 className={`${styles.work_contents} border-b border-[#d7cdbe] px-2 pb-7`}
               >
-                <dt className="pc:min-w-32 font-semibold text-[#8B5E3C]">
-                  技術
-                </dt>
+                <dt className={`${styles.contents_label} `}>技術</dt>
                 <dd className="flex flex-wrap gap-2">
                   {tech.map((t) => (
                     <span
@@ -85,10 +79,8 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
 
             {/* リンク */}
             {links?.length ? (
-              <div className="flex gap-2 px-2 pb-5">
-                <dt className="pc:min-w-32 font-semibold text-[#8B5E3C]">
-                  リンク
-                </dt>
+              <div className={`${styles.work_contents} px-2 pb-7`}>
+                <dt className={`${styles.contents_label}`}>リンク</dt>
                 <dd className="flex flex-wrap gap-3">
                   {links.map((l) => (
                     <a
