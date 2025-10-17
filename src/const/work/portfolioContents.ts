@@ -29,9 +29,17 @@ export const portfolioContents: WorkContentsData = {
     "サイト更新＆修正",
   ],
   tech: ["Next.js", "React", "TypeScript", "Tailwind", "Sass", "Swiper"],
+  github: [
+    {
+      label: "https://github.com/Naoya-0213/My-Portfolio-site-_ver.2",
+      href: "https://github.com/Naoya-0213/My-Portfolio-site-_ver.2",
+    },
+  ],
+
+  // TODO リンク更新
   links: [
     {
-      label: "GitHub",
+      label: "https://github.com/Naoya-0213/My-Portfolio-site-_ver.2",
       href: "https://github.com/Naoya-0213/My-Portfolio-site-_ver.2",
     },
   ],

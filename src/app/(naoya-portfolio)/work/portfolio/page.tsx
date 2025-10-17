@@ -9,7 +9,6 @@ const PortfolioPage = () => {
     <div className="flex flex-col gap-5">
       <WorkSectionCard data={portfolioContents} />
 
-      {/* TODO　調整 */}
       <OtherWorks />
     </div>
   );

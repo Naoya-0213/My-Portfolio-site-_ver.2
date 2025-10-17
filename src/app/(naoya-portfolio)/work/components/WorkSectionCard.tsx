@@ -8,7 +8,7 @@ type WorkSectionCardProps = {
 };
 
 const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
-  const { title, badge, sections, scope, tech, links } = data;
+  const { title, badge, sections, scope, tech, github, links } = data;
 
   return (
     <div className="mt-5 px-2">
@@ -77,12 +77,34 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
               </div>
             ) : null}
 
-            {/* リンク */}
+            {/* サイトURL */}
             {links?.length ? (
-              <div className={`${styles.work_contents} px-2 pb-7`}>
+              <div
+                className={`${styles.work_contents} border-b border-[#d7cdbe] px-2 pb-7`}
+              >
                 <dt className={`${styles.contents_label}`}>リンク</dt>
                 <dd className="flex flex-wrap gap-3">
                   {links.map((l) => (
+                    <a
+                      key={l.href}
+                      href={l.href}
+                      className="underline"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {l.label}
+                    </a>
+                  ))}
+                </dd>
+              </div>
+            ) : null}
+
+            {/* GitHub */}
+            {github?.length ? (
+              <div className={`${styles.work_contents} px-2 pb-7`}>
+                <dt className={`${styles.contents_label}`}>GitHub</dt>
+                <dd className="flex flex-wrap gap-3">
+                  {github.map((l) => (
                     <a
                       key={l.href}
                       href={l.href}
