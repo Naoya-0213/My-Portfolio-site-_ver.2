@@ -32,3 +32,59 @@
 :global(.swiper-pagination-bullet-active) {
   background: #795549;
 }
+
+// デコレーション（吹き出し）
+.decoration {
+  max-width: 130px;
+  width: calc(85px / 375px * 100%);
+  aspect-ratio: 130 / 100;
+
+  position: absolute;
+  top: -50px;
+  right: 60px;
+
+  display: none;
+
+  z-index: 1000;
+
+  transform: rotate(-5deg);
+
+  opacity: 0;
+  animation: fadeInOut 5s ease-in-out infinite; /* アニメーションをループ */
+
+  @media (min-width: 340px) {
+    display: block;
+  }
+
+  @media (min-width: 450px) {
+    top: -70px;
+  }
+
+  @media (min-width: 500px) {
+    top: -80px;
+    right: 120px;
+  }
+
+  @media (min-width: 640px) {
+    right: 160px;
+  }
+
+  @media (min-width: 900px) {
+    right: 220px;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0; /* 完全に消える */
+  }
+  25% {
+    opacity: 1; /* 徐々に現れる */
+  }
+  75% {
+    opacity: 1; /* 表示を維持 */
+  }
+  100% {
+    opacity: 0; /* 徐々に消える */
+  }
+}

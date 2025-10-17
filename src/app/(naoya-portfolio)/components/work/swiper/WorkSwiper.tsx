@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 import { workSlides } from "@/const/workSlides";
@@ -15,7 +16,7 @@ import styles from "./workSwiper.module.scss";
 
 function WorkSwiper() {
   return (
-    <div className="">
+    <div>
       <Swiper
         slidesPerView="auto"
         spaceBetween={20}
@@ -77,6 +78,15 @@ function WorkSwiper() {
 
         <div className="swiper-pagination z-1000" />
       </Swiper>
+
+      {/* デコレーション */}
+      <div className={styles.decoration}>
+        <Image
+          src="/img/section_work/icon/icon-click.png"
+          alt="デコレーション"
+          fill
+        />
+      </div>
     </div>
   );
 }
