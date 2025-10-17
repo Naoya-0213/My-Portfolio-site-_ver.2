@@ -1,6 +1,6 @@
 import type { WorkContentsData } from "@/app/(naoya-portfolio)/work/types/types";
 
-export const portfolioContents: WorkContentsData = {
+export const ohaContents: WorkContentsData = {
   id: "portfolio",
   title: "ポートフォリオサイト",
   badge: "個人制作",
@@ -14,12 +14,12 @@ export const portfolioContents: WorkContentsData = {
     {
       label: "課題",
       value:
-        "自分のスキルや実績を効果的にアピールするための専用サイトがなく、これまでの学習内容や今後取り組みたい目標を一目で分かりやすく整理・提示する必要があった。",
+        "自分のスキルや実績を効果的にアピールするための専用サイトがなく、これまでの学習内容や今後取り組みたい目標を一目で分かりやすくまとめたかった。",
     },
     {
       label: "目的",
       value:
-        "転職活動において書類選考の通過を目指し、採用担当者の方々に向けて実績や今後の学習計画をしっかりと示すことで、未経験であっても自分のポテンシャルを感じていただけるようにしたい。",
+        "スキルや実績を一元的に示す手段がなかったため、学習経過や今後の目標を可視化し、採用担当者に伝わる形で整理することが課題であった。",
     },
   ],
   scope: [
