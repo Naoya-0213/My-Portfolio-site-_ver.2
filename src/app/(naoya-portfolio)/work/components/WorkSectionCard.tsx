@@ -48,30 +48,19 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
               <div
                 className={`${styles.work_contents} border-b border-[#d7cdbe] px-2 pb-7`}
               >
-                <dt className={`${styles.contents_label} `}>担当領域</dt>
-                <dd>
-                  {scope.map((t) => (
-                    <span key={t} className="leading-relaxed">
-                      {t}
-                      <br />
-                    </span>
-                  ))}
-                </dd>
-              </div>
-            ) : null}
-
-            {/* 制作期間 */}
-            {scope?.length ? (
-              <div
-                className={`${styles.work_contents} border-b border-[#d7cdbe] px-2 pb-7`}
-              >
-                <dt className={`${styles.contents_label} `}>担当領域</dt>
-                <dd>
-                  {scope.map((t) => (
-                    <span key={t} className="leading-relaxed">
-                      {t}
-                      <br />
-                    </span>
+                <dt className={`${styles.contents_label} `}>
+                  担当領域 / <br className="pc:block hidden" />
+                  制作期間
+                </dt>
+                <dd className="flex-col gap-2 max-[350px]:flex">
+                  {scope.map((item, index) => (
+                    <div
+                      key={index}
+                      className={`flex leading-relaxed max-[350px]:flex-col ${index === scope.length - 1 ? "mt-3" : ""}`}
+                    >
+                      <div className="min-w-50 sm:min-w-60">{item.label}</div>
+                      <div>{item.value}</div>
+                    </div>
                   ))}
                 </dd>
               </div>

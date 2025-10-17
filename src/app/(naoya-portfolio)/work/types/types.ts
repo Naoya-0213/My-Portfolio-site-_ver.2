@@ -10,9 +10,8 @@ export type WorkContentsData = {
   title: string;
   badge?: string;
   sections: WorkField[];
-  scope?: string[];
+  scope?: { label: string; value: string }[];
   tech?: string[];
-  duration?: { label: string; value: string }[];
   tools?: string[];
   github?: { label: string; href: string }[];
   images?: { pc?: string; sp?: string };

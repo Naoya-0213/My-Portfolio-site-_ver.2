@@ -21,24 +21,24 @@ export const portfolioContents: WorkContentsData = {
         "転職活動において書類選考の通過を目指し、採用担当者の方々に向けて実績や今後の学習計画をしっかりと示すことで、未経験であっても自分のポテンシャルを感じていただけるようにしたい。",
     },
   ],
+
+  // TODO 詳細時間記載
   scope: [
-    "サイトデザイン作成",
-    "コーディング",
-    "サーバー取得/サイト公開",
-    "サイト更新＆修正",
-  ],
-  duration: [
     {
       label: "サイトデザイン作成",
-      value: "",
+      value: "〇〇週間",
     },
     {
       label: "コーディング",
-      value: "",
+      value: "〇〇週間",
     },
     {
       label: "サーバー取得/サイト公開",
-      value: "サイト更新＆修正",
+      value: "〇〇週間",
+    },
+    {
+      label: "合計",
+      value: "〇〇ヶ月",
     },
   ],
   tech: ["Next.js", "React", "TypeScript", "Tailwind", "Sass", "Swiper"],
