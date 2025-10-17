@@ -1,20 +1,18 @@
 import { portfolioContents } from "@/const/work/portfolioContents";
 
-import SectionCard from "@/app/components/molecules/section_card/SectionCard";
+import OtherWorks from "@/app/components/organisms/other_works/OtherWorks";
 
-import WorkSwiper from "../../components/work/swiper/WorkSwiper";
 import WorkSectionCard from "../components/WorkSectionCard";
 
-const page = () => {
+const PortfolioPage = () => {
   return (
-    <div>
+    <div className="flex flex-col gap-5">
       <WorkSectionCard data={portfolioContents} />
 
-      <SectionCard title="Other Works -" subTitle="その他、作成サイト実績">
-        <WorkSwiper />
-      </SectionCard>
+      {/* TODO　調整 */}
+      <OtherWorks />
     </div>
   );
 };
 
-export default page;
+export default PortfolioPage;
