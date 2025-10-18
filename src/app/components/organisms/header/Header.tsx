@@ -3,8 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import { NAV, SNS } from "@/const/nav";
+
 import { useMedia } from "@/app/hooks/useMedia";
 
 import HamburgerButton from "../../atoms/hamburger_buttton/HamburgerButton";
@@ -21,6 +23,9 @@ export default function Header() {
   const [pcOpen, setPcOpen] = useState(false);
   const isPc = useMedia("(min-width: 640px)");
   const pcMenuRef = useRef<HTMLDivElement | null>(null);
+
+  // 現在のpass確認
+  const pathname = usePathname();
 
   // 幅ブレイクに応じて片方を必ず閉じる
   useEffect(() => {
@@ -60,6 +65,21 @@ export default function Header() {
     }
   };
 
+  // 現在のpassに合わせてNAV要素クリック時の動作を指定 ===
+  const decorateHref = (href: string) => {
+    if (!href.startsWith("#")) return href;
+
+    return pathname === "/" ? href : `/${href}`;
+  };
+
+  // NavList に渡す配列を変換
+  const navForCurrentPage = NAV.map((item) => ({
+    ...item,
+    href: decorateHref(item.href),
+  }));
+
+  // =============================================
+
   return (
     <header className="">
       {/* SP: ハンバーガーボタン */}
@@ -78,7 +98,7 @@ export default function Header() {
             classNameNav="flex flex-col gap-[5vh]"
             classNameLink="w-full flex items-center justify-center gap-7"
             classNameWrapper="w-36 flex gap-[30px] items-center"
-            items={NAV}
+            items={navForCurrentPage}
           />
 
           {/* SNSリンク（簡略版） */}
@@ -113,7 +133,7 @@ export default function Header() {
             classNameNav={styles.drawer__nav_pc}
             classNameLink={styles.drawer__nav__link_pc}
             classNameWrapper={styles.drawer__nav__link_wrapper_pc}
-            items={NAV}
+            items={navForCurrentPage}
           />
         </div>
       </div>
