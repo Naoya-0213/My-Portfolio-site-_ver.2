@@ -16,7 +16,9 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
     <div className="mt-5 px-2">
       <SectionCard title="Works -" subTitle="これまで作成した実績" id="work">
         {/* サイトイメージ */}
-        <div className={`${styles.work__details__image}`}>
+        <div
+          className={`${styles.work__details__image} sm:mt-o mt-10 mb-10 sm:mb-3`}
+        >
           {/* <!-- SP表示用 --> */}
           <div className={`${styles.work__details__image_sp}`}>
             <div className={`${styles.image_sp_frame}`}>
@@ -32,8 +34,8 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
             </div>
 
             {/* スクロールダウンデコレーション */}
-            <p className={`${styles.work__scrolldown_text}`}>scroll</p>
-            <div className={`${styles.work__scrolldown_arrow}`}></div>
+            <p className={`${styles.work__scroll_text}`}>scroll</p>
+            <div className={`${styles.work__scroll_arrow}`}></div>
           </div>
           {/* PC表示用 */}
           <div className={`${styles.work__details__image_pc}`}>
@@ -51,7 +53,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
           </div>
         </div>
 
-        <article className="sm:p-8">
+        <article className="pb-8 sm:p-8">
           {/* イメージ画像 */}
           <div></div>
 

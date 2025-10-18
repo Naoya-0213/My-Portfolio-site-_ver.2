@@ -37,7 +37,7 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-top: 30px;
+  // margin-top: 30px;
 
   margin-left: auto;
   margin-right: auto;
@@ -48,7 +48,7 @@
     max-width: 500px;
     flex-direction: row;
     gap: 15px;
-    margin-top: 40px;
+    // margin-top: 40px;
     padding-left: 40px;
   }
 
@@ -105,9 +105,6 @@
     top: 27px;
     left: 9px;
   }
-
-  img {
-  }
 }
 
 // pc
@@ -149,14 +146,11 @@
   overflow: hidden scroll;
   scrollbar-gutter: stable;
   z-index: 1;
-
-  img {
-  }
 }
 
-// スクロールダウン　デコレーション
+// スクロールダウンデコレーション
 // テキスト
-.work__scrolldown_text {
+.work__scroll_text {
   position: absolute;
   right: -60px;
   top: 240px;
@@ -174,7 +168,7 @@
 }
 
 // 棒
-.work__scrolldown_arrow {
+.work__scroll_arrow {
   position: absolute;
   right: -20px;
   top: 227px;
