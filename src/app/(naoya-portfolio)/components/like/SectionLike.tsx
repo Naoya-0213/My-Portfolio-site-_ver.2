@@ -7,7 +7,7 @@ const SectionLike = () => {
         <div className="px-2">
           <div className="m-auto flex max-w-screen-sm flex-col">
             {/* スノーボード */}
-            <div className="flex flex-col gap-3 border-b border-[#d7cdbe] px-3 pb-5 sm:flex-row">
+            <div className="fade_in_up flex flex-col gap-3 border-b border-[#d7cdbe] px-3 pb-5 sm:flex-row">
               {/* タイトル */}
               <div className="flex gap-2 sm:min-w-40">
                 <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[#795549]">
@@ -17,7 +17,7 @@ const SectionLike = () => {
               </div>
 
               {/* 内容 */}
-              <div>
+              <div className="fade_in_up">
                 <p>
                   高校3年からスノーボードにハマっています。冬になれば、ほぼ毎週ゲレンデに行きます。これまで、29か所ものスキー場を訪問しました。今シーズンの目標は、北海道のニセコに滑りに行くこと！
                 </p>
@@ -25,7 +25,7 @@ const SectionLike = () => {
             </div>
 
             {/* カメラ */}
-            <div className="flex flex-col gap-3 px-3 py-5 sm:flex-row">
+            <div className="fade_in_up flex flex-col gap-3 px-3 py-5 sm:flex-row">
               {/* タイトル */}
               <div className="flex gap-2 sm:min-w-40">
                 <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[#795549]">
@@ -36,7 +36,7 @@ const SectionLike = () => {
 
               {/* 内容 */}
               <div>
-                <p>
+                <p className="fade_in_up">
                   <span className="font-bold">
                     念願のGR3！カメラとともに旅へ。
                   </span>

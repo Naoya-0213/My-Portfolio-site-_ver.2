@@ -4,6 +4,8 @@ import { useEffect, useRef } from "react";
 
 import Image from "next/image";
 
+import { useFadeInObserver } from "@/app/hooks/useFadeInObserver";
+
 import styles from "./modal.module.scss";
 
 // モーダル表示用（About Meで使用）
@@ -17,6 +19,7 @@ type ModalProps = {
 
 export default function Modal({ title, children, onClose, open }: ModalProps) {
   const closeBtnRef = useRef<HTMLDataListElement | null>(null);
+  useFadeInObserver();
 
   // 背面スクロール固定
   useEffect(() => {
@@ -45,12 +48,12 @@ export default function Modal({ title, children, onClose, open }: ModalProps) {
     >
       {/* タイトル */}
       <div className={`${styles.dialog} pc:p-6 p-4`}>
-        <div className="pb-5">
+        <div className="fade_in_up pb-5">
           <h2 className="pc:ml-5 ml-3 text-base font-bold">{title}</h2>
         </div>
 
         <button
-          className={`absolute top-4 right-4 z-50 cursor-pointer transition-transform duration-300 outline-none hover:scale-110 ${styles.close}`}
+          className={`fade_in_up absolute top-4 right-4 z-50 cursor-pointer transition-transform duration-300 outline-none hover:scale-110 ${styles.close}`}
           type="button"
           onClick={onClose}
         >

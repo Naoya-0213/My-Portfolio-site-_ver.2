@@ -16,7 +16,7 @@ import styles from "./workSwiper.module.scss";
 
 function WorkSwiper() {
   return (
-    <div className="relative m-auto max-w-[900px]">
+    <div className="fade_in_up relative m-auto max-w-[900px]">
       <Swiper
         slidesPerView="auto"
         spaceBetween={20}
