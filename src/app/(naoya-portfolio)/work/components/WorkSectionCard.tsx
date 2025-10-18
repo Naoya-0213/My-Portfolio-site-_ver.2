@@ -24,12 +24,9 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
                 <Image
                   src="/img/section_work/portfolio/portfolio__sp-design.png"
                   alt="サイトイメージ"
-                  /* 画像の“実寸”として縦長を指定（例）*/
                   width={1080}
                   height={2400}
                   className="block h-auto w-full"
-                  /* フレーム幅に合わせて最適化（例）*/
-                  // sizes="(min-width:600px) 140px, 190px"
                 />
               </div>
             </div>
@@ -45,11 +42,9 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
                 <Image
                   src="/img/section_work/portfolio/portfolio__pc-design.png"
                   alt="サイトイメージ"
-                  /* 実寸の目安（例）：横長 */
                   width={1920}
                   height={1200}
                   className="block h-auto w-full"
-                  // sizes="(min-width:1080px) 400px, (min-width:600px) 320px, 300px"
                 />
               </div>
             </div>

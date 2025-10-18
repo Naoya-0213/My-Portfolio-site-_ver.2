@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Oswald } from "next/font/google";
+import localFont from "next/font/local";
 
 // app/layout.tsx の先頭あたり
 
@@ -15,6 +16,12 @@ const oswald = Oswald({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-oswald",
+});
+
+const knewave = localFont({
+  src: "../../public/font/knewave.ttf",
+  variable: "--font-knewave",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -56,7 +63,7 @@ export default function RootLayout({
   return (
     <html
       lang="ja"
-      className={`bg-[#f3f0eb] leading-relaxed font-normal text-[#795549] ${noto.variable} ${oswald.variable}`}
+      className={`bg-[#f3f0eb] leading-relaxed font-normal text-[#795549] ${noto.variable} ${oswald.variable} ${knewave.variable}`}
     >
       <body className="pc:text-[15px] text-sm">{children}</body>
     </html>
