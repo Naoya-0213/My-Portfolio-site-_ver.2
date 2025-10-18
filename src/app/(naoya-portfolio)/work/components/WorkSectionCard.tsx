@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 
 import SectionCard from "@/app/components/molecules/section_card/SectionCard";
+import { useFadeInObserver } from "@/app/hooks/useFadeInObserver";
 
 import styles from "../components/workSection.module.scss";
 import type { WorkContentsData } from "../types/types";
@@ -13,6 +16,8 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
   const { title, badge, sections, scope, tech, github, links, tools, img } =
     data;
 
+  useFadeInObserver();
+
   return (
     <div className="mt-5 px-2">
       <SectionCard title="Works -" subTitle="これまで作成した実績" id="work">
@@ -21,7 +26,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
           className={`${styles.work__details__image} sm:mt-o mt-10 mb-10 sm:mb-3`}
         >
           {/* <!-- SP表示用 --> */}
-          <div className={`${styles.work__details__image_sp}`}>
+          <div className={`${styles.work__details__image_sp} fade_in_up`}>
             <div className={`${styles.image_sp_frame}`}>
               <div className={`${styles.image_sp_design}`}>
                 <Image
@@ -39,7 +44,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
             <div className={`${styles.work__scroll_arrow}`}></div>
           </div>
           {/* PC表示用 */}
-          <div className={`${styles.work__details__image_pc}`}>
+          <div className={`${styles.work__details__image_pc} fade_in_up`}>
             <div className={`${styles.image_pc_frame}`}>
               <div className={`${styles.image_pc_design}`}>
                 <Image
@@ -56,7 +61,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
 
         <article className="pb-8 sm:p-8">
           {/* タイトル */}
-          <header className="pc:mb-10 m-auto mb-5 flex max-w-2xl items-center gap-5 max-[350px]:flex-col max-[350px]:items-start max-[350px]:gap-2">
+          <header className="fade_in_up pc:mb-10 m-auto mb-5 flex max-w-2xl items-center gap-5 max-[350px]:flex-col max-[350px]:items-start max-[350px]:gap-2">
             {badge && (
               <span className="h-fit w-fit rounded-2xl bg-[#795549] px-4 py-1 text-xs text-[#f3f0eb]">
                 {badge}
@@ -72,7 +77,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
             {sections.map((s) => (
               <div
                 key={s.label}
-                className={`${styles.work_contents} px-2 pb-7`}
+                className={`${styles.work_contents} fade_in_up px-2 pb-7`}
               >
                 <dt className={`${styles.contents_label} `}>{s.label}</dt>
                 <dd className="leading-relaxed whitespace-pre-line">
@@ -83,7 +88,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
 
             {/* 担当領域 */}
             {scope?.length ? (
-              <div className={`${styles.work_contents} px-2 pb-7`}>
+              <div className={`${styles.work_contents} fade_in_up px-2 pb-7`}>
                 <dt className={`${styles.contents_label} `}>
                   担当領域 / <br className="pc:block hidden" />
                   制作期間
@@ -104,7 +109,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
 
             {/* 使用技術 */}
             {tech?.length ? (
-              <div className={`${styles.work_contents} px-2 pb-7`}>
+              <div className={`${styles.work_contents} fade_in_up px-2 pb-7`}>
                 <dt className={`${styles.contents_label} `}>使用技術</dt>
                 <dd className="flex flex-wrap gap-2">
                   {tech.map((t) => (
@@ -121,7 +126,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
 
             {/* 使用ツール */}
             {tools?.length ? (
-              <div className={`${styles.work_contents} px-2 pb-7`}>
+              <div className={`${styles.work_contents} fade_in_up px-2 pb-7`}>
                 <dt className={`${styles.contents_label} `}>使用ツール</dt>
                 <dd className="flex flex-col gap-2">
                   {tools.map((tool, index) => (
@@ -148,7 +153,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
 
             {/* サイトURL */}
             {links?.length ? (
-              <div className={`${styles.work_contents} px-2 pb-7`}>
+              <div className={`${styles.work_contents} fade_in_up px-2 pb-7`}>
                 <dt className={`${styles.contents_label}`}>リンク</dt>
                 <dd className="flex flex-wrap gap-3">
                   {links.map((l) => (
@@ -168,7 +173,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
 
             {/* GitHub */}
             {github?.length ? (
-              <div className={`${styles.work_contents} px-2 pb-7`}>
+              <div className={`${styles.work_contents} fade_in_up px-2 pb-7`}>
                 <dt className={`${styles.contents_label}`}>GitHub</dt>
                 <dd className="flex flex-wrap gap-3">
                   {github.map((l) => (
