@@ -15,7 +15,7 @@ const SectionCard = ({
 }: SectionCardProps) => {
   return (
     <section
-      className="pc:px-10 m-auto max-w-[1160px] px-5 max-[374px]:px-2"
+      className="pc:px-10 fade_in_up m-auto max-w-[1160px] px-5 max-[374px]:px-2"
       id={id}
     >
       {/* タイトル */}

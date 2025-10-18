@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Header,
   SectionAbout,
@@ -6,8 +8,11 @@ import {
   SectionSkill,
   SectionWork,
 } from "../components/organisms";
+import { useFadeInObserver } from "../hooks/useFadeInObserver";
 
 const Home = () => {
+  useFadeInObserver();
+
   return (
     <div className="flex flex-col overflow-hidden bg-[#f3f0eb] text-base text-[#795549]">
       <Header />

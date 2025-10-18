@@ -65,7 +65,7 @@ export default function Header() {
     }
   };
 
-  // 現在のpassに合わせてNAV要素クリック時の動作を指定 ===
+  // 現在のpassに合わせてNAV要素クリック時の動作を指定
   const decorateHref = (href: string) => {
     if (!href.startsWith("#")) return href;
 
@@ -77,8 +77,6 @@ export default function Header() {
     ...item,
     href: decorateHref(item.href),
   }));
-
-  // =============================================
 
   return (
     <header className="">
