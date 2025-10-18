@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import SectionCard from "@/app/components/molecules/section_card/SectionCard";
 
 import styles from "../components/workSection.module.scss";
@@ -13,6 +15,47 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
   return (
     <div className="mt-5 px-2">
       <SectionCard title="Works -" subTitle="これまで作成した実績" id="work">
+        {/* サイトイメージ */}
+        <div className={`${styles.work__details__image}`}>
+          {/* <!-- SP表示用 --> */}
+          <div className={`${styles.work__details__image_sp}`}>
+            <div className={`${styles.image_sp_frame}`}>
+              <div className={`${styles.image_sp_design}`}>
+                <Image
+                  src="/img/section_work/portfolio/portfolio__sp-design.png"
+                  alt="サイトイメージ"
+                  /* 画像の“実寸”として縦長を指定（例）*/
+                  width={1080}
+                  height={2400}
+                  className="block h-auto w-full"
+                  /* フレーム幅に合わせて最適化（例）*/
+                  // sizes="(min-width:600px) 140px, 190px"
+                />
+              </div>
+            </div>
+
+            {/* スクロールダウンデコレーション */}
+            <p className={`${styles.work__scrolldown_text}`}>scroll</p>
+            <div className={`${styles.work__scrolldown_arrow}`}></div>
+          </div>
+          {/* PC表示用 */}
+          <div className={`${styles.work__details__image_pc}`}>
+            <div className={`${styles.image_pc_frame}`}>
+              <div className={`${styles.image_pc_design}`}>
+                <Image
+                  src="/img/section_work/portfolio/portfolio__pc-design.png"
+                  alt="サイトイメージ"
+                  /* 実寸の目安（例）：横長 */
+                  width={1920}
+                  height={1200}
+                  className="block h-auto w-full"
+                  // sizes="(min-width:1080px) 400px, (min-width:600px) 320px, 300px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
         <article className="sm:p-8">
           {/* イメージ画像 */}
           <div></div>

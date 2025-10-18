@@ -26,3 +26,201 @@
     min-width: 128px;
   }
 }
+
+// ================================================
+// サイトイメージ
+// ================================================
+.work__details__image {
+  max-width: 665px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  position: relative;
+
+  @media (min-width: 600px) {
+    max-width: 500px;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 40px;
+    padding-left: 40px;
+  }
+
+  @include breakpoints.mq(pc) {
+    max-width: 600px;
+  }
+}
+
+// sp
+.work__details__image_sp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image_sp_frame {
+  width: 190px;
+  height: auto;
+  aspect-ratio: 190 / 377;
+  margin: 0 auto;
+  position: relative;
+
+  @media (min-width: 600px) {
+    width: 140px;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../../../../../public/img/section_work/sp-frame.png)
+      no-repeat center center / contain;
+    z-index: 2;
+    pointer-events: none;
+  }
+}
+
+.image_sp_design {
+  position: absolute;
+  top: 37px;
+  left: 12px;
+  width: 87%;
+  height: 87.5%;
+  overflow: hidden;
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+  z-index: 1;
+
+  @media (min-width: 600px) {
+    top: 27px;
+    left: 9px;
+  }
+
+  img {
+  }
+}
+
+// pc
+.work__details__image_pc {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image_pc_frame {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  aspect-ratio: 335 / 200;
+  margin: 0 auto;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../../../../../public/img/section_work/pc-frame.png)
+      no-repeat center center / contain;
+    z-index: 2;
+    pointer-events: none;
+  }
+}
+
+.image_pc_design {
+  position: absolute;
+  top: 3%;
+  left: 10%;
+  width: 80%;
+  height: 86.4%;
+  overflow: hidden scroll;
+  scrollbar-gutter: stable;
+  z-index: 1;
+
+  img {
+  }
+}
+
+// スクロールダウン　デコレーション
+// テキスト
+.work__scrolldown_text {
+  position: absolute;
+  right: -60px;
+  top: 240px;
+  color: #795549;
+  font-size: 20px;
+  font-family: "Knewave", serif;
+  line-height: 1.5;
+  rotate: 90deg;
+
+  @media (min-width: 600px) {
+    rotate: -90deg;
+    right: 160px;
+    top: 160px;
+  }
+}
+
+// 棒
+.work__scrolldown_arrow {
+  position: absolute;
+  right: -20px;
+  top: 227px;
+  width: 2px;
+  height: 80px;
+  background: common-css.$color3;
+
+  @media (min-width: 600px) {
+    right: 165px;
+    top: 145px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: common-css.$color3;
+    rotate: -30deg;
+    transform-origin: left top;
+
+    @media (min-width: 600px) {
+      rotate: 210deg;
+      bottom: -2px;
+    }
+  }
+
+  animation: 2s 0s ease-in-out backwards infinite scrollDown;
+  @keyframes scrollDown {
+    0% {
+      bottom: 80px;
+      height: 80px;
+    }
+    10% {
+      bottom: 80px;
+      height: 80px;
+    }
+    90% {
+      bottom: 20px;
+      height: 140px;
+    }
+    100% {
+      bottom: 20px;
+      height: 140px;
+    }
+  }
+}
