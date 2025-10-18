@@ -2,7 +2,7 @@ import type { WorkContentsData } from "@/app/(naoya-portfolio)/work/types/types"
 
 export const onomichiContents: WorkContentsData = {
   id: "oha",
-  title: "架空アプリ「Oha!」紹介サイト",
+  title: "架空キャンペーン「Onomachi」詳細サイト",
   badge: "制作課題",
   img: {
     sp: "/img/section_work/onomichi/onomichi__sp-design.png",
@@ -12,7 +12,7 @@ export const onomichiContents: WorkContentsData = {
   sections: [
     {
       label: "概要",
-      value: `スクール（デイトラ）の課題で、観光と地域振興をテーマにした架空キャンペーン「Onomachi」の詳細サイトを制作しました。与えられたデザインを元に、魅力的な体験を想起させる構成を意識して実装しています。`,
+      value: `スクール（デイトラ）の課題として、観光と地域振興をテーマにした架空キャンペーン「Onomachi」の詳細サイトを制作。デザインカンプをもとに、配色や余白など細部まで丁寧に再現し、魅力的な体験を想起させる構成を意識して実装した。学んだ技術を応用しながら、地域の魅力を伝えるデザインを表現したサイトとなっている。`,
     },
     {
       label: "ターゲット",

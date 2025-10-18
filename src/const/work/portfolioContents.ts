@@ -38,7 +38,7 @@ export const portfolioContents: WorkContentsData = {
       value: "72時間",
     },
     {
-      label: "Next.jsによるリニューアル更新",
+      label: "リニューアル更新",
       value: "60時間",
     },
     {
