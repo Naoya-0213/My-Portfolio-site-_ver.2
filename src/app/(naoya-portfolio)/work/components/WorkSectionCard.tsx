@@ -105,7 +105,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
             {/* 使用技術 */}
             {tech?.length ? (
               <div className={`${styles.work_contents} px-2 pb-7`}>
-                <dt className={`${styles.contents_label} `}>技術</dt>
+                <dt className={`${styles.contents_label} `}>使用技術</dt>
                 <dd className="flex flex-wrap gap-2">
                   {tech.map((t) => (
                     <span

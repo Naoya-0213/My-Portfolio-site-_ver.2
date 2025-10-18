@@ -1,9 +1,9 @@
 import { portfolioContents } from "@/const/work/portfolioContents";
 
+import { Header } from "@/app/components/organisms";
 import OtherWorks from "@/app/components/organisms/other_works/OtherWorks";
 
 import WorkSectionCard from "../components/WorkSectionCard";
-import { Header } from "@/app/components/organisms";
 
 const PortfolioPage = () => {
   return (

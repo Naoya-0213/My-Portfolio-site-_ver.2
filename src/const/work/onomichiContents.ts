@@ -34,16 +34,20 @@ export const ohaContents: WorkContentsData = {
   // TODO 詳細時間記載
   scope: [
     {
-      label: "コーディング",
-      value: "2週間",
+      label: "構成 / デザイン作成",
+      value: "62時間",
     },
     {
-      label: "更新 / 修正",
-      value: "1週間",
+      label: "コーディング",
+      value: "72時間",
+    },
+    {
+      label: "Next.jsによるリニューアル更新",
+      value: "60時間",
     },
     {
       label: "合計",
-      value: "3週間",
+      value: "〇〇時間",
     },
   ],
   tech: ["HTML", "css", "Sass"],
