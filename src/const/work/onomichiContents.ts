@@ -1,53 +1,49 @@
 import type { WorkContentsData } from "@/app/(naoya-portfolio)/work/types/types";
 
-export const ohaContents: WorkContentsData = {
+export const onomichiContents: WorkContentsData = {
   id: "oha",
   title: "架空アプリ「Oha!」紹介サイト",
   badge: "制作課題",
   img: {
-    sp: "/img/section_work/oha/oha__sp-design.png",
-    pc: "/img/section_work/oha/oha__pc-design.png",
+    sp: "/img/section_work/onomichi/onomichi__sp-design.png",
+    pc: "/img/section_work/onomichi/onomichi__pc-design.png",
   },
 
   sections: [
     {
       label: "概要",
-      value: `スクール（デイトラ）の課題として、架空アプリ「Oha!」の紹介サイトを制作。問い合わせフォームやSwiper、アコーディオンメニューなどの動的な要素を取り入れ、これまでに学んだ技術を応用しながら、視覚的な魅力と使いやすさを両立させたサイトを目指して制作した。`,
+      value: `スクール（デイトラ）の課題で、観光と地域振興をテーマにした架空キャンペーン「Onomachi」の詳細サイトを制作しました。与えられたデザインを元に、魅力的な体験を想起させる構成を意識して実装しています。`,
     },
     {
       label: "ターゲット",
       value:
-        "新リリースアプリ「oha!」の存在は知っているが詳細を知らない人、または当サイトで初めてその存在に触れる人向け。主にスマートフォンユーザー（主に20～30代の若年層を想定）",
+        "観光地の魅力を発信し、訪問者の興味を引く20～40代の旅行者層（想定）",
     },
     {
       label: "課題",
       value:
-        "「Oha！」の特設サイトが未公開であり、リリース済みながらも認知度が低く、ダウンロード数の伸びが停滞している状況。（想定）",
+        "尾道市の観光客集客を目的としたInstagramを活用したプレゼント企画を実施。しかし、企画の内容や趣旨を伝える専用サイトが存在せず、認知拡大の機会を十分に活用できていなかった。（想定）",
     },
     {
       label: "目的",
       value:
-        "サイトを通じて、「Oha！」の内容や開発の想いを伝え、存在を認知させることでダウンロードと使用を促進する。（想定）",
+        "専用サイトを制作し、企画の内容や趣旨を広く認知してもらうとともに、尾道市の魅力を発信する仕組みを構築することで、地域の観光資源の認知拡大を図る。（想定）",
     },
   ],
 
   // TODO 詳細時間記載
   scope: [
     {
-      label: "構成 / デザイン作成",
-      value: "62時間",
-    },
-    {
       label: "コーディング",
-      value: "72時間",
+      value: "90時間",
     },
     {
-      label: "Next.jsによるリニューアル更新",
-      value: "60時間",
+      label: "更新 / 修正",
+      value: "10時間",
     },
     {
       label: "合計",
-      value: "〇〇時間",
+      value: "100時間",
     },
   ],
   tech: ["HTML", "css", "Sass"],

@@ -94,7 +94,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
                       key={index}
                       className={`flex leading-relaxed max-[350px]:flex-col ${index === scope.length - 1 ? "mt-3" : ""}`}
                     >
-                      <div className="min-w-50 sm:min-w-60">{item.label}</div>
+                      <div className="min-w-30 sm:min-w-40">{item.label}</div>
                       <div>{item.value}</div>
                     </div>
                   ))}
