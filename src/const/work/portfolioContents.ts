@@ -4,6 +4,11 @@ export const portfolioContents: WorkContentsData = {
   id: "portfolio",
   title: "ポートフォリオサイト",
   badge: "個人制作",
+  img: {
+    sp: "/img/section_work/portfolio/portfolio__sp-design.png",
+    pc: "/img/section_work/portfolio/portfolio__pc-design.png",
+  },
+
   sections: [
     {
       label: "概要",

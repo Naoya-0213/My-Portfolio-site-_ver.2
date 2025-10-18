@@ -1,15 +1,11 @@
 import { ReactNode } from "react";
 
-export type WorkField = {
-  label: string;
-  value: ReactNode;
-};
-
 export type WorkContentsData = {
   id: string;
   title: string;
   badge?: string;
-  sections: WorkField[];
+  img: { sp: string; pc: string };
+  sections: { label: string; value: ReactNode }[];
   scope?: { label: string; value: string }[];
   tech?: string[];
   tools?: { label: string; value: { item: string }[] }[];

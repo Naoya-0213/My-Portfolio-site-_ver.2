@@ -10,7 +10,8 @@ type WorkSectionCardProps = {
 };
 
 const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
-  const { title, badge, sections, scope, tech, github, links, tools } = data;
+  const { title, badge, sections, scope, tech, github, links, tools, img } =
+    data;
 
   return (
     <div className="mt-5 px-2">
@@ -24,7 +25,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
             <div className={`${styles.image_sp_frame}`}>
               <div className={`${styles.image_sp_design}`}>
                 <Image
-                  src="/img/section_work/portfolio/portfolio__sp-design.png"
+                  src={img.sp}
                   alt="サイトイメージ"
                   width={1080}
                   height={2400}
@@ -42,7 +43,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
             <div className={`${styles.image_pc_frame}`}>
               <div className={`${styles.image_pc_design}`}>
                 <Image
-                  src="/img/section_work/portfolio/portfolio__pc-design.png"
+                  src={img.pc}
                   alt="サイトイメージ"
                   width={1920}
                   height={1200}
@@ -54,9 +55,6 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
         </div>
 
         <article className="pb-8 sm:p-8">
-          {/* イメージ画像 */}
-          <div></div>
-
           {/* タイトル */}
           <header className="pc:mb-10 m-auto mb-5 flex max-w-2xl items-center gap-5 max-[350px]:flex-col max-[350px]:items-start max-[350px]:gap-2">
             {badge && (
