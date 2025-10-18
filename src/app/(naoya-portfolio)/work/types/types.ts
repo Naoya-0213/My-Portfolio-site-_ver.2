@@ -12,7 +12,7 @@ export type WorkContentsData = {
   sections: WorkField[];
   scope?: { label: string; value: string }[];
   tech?: string[];
-  tools?: string[];
+  tools?: { label: string; value: { item: string }[] }[];
   github?: { label: string; href: string }[];
   images?: { pc?: string; sp?: string };
   links?: { label: string; href: string }[];

@@ -8,7 +8,7 @@ type WorkSectionCardProps = {
 };
 
 const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
-  const { title, badge, sections, scope, tech, github, links } = data;
+  const { title, badge, sections, scope, tech, github, links, tools } = data;
 
   return (
     <div className="mt-5 px-2">
@@ -34,7 +34,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
             {sections.map((s) => (
               <div
                 key={s.label}
-                className={`${styles.work_contents} border-b border-[#d7cdbe] px-2 pb-7`}
+                className={`${styles.work_contents} px-2 pb-7`}
               >
                 <dt className={`${styles.contents_label} `}>{s.label}</dt>
                 <dd className="leading-relaxed whitespace-pre-line">
@@ -45,9 +45,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
 
             {/* 担当領域 */}
             {scope?.length ? (
-              <div
-                className={`${styles.work_contents} border-b border-[#d7cdbe] px-2 pb-7`}
-              >
+              <div className={`${styles.work_contents} px-2 pb-7`}>
                 <dt className={`${styles.contents_label} `}>
                   担当領域 / <br className="pc:block hidden" />
                   制作期間
@@ -68,15 +66,13 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
 
             {/* 使用技術 */}
             {tech?.length ? (
-              <div
-                className={`${styles.work_contents} border-b border-[#d7cdbe] px-2 pb-7`}
-              >
+              <div className={`${styles.work_contents} px-2 pb-7`}>
                 <dt className={`${styles.contents_label} `}>技術</dt>
                 <dd className="flex flex-wrap gap-2">
                   {tech.map((t) => (
                     <span
                       key={t}
-                      className="rounded bg-[#EDE4D9] px-2 py-1 text-sm"
+                      className="rounded bg-[#795549] px-2 py-1 text-sm text-[#EDE4D9]"
                     >
                       {t}
                     </span>
@@ -85,11 +81,36 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
               </div>
             ) : null}
 
+            {/* 使用ツール */}
+            {tools?.length ? (
+              <div className={`${styles.work_contents} px-2 pb-7`}>
+                <dt className={`${styles.contents_label} `}>使用ツール</dt>
+                <dd className="flex flex-col gap-2">
+                  {tools.map((tool, index) => (
+                    <div
+                      key={index}
+                      className="flex leading-relaxed max-[350px]:flex-col"
+                    >
+                      <div className="min-w-30 sm:min-w-30">{tool.label}</div>
+                      <div className="flex flex-wrap gap-2">
+                        {tool.value.map((v, index) => (
+                          <span
+                            key={index}
+                            className="rounded bg-[#EDE4D9] px-2 py-1 text-sm"
+                          >
+                            {v.item}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </dd>
+              </div>
+            ) : null}
+
             {/* サイトURL */}
             {links?.length ? (
-              <div
-                className={`${styles.work_contents} border-b border-[#d7cdbe] px-2 pb-7`}
-              >
+              <div className={`${styles.work_contents} px-2 pb-7`}>
                 <dt className={`${styles.contents_label}`}>リンク</dt>
                 <dd className="flex flex-wrap gap-3">
                   {links.map((l) => (

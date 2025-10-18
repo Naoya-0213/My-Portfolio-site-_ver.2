@@ -25,24 +25,46 @@ export const portfolioContents: WorkContentsData = {
   // TODO 詳細時間記載
   scope: [
     {
-      label: "サイトデザイン作成",
-      value: "〇〇週間",
+      label: "構成 / デザイン作成",
+      value: "62時間",
     },
     {
       label: "コーディング",
-      value: "〇〇週間",
+      value: "72時間",
     },
     {
-      label: "サーバー取得/サイト公開",
-      value: "〇〇週間",
+      label: "Next.jsによるリニューアル更新",
+      value: "60時間",
     },
     {
       label: "合計",
-      value: "〇〇ヶ月",
+      value: "〇〇時間",
     },
   ],
   tech: ["Next.js", "React", "TypeScript", "Tailwind", "Sass", "Swiper"],
-  tools: [],
+  tools: [
+    {
+      label: "デザイン",
+      value: [{ item: "Canva" }, { item: "Figma" }],
+    },
+    {
+      label: "開発環境",
+      value: [{ item: "Visual Studio Code" }],
+    },
+    {
+      label: "開発支援",
+      value: [
+        { item: "Chrome DevTools" },
+        { item: "Terminal (zsh)" },
+        { item: "ESLint" },
+        { item: "Prettier" },
+      ],
+    },
+    {
+      label: "コーディング",
+      value: [{ item: "GitHub" }, { item: "Vercel" }, { item: "npm" }],
+    },
+  ],
   github: [
     {
       label: "https://github.com/Naoya-0213/My-Portfolio-site-_ver.2",
