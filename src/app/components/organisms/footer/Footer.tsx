@@ -29,6 +29,12 @@ const Footer = () => {
     href: decorateHref(item.href),
   }));
 
+  const handleScrollTop = () => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="w-full bg-[#795549] pt-5">
       <SectionCard
@@ -36,9 +42,9 @@ const Footer = () => {
         title="Contact -"
         subTitle="お問い合わせ"
         textColor="#f3f0eb"
-        contentClassName="pc:!mt-5"
+        contentClassName="!mt-10"
       >
-        <div className="flex items-center justify-center gap-5 px-5 max-[350px]:gap-2 sm:gap-10">
+        <div className="flex items-center justify-center gap-5 px-5 max-[350px]:gap-2 sm:gap-20">
           {/* コメント＆メアド */}
           <div className="flex flex-col gap-5">
             <p className="max-w-80 text-[#f3f0eb]">
@@ -71,12 +77,20 @@ const Footer = () => {
 
           {/* SNSリンク＆Top戻るボタン */}
           <div className="hidden flex-col items-center justify-center gap-5 sm:flex">
-            <Image
-              src="/img/icon/balloon/icon-pagetop.png"
-              alt="吹き出し"
-              width={130}
-              height={90}
-            />
+            {/* Top戻るボタン */}
+            <button
+              className="transition-transform duration-300 hover:scale-110"
+              type="button"
+              onClick={handleScrollTop}
+              aria-label="ページトップへ戻る"
+            >
+              <Image
+                src="/img/icon/balloon/icon-pagetop.png"
+                alt="吹き出し"
+                width={130}
+                height={90}
+              />
+            </button>
 
             {/* SNSリンク */}
             <div className="sm:flex sm:gap-4">
@@ -115,7 +129,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <div className="mx-auto mt-5 w-full max-w-4xl border-t border-[#f3f0eb] pt-3 sm:mt-10 sm:w-4/5">
+          <div className="mx-auto mt-10 w-full max-w-4xl border-t border-[#f3f0eb] py-3 sm:w-4/5">
             <div className="flex flex-col items-center justify-center gap-2 text-xs text-[#f3f0eb] sm:flex-row sm:gap-4">
               <span>Icons made by フリーピック from www.flaticon.com</span>
               <span>© 2024 Naoya’s Portfolio</span>
