@@ -99,7 +99,7 @@ export default function Header() {
             items={navForCurrentPage}
           />
 
-          {/* SNSリンク（簡略版） */}
+          {/* SNSリンク */}
           <div className="flex items-center justify-center gap-7">
             {SNS.map((s) => (
               <div key={s.label} className={styles.sns__icon_animation}>

@@ -70,9 +70,16 @@ const Footer = () => {
           </div>
 
           {/* SNSリンク＆Top戻るボタン */}
-          <div className="hidden sm:flex sm:gap-4">
+          <div className="hidden flex-col items-center justify-center gap-5 sm:flex">
+            <Image
+              src="/img/icon/balloon/icon-pagetop.png"
+              alt="吹き出し"
+              width={130}
+              height={90}
+            />
+
             {/* SNSリンク */}
-            <div>
+            <div className="sm:flex sm:gap-4">
               {SNS__footer.map((item, index) => (
                 <div key={index}>
                   <a href={item.href}>
