@@ -40,3 +40,17 @@ export const SNS = [
     label: "Instagram",
   },
 ];
+
+export const SNS__footer = [
+  { href: "#", icon: "/img/icon/line/line_icon-cream2.png", label: "LINE" },
+  {
+    href: "https://x.com/Naoya__in_web",
+    icon: "/img/icon/x/x_icon-cream2.png",
+    label: "X",
+  },
+  {
+    href: "#",
+    icon: "/img/icon/instagram/instagram_icon-cream2.png",
+    label: "Instagram",
+  },
+];

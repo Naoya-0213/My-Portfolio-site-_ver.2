@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { NAV } from "@/const/nav";
+import { NAV, SNS__footer } from "@/const/nav";
 
 import SectionCard from "../../molecules/section_card/SectionCard";
 import styles from "./footer.module.scss";
@@ -70,7 +70,23 @@ const Footer = () => {
           </div>
 
           {/* SNSリンク＆Top戻るボタン */}
-          <div></div>
+          <div className="hidden sm:flex sm:gap-4">
+            {/* SNSリンク */}
+            <div>
+              {SNS__footer.map((item, index) => (
+                <div key={index}>
+                  <a href={item.href}>
+                    <Image
+                      src={item.icon}
+                      alt="SNSアイコン"
+                      width={25}
+                      height={25}
+                    />
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* navメニュー */}
           <nav className="pc:flex hidden flex-col gap-1 sm:gap-2">
