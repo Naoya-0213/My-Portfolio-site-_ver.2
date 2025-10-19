@@ -2,7 +2,7 @@
 
 import { ohaContents } from "@/const/work/ohaContents";
 
-import { Header } from "@/app/components/organisms";
+import { Footer, Header } from "@/app/components/organisms";
 import OtherWorks from "@/app/components/organisms/other_works/OtherWorks";
 import { useFadeInObserver } from "@/app/hooks/useFadeInObserver";
 
@@ -17,6 +17,7 @@ const OhaPage = () => {
       <WorkSectionCard data={ohaContents} />
 
       <OtherWorks />
+      <Footer />
     </div>
   );
 };

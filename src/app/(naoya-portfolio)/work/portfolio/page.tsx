@@ -1,6 +1,6 @@
 import { portfolioContents } from "@/const/work/portfolioContents";
 
-import { Header } from "@/app/components/organisms";
+import { Footer, Header } from "@/app/components/organisms";
 import OtherWorks from "@/app/components/organisms/other_works/OtherWorks";
 
 import WorkSectionCard from "../components/WorkSectionCard";
@@ -12,6 +12,7 @@ const PortfolioPage = () => {
       <WorkSectionCard data={portfolioContents} />
 
       <OtherWorks />
+       <Footer />
     </div>
   );
 };
