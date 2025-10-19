@@ -4,7 +4,7 @@ type types = {
   pic: string;
 };
 
-export const gr3Contents: types[] = [
+export const GR3Contents: types[] = [
   // 写真1
   {
     pic: "/img/section_like/pic/camera__picture1.png",
