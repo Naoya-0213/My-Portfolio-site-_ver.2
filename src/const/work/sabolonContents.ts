@@ -2,7 +2,7 @@ import type { WorkContentsData } from "@/const/work/types/types";
 
 export const sabolonContents: WorkContentsData = {
   id: "oha",
-  title: "アクセサリーブランド「sabolon」架空サイト",
+  title: "アクセサリーブランド架空サイト",
   badge: "制作課題",
   img: {
     sp: "/img/section_work/sabolon/sabolon__sp-design.png",
