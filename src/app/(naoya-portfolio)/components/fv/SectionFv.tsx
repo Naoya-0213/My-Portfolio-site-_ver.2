@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 
+import { NAV, SNS } from "@/const/nav";
+
 import styles from "./fv.module.scss";
 
 const SectionFv = () => {
@@ -36,114 +38,41 @@ const SectionFv = () => {
               />
             </div>
 
-            {/* pc）nav */}
-            <div className={styles.fv__menu__nav_pc}>
+            {/* PC）nav */}
+            <div className={`${styles.fv__menu__nav_pc}`}>
               <nav className={styles.nav_pc}>
-                {/* menu1：home */}
-                <a href="#fv" className={styles.nav__link_pc}>
-                  <div className={styles.nav__link_wrapper_pc}>
-                    <Image
-                      src="/img/icon/home/paper-plane_icon-brown.png"
-                      alt="icon"
-                      width={25}
-                      height={25}
-                    />
-                    <span>Home -</span>
-                  </div>
-                </a>
-
-                {/* menu2：skill */}
-                <a href="#skill" className={styles.nav__link_pc}>
-                  <div className={styles.nav__link_wrapper_pc}>
-                    <Image
-                      src="/img/icon/skill/skill_icon-brown.png"
-                      alt="icon"
-                      width={25}
-                      height={25}
-                    />
-                    <span>Skill -</span>
-                  </div>
-                </a>
-
-                {/* menu3：work */}
-                <a href="#work" className={styles.nav__link_pc}>
-                  <div className={styles.nav__link_wrapper_pc}>
-                    <Image
-                      src="/img/icon/work/pc_icon-brown.png"
-                      alt="icon"
-                      width={25}
-                      height={25}
-                    />
-                    <span>Work -</span>
-                  </div>
-                </a>
-
-                {/* menu4：About me */}
-                <a href="#about" className={styles.nav__link_pc}>
-                  <div className={styles.nav__link_wrapper_pc}>
-                    <Image
-                      src="/img/icon/about-me/user_icon-brown.png"
-                      alt="icon"
-                      width={25}
-                      height={25}
-                    />
-                    <span>About me -</span>
-                  </div>
-                </a>
-
-                {/* menu5：contact */}
-                <a href="#contact" className={styles.nav__link_pc}>
-                  <div className={styles.nav__link_wrapper_pc}>
-                    <Image
-                      src="/img/icon/mail/email_icon-brown.png"
-                      alt="icon"
-                      width={25}
-                      height={25}
-                    />
-                    <span>Contact -</span>
-                  </div>
-                </a>
-
-                {/* snsリンク */}
-                <div className={styles.sns__link_pc}>
-                  <div className={styles.sns__link_pc_item}>
-                    <a href="#" target="_blank" rel="nofollow noopener">
-                      <Image
-                        src="/img/icon/line/line_icon-brown.png"
-                        alt="sns-icon"
-                        width={25}
-                        height={25}
-                      />
+                {NAV.map((item, index) => (
+                  <div key={index}>
+                    <a href={item.href} className={styles.nav__link_pc}>
+                      <div className={styles.nav__link_wrapper_pc}>
+                        <Image
+                          src={item.icon}
+                          alt="icon"
+                          width={25}
+                          height={25}
+                        />
+                        <span>{item.label}</span>
+                      </div>
                     </a>
                   </div>
-
-                  <div className={styles.sns__link_pc_item}>
-                    <a
-                      href="https://x.com/Naoya__in_web"
-                      target="_blank"
-                      rel="nofollow noopener"
-                    >
-                      <Image
-                        src="/img/icon/x/x_icon-brown.png"
-                        alt="sns-icon"
-                        width={25}
-                        height={25}
-                      />
-                    </a>
-                  </div>
-
-                  <div className={styles.sns__link_pc_item}>
-                    <a href="#" target="_blank" rel="nofollow noopener">
-                      <Image
-                        src="/img/icon/instagram/instagram_icon-brown.png"
-                        alt="sns-icon"
-                        width={25}
-                        height={25}
-                      />
-                    </a>
-                  </div>
-                </div>
+                ))}
               </nav>
+
+              {/* snsリンク */}
+              <div className={styles.sns__link_pc}>
+                {SNS.map((item, index) => (
+                  <div className={styles.sns__link_pc_item} key={index}>
+                    <a href={item.href} target="_blank" rel="nofollow noopener">
+                      <Image
+                        src={item.icon}
+                        alt="sns-icon"
+                        width={25}
+                        height={25}
+                      />
+                    </a>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
