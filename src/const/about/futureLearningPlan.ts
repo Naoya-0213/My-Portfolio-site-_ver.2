@@ -1,4 +1,5 @@
 // About Me セクション：モーダル（これから学習したい内容）
+
 type types = {
   date: string;
   title: string;

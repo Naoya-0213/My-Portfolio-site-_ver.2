@@ -1,5 +1,8 @@
 import Image from "next/image";
 
+import { qualifications } from "@/const/about/qualifications";
+import { skill } from "@/const/about/skill";
+
 import SectionCard from "@/app/components/molecules/section_card/SectionCard";
 
 import SectionAboutModal from "./SectionAboutModal";
@@ -9,7 +12,7 @@ const SectionAbout = () => {
     <div>
       <SectionCard id="about" title="About Me -" subTitle="私について">
         <div className="flex flex-col gap-5">
-          <div className="pc:gap-10 m-auto flex max-w-3xl flex-col items-center justify-center gap-5 px-2 sm:flex-row">
+          <div className="m-auto flex max-w-3xl flex-col items-center justify-center gap-5 px-2 sm:flex-row sm:gap-10">
             {/* 画像と名前 */}
             <div className="relative flex flex-col items-center sm:w-1/3">
               <Image
@@ -38,13 +41,48 @@ const SectionAbout = () => {
             </div>
 
             {/* 紹介文 */}
-            <div className="fade_in_up p-3 max-[350px]:p-1 sm:w-2/3">
+            <div className="fade_in_up flex flex-col gap-5 p-3 max-[350px]:p-1 sm:w-2/3">
               <p>
                 1999年東京都生まれ。中央大学商学部を卒業後、新卒でFA機器を扱う専門商社に入社。4年間、ルート営業を担当し、顧客ニーズに寄り添った提案や業務効率化のサポートを通じて信頼を築き、売上成長に貢献。
                 <br></br>
                 <br></br>
                 以前から関心のあったWeb業界へ挑戦すべく独学で学び始め、Web制作を経て、現在はアプリ開発に専念しています。UI/UXを意識した設計やモダンなフレームワークを活用し、実践的なスキルを磨いています。
               </p>
+
+              <div className="flex w-full flex-col gap-5">
+                {/* 取得資格 */}
+                <div className="flex flex-col gap-2 font-bold sm:flex-row">
+                  <p className="min-w-20">取得資格 :</p>
+
+                  <div className="flex flex-wrap items-center gap-2 font-bold">
+                    {qualifications.map((q, index) => (
+                      <div
+                        key={index}
+                        className="rounded bg-[#EDE4D9] px-2 py-1 text-sm"
+                      >
+                        {q.title}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* スキル */}
+                <div className="flex">
+                  <div className="flex flex-col justify-center gap-2 font-bold sm:flex-row">
+                    <p className="min-w-20">スキル :</p>
+                    <div className="flex flex-wrap items-center gap-2 font-bold">
+                      {skill.map((q, index) => (
+                        <div
+                          key={index}
+                          className="rounded bg-[#EDE4D9] px-2 py-1 text-sm"
+                        >
+                          {q.title}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           {/* モーダルボタン */}
