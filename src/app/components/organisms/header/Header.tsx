@@ -79,7 +79,7 @@ export default function Header() {
   }));
 
   return (
-    <header className="">
+    <header>
       {/* SP: ハンバーガーボタン */}
       {isSp && (
         <HamburgerButton open={open} onClick={() => setOpen((v) => !v)} />

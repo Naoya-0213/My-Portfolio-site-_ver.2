@@ -38,7 +38,7 @@ const SectionAbout = () => {
             </div>
 
             {/* 紹介文 */}
-            <div className="fade_in_up p-3 sm:w-2/3">
+            <div className="fade_in_up p-3 max-[350px]:p-1 sm:w-2/3">
               <p>
                 1999年東京都生まれ。中央大学商学部を卒業後、新卒でFA機器を扱う専門商社に入社。4年間、ルート営業を担当し、顧客ニーズに寄り添った提案や業務効率化のサポートを通じて信頼を築き、売上成長に貢献。
                 <br></br>

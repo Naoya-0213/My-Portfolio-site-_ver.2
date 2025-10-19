@@ -4,6 +4,7 @@ type SectionCardProps = {
   subTitle: string;
   children: React.ReactNode;
   contentClassName?: string;
+  textColor?: string;
 };
 
 const SectionCard = ({
@@ -12,6 +13,7 @@ const SectionCard = ({
   children,
   contentClassName = "",
   id,
+  textColor = "#795549",
 }: SectionCardProps) => {
   return (
     <section
@@ -20,10 +22,18 @@ const SectionCard = ({
     >
       {/* タイトル */}
       <div className="fade_in_up flex flex-col gap-1">
-        <h2 className="pc:text-3xl font-[Oswald,serif] text-2xl font-bold max-[374px]:text-xl">
+        <h2
+          className="pc:text-3xl font-[Oswald,serif] text-2xl font-bold max-[374px]:text-xl"
+          style={textColor ? { color: textColor } : undefined}
+        >
           {title}
         </h2>
-        <p className="common_font_size">{subTitle}</p>
+        <p
+          className="common_font_size"
+          style={textColor ? { color: textColor } : undefined}
+        >
+          {subTitle}
+        </p>
       </div>
 
       {/* コンテンツ */}

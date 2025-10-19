@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Footer,
   Header,
   SectionAbout,
   SectionFv,
@@ -23,7 +24,7 @@ const Home = () => {
         <SectionAbout />
         <SectionLike />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
