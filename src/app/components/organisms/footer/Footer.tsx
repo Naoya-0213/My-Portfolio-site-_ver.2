@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { NAV } from "@/const/nav";
@@ -46,8 +47,11 @@ const Footer = () => {
               <br />
               　＊LINE・Instagramは準備中です。
             </p>
-            <div
+            <Link
+              href="mailto:naoya.work0213@gmail.com"
+              prefetch={false}
               className={styles.footer__mail}
+              aria-label="メールで問い合わせ"
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
             >
@@ -62,7 +66,7 @@ const Footer = () => {
                 height={20}
               />
               <span>naoya.work0213@gmail.com</span>
-            </div>
+            </Link>
           </div>
 
           {/* SNSリンク＆Top戻るボタン */}
