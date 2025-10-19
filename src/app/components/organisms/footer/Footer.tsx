@@ -81,7 +81,10 @@ const Footer = () => {
             {/* SNSリンク */}
             <div className="sm:flex sm:gap-4">
               {SNS__footer.map((item, index) => (
-                <div key={index}>
+                <div
+                  key={index}
+                  className="transition-transform duration-300 hover:scale-125"
+                >
                   <a href={item.href}>
                     <Image
                       src={item.icon}
