@@ -3,15 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { workSlides } from "@/const/workSlides";
+import { workSlides } from "@/const/work/workSlides";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Keyboard, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { SlideNextButton } from "../../../../components/atoms/button/swiper_button/SlideNextButton";
+import { SlidePrevButton } from "../../../../components/atoms/button/swiper_button/SlidePrevButton";
 import WorkSwiperSlide from "../../../../components/atoms/work_swiper_slide/WorkSwiperSlide";
-import { SlideNextButton } from "./swiper_button/SlideNextButton";
-import { SlidePrevButton } from "./swiper_button/SlidePrevButton";
 import styles from "./workSwiper.module.scss";
 
 function WorkSwiper() {

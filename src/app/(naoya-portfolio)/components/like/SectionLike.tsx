@@ -1,3 +1,4 @@
+import GR3Swiper from "@/app/components/molecules/GR3_contents/swiper/GR3Swiper";
 import SectionCard from "@/app/components/molecules/section_card/SectionCard";
 
 const SectionLike = () => {
@@ -19,7 +20,7 @@ const SectionLike = () => {
               {/* 内容 */}
               <div className="fade_in_up">
                 <p>
-                  高校3年からスノーボードにハマっています。冬になれば、ほぼ毎週ゲレンデに行きます。これまで、29か所ものスキー場を訪問しました。今シーズンの目標は、北海道のニセコに滑りに行くこと！
+                  高校3年からスノーボードにハマっています。冬になれば、ほぼ毎週ゲレンデに行きます。これまで29か所ものスキー場を訪問しました。今シーズンの目標は、北海道のニセコに滑りに行くこと！
                 </p>
               </div>
             </div>
@@ -48,6 +49,9 @@ const SectionLike = () => {
           </div>
         </div>
       </SectionCard>
+      <div className="mb-5 sm:mb-8">
+        <GR3Swiper />
+      </div>
     </div>
   );
 };
