@@ -5,8 +5,8 @@ import Image from "next/image";
 import SectionCard from "@/app/components/molecules/section_card/SectionCard";
 import { useFadeInObserver } from "@/app/hooks/useFadeInObserver";
 
+import type { WorkContentsData } from "../../../../const/work/types/types";
 import styles from "../components/workSection.module.scss";
-import type { WorkContentsData } from "../types/types";
 
 type WorkSectionCardProps = {
   data: WorkContentsData;

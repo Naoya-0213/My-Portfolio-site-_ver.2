@@ -1,6 +1,12 @@
 // About Me セクション：モーダル（これまで学習した内容）
 
-export const LearningHistory = [
+type types = {
+  date: string;
+  title: string;
+  description: string;
+};
+
+export const LearningHistory: types[] = [
   {
     date: "2023年5月",
     title: "「ITパスポート」取得",

@@ -1,6 +1,11 @@
 // About Me セクション：モーダル（これから学習したい内容）
+type types = {
+  date: string;
+  title: string;
+  description: string;
+};
 
-export const FutureLearningPlan = [
+export const FutureLearningPlan: types[] = [
   {
     date: "2025年12月",
     title: "AWS学習（デプロイ・インフラ設計）",

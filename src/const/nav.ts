@@ -1,4 +1,10 @@
-export const NAV = [
+type types = {
+  href: string;
+  label: string;
+  icon: string;
+};
+
+export const NAV: types[] = [
   {
     href: "#fv",
     label: "Home -",
@@ -27,7 +33,7 @@ export const NAV = [
   },
 ];
 
-export const SNS = [
+export const SNS: types[] = [
   { href: "#", icon: "/img/icon/line/line_icon-brown.png", label: "LINE" },
   {
     href: "https://x.com/Naoya__in_web",
@@ -41,7 +47,7 @@ export const SNS = [
   },
 ];
 
-export const SNS__footer = [
+export const SNS__footer: types[] = [
   { href: "#", icon: "/img/icon/line/line_icon-cream2.png", label: "LINE" },
   {
     href: "https://x.com/Naoya__in_web",

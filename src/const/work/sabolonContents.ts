@@ -1,4 +1,4 @@
-import type { WorkContentsData } from "@/app/(naoya-portfolio)/work/types/types";
+import type { WorkContentsData } from "@/const/work/types/types";
 
 export const sabolonContents: WorkContentsData = {
   id: "oha",

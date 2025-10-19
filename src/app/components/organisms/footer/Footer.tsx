@@ -44,7 +44,7 @@ const Footer = () => {
         textColor="#f3f0eb"
         contentClassName="!mt-10"
       >
-        <div className="flex items-center justify-center gap-5 px-5 max-[350px]:gap-2 sm:gap-20">
+        <div className="fade_in_up flex items-center justify-center gap-5 px-5 max-[350px]:gap-2 sm:gap-20">
           {/* コメント＆メアド */}
           <div className="flex flex-col gap-5">
             <p className="max-w-80 text-[#f3f0eb]">
