@@ -1,8 +1,9 @@
+// app/layout.tsx の先頭あたり
+import { Toaster } from "react-hot-toast";
+
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Oswald } from "next/font/google";
 import localFont from "next/font/local";
-
-// app/layout.tsx の先頭あたり
 
 import "./styles/_common-css.scss";
 import "./styles/globals.css";
@@ -65,7 +66,38 @@ export default function RootLayout({
       lang="ja"
       className={`bg-[#f3f0eb] leading-relaxed font-normal text-[#795549] ${noto.variable} ${oswald.variable} ${knewave.variable}`}
     >
-      <body className="pc:text-[15px] text-sm">{children}</body>
+      <body className="pc:text-[15px] text-sm">
+        {/* トースト導入 */}
+        <Toaster
+          position="top-center"
+          toastOptions={{
+            duration: 4000,
+            style: {
+              fontFamily: "var(--font-geist-sans)",
+              background: "#F3F0EB",
+              color: "#795549",
+              fontSize: "14px",
+              padding: "12px 16px",
+              borderRadius: "8px",
+              boxShadow: "0 2px 6px rgba(0, 0, 0, 0.1)",
+            },
+            success: {
+              iconTheme: {
+                primary: "#795549",
+                secondary: "#FFF8F0",
+              },
+            },
+            error: {
+              iconTheme: {
+                primary: "#B00020",
+                secondary: "#FFD4D4",
+              },
+            },
+          }}
+          reverseOrder={false}
+        />
+        {children}
+      </body>
     </html>
   );
 }

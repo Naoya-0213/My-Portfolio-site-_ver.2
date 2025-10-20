@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import { NAV, SNS } from "@/const/nav";
 
 import { useMedia } from "@/app/hooks/useMedia";
+import { useSnsToast } from "@/app/hooks/useSnsToast";
 
 import HamburgerButton from "../../atoms/hamburger_buttton/HamburgerButton";
 import NavList from "../../molecules/nav_list/NavList";
@@ -26,6 +27,9 @@ export default function Header() {
 
   // 現在のpass確認
   const pathname = usePathname();
+
+  // トースト
+  const { handleSnsClick } = useSnsToast();
 
   // 幅ブレイクに応じて片方を必ず閉じる
   useEffect(() => {
@@ -101,12 +105,17 @@ export default function Header() {
 
           {/* SNSリンク */}
           <div className="flex items-center justify-center gap-7">
-            {SNS.map((s) => (
-              <div key={s.label} className={styles.sns__icon_animation}>
-                <a href={s.href} target="_blank" rel="nofollow noopener">
+            {SNS.map((item, index) => (
+              <div key={index} className={styles.sns__icon_animation}>
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="nofollow noopener"
+                  onClick={(e) => handleSnsClick(e, item)}
+                >
                   <Image
-                    src={s.icon}
-                    alt={`${s.label} icon`}
+                    src={item.icon}
+                    alt={`${item.label} icon`}
                     width={25}
                     height={25}
                   />
@@ -133,7 +142,29 @@ export default function Header() {
             classNameWrapper={styles.drawer__nav__link_wrapper_pc}
             items={navForCurrentPage}
           />
+
+          <div className="flex items-center justify-center gap-5">
+            {SNS.map((s) => (
+              <div key={s.label} className={styles.sns__icon_animation}>
+                <a
+                  href={s.href}
+                  target="_blank"
+                  rel="nofollow noopener"
+                  onClick={(e) => handleSnsClick(e, s)}
+                >
+                  <Image
+                    src={s.icon}
+                    alt={`${s.label} icon`}
+                    width={20}
+                    height={20}
+                  />
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
+
+        {/* SNSリンク */}
       </div>
     </header>
   );

@@ -4,9 +4,13 @@ import Image from "next/image";
 
 import { NAV, SNS } from "@/const/nav";
 
+import { useSnsToast } from "@/app/hooks/useSnsToast";
+
 import styles from "./fv.module.scss";
 
 const SectionFv = () => {
+  const { handleSnsClick } = useSnsToast();
+
   return (
     <section className="pc:pb-10 relative" id="fv">
       <div className="mx-auto max-w-[1160px]">
@@ -62,7 +66,12 @@ const SectionFv = () => {
               <div className={styles.sns__link_pc}>
                 {SNS.map((item, index) => (
                   <div className={styles.sns__link_pc_item} key={index}>
-                    <a href={item.href} target="_blank" rel="nofollow noopener">
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="nofollow noopener"
+                      onClick={(e) => handleSnsClick(e, item)}
+                    >
                       <Image
                         src={item.icon}
                         alt="sns-icon"

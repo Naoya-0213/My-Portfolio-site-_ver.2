@@ -42,8 +42,6 @@
 
 .sns__icon_animation {
   img {
-    width: 25px;
-    height: 25px;
     transition: transform 0.3s;
 
     @media (min-width: 600px) {
@@ -104,6 +102,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .drawer__nav_pc {

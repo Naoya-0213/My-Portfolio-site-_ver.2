@@ -8,6 +8,8 @@ import { usePathname } from "next/navigation";
 
 import { NAV, SNS__footer } from "@/const/nav";
 
+import { useSnsToast } from "@/app/hooks/useSnsToast";
+
 import SectionCard from "../../molecules/section_card/SectionCard";
 import styles from "./footer.module.scss";
 
@@ -15,6 +17,9 @@ const Footer = () => {
   // 現在のpass確認
   const pathname = usePathname();
   const [hover, setHover] = useState(false);
+
+  // トースト
+  const { handleSnsClick } = useSnsToast();
 
   // 現在のpassに合わせてNAV要素クリック時の動作を指定
   const decorateHref = (href: string) => {
@@ -99,7 +104,7 @@ const Footer = () => {
                   key={index}
                   className="transition-transform duration-300 hover:scale-125"
                 >
-                  <a href={item.href}>
+                  <a href={item.href} onClick={(e) => handleSnsClick(e, item)}>
                     <Image
                       src={item.icon}
                       alt="SNSアイコン"
