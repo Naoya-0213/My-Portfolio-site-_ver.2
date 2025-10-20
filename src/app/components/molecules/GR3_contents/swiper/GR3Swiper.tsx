@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { GR3Contents } from "@/const/like/gr3Contents";
+import { GR3Contents } from "@/const/like/GR3Contents";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Keyboard } from "swiper/modules";
