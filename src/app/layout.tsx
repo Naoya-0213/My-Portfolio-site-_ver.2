@@ -27,11 +27,11 @@ const knewave = localFont({
 export const metadata: Metadata = {
   title: "Portfolio site by Naoya",
   description:
-    "転職活動用ポートフォリオサイトです。フロントエンドエンジニアを目指して学習を進めており、現在は React / Next.js を中心に取り組んでいます。これまで学んだスキルや制作物をまとめ、実践的なアウトプットとして公開しています。",
+    "転職活動用ポートフォリオサイトです。エンジニアを目指して学習を進めており、現在は React / Next.js を中心に取り組んでいます。これまで学んだスキルや制作物をまとめ、実践的なアウトプットとして公開しています。",
   openGraph: {
     title: "Portfolio site by Naoya",
     description:
-      "フロントエンドエンジニアを目指して学習中。React / Next.js で制作したポートフォリオです。",
+      "エンジニアを目指して学習中。React / Next.js で制作したポートフォリオです。",
     // TODO　デプロイ後に変更予定
     // TODO　Xでカード確認
     url: "https://your-portfolio.vercel.app",
