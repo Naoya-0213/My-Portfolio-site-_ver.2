@@ -9,12 +9,16 @@ import "swiper/css/pagination";
 import { Autoplay, Keyboard, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { useWorkToast } from "@/app/hooks/useWorkToast";
+
 import { SlideNextButton } from "../../../../components/atoms/button/swiper_button/SlideNextButton";
 import { SlidePrevButton } from "../../../../components/atoms/button/swiper_button/SlidePrevButton";
 import WorkSwiperSlide from "../../../../components/atoms/work_swiper_slide/WorkSwiperSlide";
 import styles from "./workSwiper.module.scss";
 
 function WorkSwiper() {
+  const { handleWorkSlideClick } = useWorkToast();
+
   return (
     <div className="fade_in_up relative m-auto max-w-[900px]">
       <Swiper
@@ -53,16 +57,18 @@ function WorkSwiper() {
         }}
         autoplay={{ delay: 3000, disableOnInteraction: true }}
       >
-        {workSlides.map((s) => {
+        {workSlides.map((workSlide, index) => {
           return (
-            <SwiperSlide className={styles.slide} key={s.id}>
-              {s.href ? (
-                <Link href={s.href}>
-                  <WorkSwiperSlide pc_img={s.pc_img} sp_img={s.sp_img} />
-                </Link>
-              ) : (
-                <WorkSwiperSlide pc_img={s.pc_img} sp_img={s.sp_img} />
-              )}
+            <SwiperSlide className={styles.slide} key={index}>
+              <Link
+                href={workSlide.href}
+                onClick={(e) => handleWorkSlideClick(e, workSlide)}
+              >
+                <WorkSwiperSlide
+                  pc_img={workSlide.pc_img}
+                  sp_img={workSlide.sp_img}
+                />
+              </Link>
             </SwiperSlide>
           );
         })}

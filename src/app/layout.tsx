@@ -79,7 +79,7 @@ export default function RootLayout({
               fontSize: "14px",
               padding: "12px 16px",
               borderRadius: "8px",
-              boxShadow: "0 2px 6px rgba(0, 0, 0, 0.1)",
+              boxShadow: "0 2px 6px rgba(0, 0, 0, 0.3)",
             },
             success: {
               iconTheme: {

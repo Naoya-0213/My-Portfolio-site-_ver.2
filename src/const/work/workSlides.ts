@@ -1,6 +1,6 @@
 export type workSlides = {
   id: string;
-  href?: string;
+  href: string;
   pc_img: string;
   sp_img: string;
 };
@@ -44,7 +44,7 @@ export const workSlides: workSlides[] = [
   // coming soon
   {
     id: "coming_soon",
-    // href: "",
+    href: "#",
     pc_img: "/img/section_work/coming_soon/coming_soon-pc.png",
     sp_img: "/img/section_work/coming_soon/coming_soon.png",
   },
