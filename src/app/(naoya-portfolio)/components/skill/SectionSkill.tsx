@@ -1,3 +1,4 @@
+import AccordionButton from "@/app/components/atoms/button/accordion_button/AccordionButton";
 import ItemCard from "@/app/components/molecules/section_card/itemcard/ItemCard";
 
 import SectionCard from "../../../components/molecules/section_card/SectionCard";
@@ -37,6 +38,15 @@ const SectionSkill = () => {
               既存のサイトやアプリの修正・機能追加・リファクタリングに対応します。柔軟かつ丁寧に改善を行い、小規模から大規模まで、保守性を意識した改修を実現します。
             </p>
           </ItemCard>
+        </div>
+
+        <div className="m-auto my-5 w-full">
+          <AccordionButton
+            title="スキルを詳しく見る"
+            titleColor="text-[#96b3d1]"
+          >
+            <div>test</div>
+          </AccordionButton>
         </div>
       </SectionCard>
     </div>
