@@ -30,6 +30,7 @@ const SectionSkill = () => {
           <AccordionButton
             title="スキルを詳しく見る"
             titleColor="text-[#96b3d1] hover:text-[#795549]"
+            durationSec={1}
           >
             <div className="m-auto max-w-screen-sm px-5 pt-8">
               <div className="flex flex-col gap-5">
