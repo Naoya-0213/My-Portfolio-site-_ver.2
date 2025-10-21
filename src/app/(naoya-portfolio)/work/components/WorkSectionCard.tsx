@@ -13,8 +13,18 @@ type WorkSectionCardProps = {
 };
 
 const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
-  const { title, badge, sections, scope, tech, github, links, tools, img } =
-    data;
+  const {
+    title,
+    badge,
+    sections,
+    scope,
+    tech,
+    github,
+    links,
+    tools,
+    img,
+    refactoring,
+  } = data;
 
   useFadeInObserver();
 
@@ -86,11 +96,31 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
               </div>
             ))}
 
+            {/* 今後の更新内容（リファクタリング内容） */}
+            {refactoring?.length ? (
+              <div className={`${styles.work_contents} fade_in_up px-2 pb-7`}>
+                <dt className={`${styles.contents_label} `}>今後の更新</dt>
+                <dd className="flex flex-col gap-3">
+                  {refactoring.map((item, index) => (
+                    <div
+                      key={index}
+                      className={`flex flex-col leading-relaxed`}
+                    >
+                      <div className="min-w-30 font-semibold sm:min-w-40">
+                        {item.label}
+                      </div>
+                      <div>{item.value}</div>
+                    </div>
+                  ))}
+                </dd>
+              </div>
+            ) : null}
+
             {/* 担当領域 */}
             {scope?.length ? (
               <div className={`${styles.work_contents} fade_in_up px-2 pb-7`}>
                 <dt className={`${styles.contents_label} `}>
-                  担当領域 / <br className="pc:block hidden" />
+                  担当領域 / <br className="hidden sm:block" />
                   制作期間
                 </dt>
                 <dd className="flex-col gap-2 max-[350px]:flex">
@@ -99,7 +129,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
                       key={index}
                       className={`flex leading-relaxed max-[350px]:flex-col ${index === scope.length - 1 ? "mt-3" : ""}`}
                     >
-                      <div className="min-w-30 sm:min-w-40">{item.label}</div>
+                      <div className="min-w-40">{item.label}</div>
                       <div>{item.value}</div>
                     </div>
                   ))}
@@ -170,6 +200,8 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
                 </dd>
               </div>
             ) : null}
+
+            {/* TODO:デモアカウントID */}
 
             {/* GitHub */}
             {github?.length ? (

@@ -12,4 +12,5 @@ export type WorkContentsData = {
   github?: { label: string; href: string }[];
   images?: { pc?: string; sp?: string };
   links?: { label: string; href: string }[];
+  refactoring?: { label: string; value: string }[];
 };
