@@ -1,5 +1,5 @@
 import { skillAccordion } from "@/const/skill/skillAccordion";
-import { skillCard } from "@/const/skill/skillCard";
+import { skillCard } from "@/const/skill/skillcard";
 
 import AccordionButton from "@/app/components/atoms/button/accordion_button/AccordionButton";
 import ItemCard from "@/app/components/molecules/section_card/itemcard/ItemCard";
