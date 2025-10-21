@@ -1,8 +1,21 @@
+/* 速度とイージングはここで集中管理。JSで --acc-duration を上書き可能 */
+:root {
+  --acc-duration: 0.5s;
+  --acc-ease: cubic-bezier(0.22, 1, 0.36, 1); // しっとり系
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --acc-duration: 0s;
+  }
+}
+
 .accordion {
   width: 100%;
   margin-top: 20px;
 }
 
+/* 既存ボタンはそのまま。transformのホバー演出も維持 */
 .accordion__button {
   width: 100%;
   background: none;
@@ -15,13 +28,14 @@
   justify-content: center;
   gap: 20px;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.7s;
 
   &:hover {
     transform: scale(1.05);
   }
 }
 
+/* プラス/マイナスのアイコン */
 .accordion__icon {
   width: 40px;
   height: 40px;
@@ -29,48 +43,41 @@
   border: 1px solid #795549;
   position: relative;
 
-  &::before {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     top: calc(20px - 2px);
     left: calc(10px - 1px);
     background: #795549;
-
     width: 20px;
     height: 1px;
   }
 
+  /* 縦線 */
   &::after {
-    content: "";
-    position: absolute;
-
-    top: calc(20px - 2px);
-    left: calc(10px - 1px);
-    background: #795549;
-
-    width: 20px;
-    height: 1px;
-
     transform: rotate(90deg);
     transition: transform 0.3s;
   }
 
   &.is_open {
     &::after {
-      transform: rotate(0deg);
+      transform: rotate(0deg); // マイナス化
     }
   }
 }
 
+/* ★ ここが重要：heightでアニメ。初期は0で非表示。 */
 .accordion__content {
-  max-height: 200px;
+  height: 0;
   overflow: hidden;
-  opacity: 0;
-  transition: all 0.5s ease;
+  transition: height var(--acc-duration) var(--acc-ease);
+  /* 余白が欲しいときは padding を内側で付けるか、子に付ける */
 }
 
+/* 開いた状態。heightはJSでscrollHeightにし、完了後autoに解放するので
+   ここでは見た目用のフックだけ（必要ならクラスで余白などを付与） */
 .accordion__content.open {
-  max-height: 500px; /* 開く高さを調整 */
-  opacity: 1;
-  margin-top: 10px;
+  /* 例: 開いた時だけ上に余白 */
+  /* padding-top: 8px; */
 }

@@ -1,4 +1,5 @@
-import { skillCard } from "@/const/skill/skillcard";
+import { skillAccordion } from "@/const/skill/skillAccordion";
+import { skillCard } from "@/const/skill/skillCard";
 
 import AccordionButton from "@/app/components/atoms/button/accordion_button/AccordionButton";
 import ItemCard from "@/app/components/molecules/section_card/itemcard/ItemCard";
@@ -30,7 +31,12 @@ const SectionSkill = () => {
             title="スキルを詳しく見る"
             titleColor="text-[#96b3d1]"
           >
-            <div>test</div>
+            {skillAccordion.map((item, index) => (
+              <div key={index} className="flex flex-col gap-2 sm:flex-row">
+                <div>{item.label}</div>
+                <p>{item.value}</p>
+              </div>
+            ))}
           </AccordionButton>
         </div>
       </SectionCard>
