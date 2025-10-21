@@ -13,4 +13,5 @@ export type WorkContentsData = {
   images?: { pc?: string; sp?: string };
   links?: { label: string; href: string }[];
   refactoring?: { label: string; value: string }[];
+  mainFunction?: { label: string; value: string }[];
 };

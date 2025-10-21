@@ -32,6 +32,35 @@ export const money_mindfulContents: WorkContentsData = {
     },
   ],
 
+  // 主な機能
+  mainFunction: [
+    {
+      label: "ユーザー認証（ログイン・サインアップ）",
+      value: "Supabase Authで認証管理を実装。",
+    },
+    {
+      label: "目標設定機能",
+      value: "目的・金額・期限を登録し、達成率を表示。",
+    },
+    {
+      label: "我慢記録の登録",
+      value: "金額・カテゴリ・メモを入力して記録。",
+    },
+    {
+      label: "進捗グラフ表示",
+      value: "円グラフ・棒グラフで貯金の推移を可視化。",
+    },
+    {
+      label: "カレンダー表示",
+      value: "日別の記録をカレンダーで一覧表示。",
+    },
+    {
+      label: "ユーザー設定",
+      value: "アドレス・名前・画像の変更に対応。",
+    },
+  ],
+
+  // 今後の更新内容
   refactoring: [
     {
       label: "PC画面へのレスポンシブ対応",
@@ -58,19 +87,15 @@ export const money_mindfulContents: WorkContentsData = {
   scope: [
     {
       label: "構成 / デザイン作成",
-      value: "62時間",
+      value: "30時間",
     },
     {
       label: "コーディング",
-      value: "72時間",
-    },
-    {
-      label: "リニューアル更新",
-      value: "60時間",
+      value: "161時間",
     },
     {
       label: "合計",
-      value: "〇〇時間",
+      value: "191時間",
     },
   ],
   tech: ["Next.js", "React", "TypeScript", "Tailwind", "Sass", "Swiper"],

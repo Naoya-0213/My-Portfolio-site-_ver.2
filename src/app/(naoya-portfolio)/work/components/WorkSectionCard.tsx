@@ -24,6 +24,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
     tools,
     img,
     refactoring,
+    mainFunction,
   } = data;
 
   useFadeInObserver();
@@ -95,6 +96,26 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
                 </dd>
               </div>
             ))}
+
+            {/* 主な機能 */}
+            {mainFunction?.length ? (
+              <div className={`${styles.work_contents} fade_in_up px-2 pb-7`}>
+                <dt className={`${styles.contents_label} `}>主な機能</dt>
+                <dd className="flex flex-col gap-3">
+                  {mainFunction.map((item, index) => (
+                    <div
+                      key={index}
+                      className={`flex flex-col leading-relaxed`}
+                    >
+                      <div className="min-w-30 font-semibold sm:min-w-40">
+                        {item.label}
+                      </div>
+                      <div>{item.value}</div>
+                    </div>
+                  ))}
+                </dd>
+              </div>
+            ) : null}
 
             {/* 今後の更新内容（リファクタリング内容） */}
             {refactoring?.length ? (
@@ -181,6 +202,26 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
               </div>
             ) : null}
 
+            {/* GitHub */}
+            {github?.length ? (
+              <div className={`${styles.work_contents} fade_in_up px-2 pb-7`}>
+                <dt className={`${styles.contents_label}`}>GitHub</dt>
+                <dd className="flex flex-wrap gap-3">
+                  {github.map((l) => (
+                    <a
+                      key={l.href}
+                      href={l.href}
+                      className="underline"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {l.label}
+                    </a>
+                  ))}
+                </dd>
+              </div>
+            ) : null}
+
             {/* サイトURL */}
             {links?.length ? (
               <div className={`${styles.work_contents} fade_in_up px-2 pb-7`}>
@@ -202,26 +243,6 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
             ) : null}
 
             {/* TODO:デモアカウントID */}
-
-            {/* GitHub */}
-            {github?.length ? (
-              <div className={`${styles.work_contents} fade_in_up px-2 pb-7`}>
-                <dt className={`${styles.contents_label}`}>GitHub</dt>
-                <dd className="flex flex-wrap gap-3">
-                  {github.map((l) => (
-                    <a
-                      key={l.href}
-                      href={l.href}
-                      className="underline"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {l.label}
-                    </a>
-                  ))}
-                </dd>
-              </div>
-            ) : null}
           </dl>
         </article>
       </SectionCard>
