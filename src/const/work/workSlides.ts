@@ -38,8 +38,8 @@ export const workSlides: workSlides[] = [
   {
     id: "money_mindful",
     href: "/work/money_mindful",
-    pc_img: "/img/section_work/portfolio/portfolio-pc.png",
-    sp_img: "/img/section_work/portfolio/portfolio.png",
+    pc_img: "/img/section_work/coming_soon/coming_soon-pc.png",
+    sp_img: "/img/section_work/money_mindful/money_mindful.png",
   },
   // coming soon
   {
