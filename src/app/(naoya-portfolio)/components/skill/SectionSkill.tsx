@@ -29,14 +29,27 @@ const SectionSkill = () => {
         <div className="m-auto my-5 w-full">
           <AccordionButton
             title="スキルを詳しく見る"
-            titleColor="text-[#96b3d1]"
+            titleColor="text-[#96b3d1] hover:text-[#795549]"
           >
-            {skillAccordion.map((item, index) => (
-              <div key={index} className="flex flex-col gap-2 sm:flex-row">
-                <div>{item.label}</div>
-                <p>{item.value}</p>
+            <div className="m-auto max-w-screen-sm px-5 pt-8">
+              <div className="flex flex-col gap-5">
+                {skillAccordion.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col gap-2 border-b border-[#d7cdbe] pb-5 sm:flex-row"
+                  >
+                    <div className="min-w-30 font-bold text-[#96b3d1]">
+                      {item.label}
+                    </div>
+                    <p>{item.value}</p>
+                  </div>
+                ))}
+
+                <div className="text-right font-[Oswald,serif] font-bold text-[#795549]">
+                  To be continued...
+                </div>
               </div>
-            ))}
+            </div>
           </AccordionButton>
         </div>
       </SectionCard>

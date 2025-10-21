@@ -28,10 +28,11 @@
   justify-content: center;
   gap: 20px;
   cursor: pointer;
-  transition: transform 0.7s;
+  transition: color transform 0.7s;
 
   &:hover {
-    transform: scale(1.05);
+    // transform: scale(1.05);
+    color: #795549;
   }
 }
 
@@ -79,5 +80,4 @@
    ここでは見た目用のフックだけ（必要ならクラスで余白などを付与） */
 .accordion__content.open {
   /* 例: 開いた時だけ上に余白 */
-  /* padding-top: 8px; */
 }
