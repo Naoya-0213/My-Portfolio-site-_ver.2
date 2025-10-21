@@ -25,6 +25,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
     img,
     refactoring,
     mainFunction,
+    account,
   } = data;
 
   useFadeInObserver();
@@ -242,7 +243,20 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
               </div>
             ) : null}
 
-            {/* TODO:デモアカウントID */}
+            {/* デモアカウントID */}
+            {account?.length ? (
+              <div className={`${styles.work_contents} fade_in_up px-2 pb-7`}>
+                <dt className={`${styles.contents_label} `}>デモアカウント</dt>
+                <dd className="flex gap-10 max-[350px]:flex-col max-[350px]:gap-0">
+                  {account.map((item, index) => (
+                    <div key={index} className={`flex gap-2 leading-relaxed`}>
+                      <div className="font-semibold">{item.label}：</div>
+                      <div>{item.value}</div>
+                    </div>
+                  ))}
+                </dd>
+              </div>
+            ) : null}
           </dl>
         </article>
       </SectionCard>

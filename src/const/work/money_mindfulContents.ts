@@ -129,11 +129,20 @@ export const money_mindfulContents: WorkContentsData = {
     },
   ],
 
-  // TODO リンク更新
+  // サイトURL
   links: [
     {
       label: "https://moneymindful-gamma.vercel.app/money-mindful",
       href: "https://moneymindful-gamma.vercel.app/money-mindful",
+    },
+  ],
+
+  // デモアカウント情報
+  account: [
+    { label: "ID", value: "demo@demo.com" },
+    {
+      label: "PW",
+      value: "demo1234",
     },
   ],
 };
