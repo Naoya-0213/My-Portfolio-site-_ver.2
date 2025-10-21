@@ -15,7 +15,6 @@
   margin-top: 20px;
 }
 
-/* 既存ボタンはそのまま。transformのホバー演出も維持 */
 .accordion__button {
   width: 100%;
   background: none;
@@ -55,7 +54,6 @@
     height: 1px;
   }
 
-  /* 縦線 */
   &::after {
     transform: rotate(90deg);
     transition: transform 0.3s;
@@ -63,7 +61,7 @@
 
   &.is_open {
     &::after {
-      transform: rotate(0deg); // マイナス化
+      transform: rotate(0deg);
     }
   }
 }
@@ -74,10 +72,4 @@
   overflow: hidden;
   transition: height var(--acc-duration) var(--acc-ease);
   /* 余白が欲しいときは padding を内側で付けるか、子に付ける */
-}
-
-/* 開いた状態。heightはJSでscrollHeightにし、完了後autoに解放するので
-   ここでは見た目用のフックだけ（必要ならクラスで余白などを付与） */
-.accordion__content.open {
-  /* 例: 開いた時だけ上に余白 */
 }
