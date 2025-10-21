@@ -73,7 +73,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
 
         <article className="pb-8 sm:p-8">
           {/* タイトル */}
-          <header className="fade_in_up pc:mb-10 m-auto mb-5 flex max-w-2xl flex-col gap-5 max-[350px]:items-start max-[350px]:gap-2 sm:flex-row sm:items-center">
+          <header className="fade_in_up pc:mb-10 pc:gap-10 m-auto mb-5 flex max-w-2xl flex-col gap-5 max-[350px]:items-start max-[350px]:gap-2 sm:flex-row sm:items-center">
             {badge && (
               <span className="h-fit w-fit min-w-20 rounded-2xl bg-[#795549] px-4 py-1 text-xs text-[#f3f0eb]">
                 {badge}

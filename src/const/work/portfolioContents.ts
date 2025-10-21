@@ -27,7 +27,6 @@ export const portfolioContents: WorkContentsData = {
     },
   ],
 
-  // TODO 詳細時間記載
   scope: [
     {
       label: "構成 / デザイン作成",
@@ -39,11 +38,11 @@ export const portfolioContents: WorkContentsData = {
     },
     {
       label: "リニューアル更新",
-      value: "60時間",
+      value: "70時間",
     },
     {
       label: "合計",
-      value: "〇〇時間",
+      value: "204時間",
     },
   ],
   tech: ["Next.js", "React", "TypeScript", "Tailwind", "Sass", "Swiper"],
@@ -67,7 +66,11 @@ export const portfolioContents: WorkContentsData = {
     },
     {
       label: "コーディング",
-      value: [{ item: "GitHub" }, { item: "Vercel" }, { item: "npm" }],
+      value: [{ item: "GitHub" }, { item: "npm" }],
+    },
+    {
+      label: "デプロイ",
+      value: [{ item: "Vercel" }],
     },
   ],
   github: [

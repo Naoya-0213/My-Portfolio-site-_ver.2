@@ -43,7 +43,7 @@ const Footer = () => {
   return (
     <footer className="w-full bg-[#795549] pt-5">
       <SectionCard
-        id="about"
+        id="contact"
         title="Contact -"
         subTitle="お問い合わせ"
         textColor="#f3f0eb"

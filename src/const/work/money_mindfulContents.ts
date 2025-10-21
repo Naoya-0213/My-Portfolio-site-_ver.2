@@ -119,7 +119,11 @@ export const money_mindfulContents: WorkContentsData = {
     },
     {
       label: "コーディング",
-      value: [{ item: "GitHub" }, { item: "Vercel" }, { item: "npm" }],
+      value: [{ item: "GitHub" }, { item: "npm" }],
+    },
+    {
+      label: "デプロイ",
+      value: [{ item: "Vercel" }],
     },
   ],
   github: [
