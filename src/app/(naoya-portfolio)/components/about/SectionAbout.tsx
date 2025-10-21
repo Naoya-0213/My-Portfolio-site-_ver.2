@@ -82,6 +82,17 @@ const SectionAbout = () => {
                     </div>
                   </div>
                 </div>
+
+                {/* Quita */}
+                <div className="flex flex-col gap-2 sm:flex-row">
+                  <h2 className="min-w-20 font-bold">Quita :</h2>
+                  <a
+                    href="https://qiita.com/Naoya__in_web"
+                    className="font-bold"
+                  >
+                    https://qiita.com/Naoya__in_web
+                  </a>
+                </div>
               </div>
             </div>
           </div>
