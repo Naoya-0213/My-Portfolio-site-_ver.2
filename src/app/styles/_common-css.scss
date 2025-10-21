@@ -5,21 +5,21 @@
 // ================================================
 
 // font
-$font-family-jp: "Noto San JP", sans-serif;
-$font-family-en: "Oswald", serif;
+// $font-family-jp: "Noto San JP", sans-serif;
+// $font-family-en: "Oswald", serif;
 
-$font-size-sp: 14px;
-$font-size-pc: 15px;
+// $font-size-sp: 14px;
+// $font-size-pc: 15px;
 
-$font-weight-base: 400;
-$line-height: 1.6;
+// $font-weight-base: 400;
+// $line-height: 1.6;
 
 // color
-$color1: #f3f0eb;
-$color2: #d7cdbe;
-$color3: #795549;
-$color4: #c7c4c4;
-$color5: #96b3d1;
+// $color1: #f3f0eb;
+// $color2: #d7cdbe;
+// $color3: #795549;
+// $color4: #c7c4c4;
+// $color5: #96b3d1;
 
 // その他↓
 
@@ -35,10 +35,10 @@ $color5: #96b3d1;
 
 // フォントサイズ
 .common_font_size {
-  font-size: $font-size-sp;
+  font-size: 14px;
 
   @media (min-width: 900px) {
-    font-size: $font-size-pc;
+    font-size: 15px;
   }
 }
 
