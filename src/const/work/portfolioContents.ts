@@ -38,7 +38,7 @@ export const portfolioContents: WorkContentsData = {
     },
     {
       label: "リニューアル更新",
-      value: "70時間",
+      value: "71時間",
     },
     {
       label: "合計",
