@@ -136,8 +136,8 @@ export const money_mindfulContents: WorkContentsData = {
   // サイトURL
   links: [
     {
-      label: "https://moneymindful-gamma.vercel.app/money-mindful",
-      href: "https://moneymindful-gamma.vercel.app/money-mindful",
+      label: "https://moneymindful-gamma.vercel.app/",
+      href: "https://moneymindful-gamma.vercel.app/",
     },
   ],
 
