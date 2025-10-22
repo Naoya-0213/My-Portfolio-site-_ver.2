@@ -12,7 +12,7 @@ export const portfolioContents: WorkContentsData = {
   sections: [
     {
       label: "概要",
-      value: `転職活動および実績掲載を目的としたポートフォリオサイトとして、デザイン設計からコーディング、デプロイまで一貫して自作。学んだ技術を応用し、動きや配色、余白など細部までこだわりながら、自分の世界観と制作姿勢を表現した。\n\n2025年10月には ver.2 として、HTML / CSS ベースで構築していた既存サイトを Next.js × React で再構築。`,
+      value: `転職活動および実績掲載を目的としたポートフォリオサイトとして、デザイン設計からコーディング、デプロイまで一貫して自作。学んだ技術を応用し、動きや配色、余白など細部までこだわりながら、自分の世界観と制作姿勢を表現した。\n\n2025年10月にはver.2として、HTML / CSS ベースで構築していた既存サイトを Next.js × React で再構築。`,
     },
     { label: "ターゲット", value: "企業の採用担当者の方々" },
     {
@@ -79,12 +79,10 @@ export const portfolioContents: WorkContentsData = {
       href: "https://github.com/Naoya-0213/My-Portfolio-site-_ver.2",
     },
   ],
-
-  // TODO リンク更新
   links: [
     {
-      label: "https://github.com/Naoya-0213/My-Portfolio-site-_ver.2",
-      href: "https://github.com/Naoya-0213/My-Portfolio-site-_ver.2",
+      label: "https://naoyaportfolio.vercel.app/",
+      href: "https://naoyaportfolio.vercel.app/",
     },
   ],
 };
