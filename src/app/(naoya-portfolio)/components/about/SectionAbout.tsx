@@ -88,9 +88,20 @@ const SectionAbout = () => {
                   <h2 className="min-w-20 font-bold">Quita :</h2>
                   <a
                     href="https://qiita.com/Naoya__in_web"
-                    className="font-bold"
+                    className="rounded bg-[#EDE4D9] px-2 py-1 text-sm font-bold"
                   >
                     https://qiita.com/Naoya__in_web
+                  </a>
+                </div>
+
+                {/* GitHub */}
+                <div className="flex flex-col gap-2 sm:flex-row">
+                  <h2 className="min-w-20 font-bold">GitHub :</h2>
+                  <a
+                    href="https://github.com/Naoya-0213"
+                    className="rounded bg-[#EDE4D9] px-2 py-1 text-sm font-bold"
+                  >
+                    https://github.com/Naoya-0213
                   </a>
                 </div>
               </div>
