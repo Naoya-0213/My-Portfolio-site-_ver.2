@@ -6,8 +6,9 @@ import { FutureLearningPlan } from "@/const/about/futureLearningPlan";
 import { LearningHistory } from "@/const/about/learningHistory";
 
 import ButtonBrown from "@/app/components/atoms/button/ButtonBrown";
-import Modal from "@/app/components/atoms/modal/Modal";
 import ModalContent from "@/app/components/atoms/modal/modal_content/ModalContent";
+
+import Modal from "../../../components/atoms/modal/Modal";
 
 const SectionAboutModal = () => {
   const [openWhich, setOpenWhich] = useState<null | "past" | "next">(null);
