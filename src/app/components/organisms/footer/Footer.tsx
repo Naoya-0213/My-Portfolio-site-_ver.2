@@ -137,7 +137,7 @@ const Footer = () => {
           <div className="mx-auto mt-10 w-full max-w-4xl border-t border-[#f3f0eb] py-3 sm:w-4/5">
             <div className="flex flex-col items-center justify-center gap-2 text-xs text-[#f3f0eb] sm:flex-row sm:gap-4">
               <span>Icons made by フリーピック from www.flaticon.com</span>
-              <span>© 2024 Naoya’s Portfolio</span>
+              <span>© 2025 Naoya’s Portfolio</span>
             </div>
           </div>
         </div>
