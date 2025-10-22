@@ -247,7 +247,7 @@ const WorkSectionCard = ({ data }: WorkSectionCardProps) => {
             {account?.length ? (
               <div className={`${styles.work_contents} fade_in_up px-2 pb-7`}>
                 <dt className={`${styles.contents_label} `}>デモアカウント</dt>
-                <dd className="flex gap-10 max-[350px]:flex-col max-[350px]:gap-0">
+                <dd className="pc:flex-row pc:gap-10 flex flex-col gap-0">
                   {account.map((item, index) => (
                     <div key={index} className={`flex gap-2 leading-relaxed`}>
                       <div className="font-semibold">{item.label}：</div>

@@ -143,7 +143,7 @@ export const money_mindfulContents: WorkContentsData = {
 
   // デモアカウント情報
   account: [
-    { label: "ID", value: "demo@demo.com" },
+    { label: "mail address", value: "demo@demo.com" },
     {
       label: "PW",
       value: "demo1234",
