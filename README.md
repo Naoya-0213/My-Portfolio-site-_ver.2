@@ -1,57 +1,81 @@
 # Naoya's Portfolio Site
 
-このリポジトリは、私「Naoya」が作成したポートフォリオサイトのソースコードです。
-転職活動の一環および私のスキルの証明として、デザインからコーディング、公開までを一貫して行いました。
+このリポジトリは、私「**野口直也（Naoya）」** が作成したポートフォリオサイトのソースコードです。  
+デザイン設計からコーディング、デプロイまでをすべて自ら行い、これまでの学習成果や実績を可視化することを目的としています。
 
-2025 年 9 月より、"TypeScript" / "React" / "Next.js" を用いて、サイトをリニューアル中。
+<br >
 
 📍 **サイト公開 URL**  
-（未公開）
+🔗 **https://naoyaportfolio.vercel.app/**  
+（Vercelにてホスティング）
 
-🛠 **制作期間**  
-ver.1
-2024 年 12 月 〜 2025 年 1 月
-　・"HTML"＆"css（sass）"/ "jQuery"
+<br >
 
-ver.2
-2025 年 9 月 〜
-　・"TypeScript" / "React" / "Next.js"
+## 🛠 制作期間
+| バージョン | 期間 | 主な技術 |
+|-------------|------|-----------|
+| **ver.1** | 2024年12月〜2025年1月 | `HTML` / `CSS` / `Sass` / `jQuery` |
+| **ver.2（本リポジトリ）** | 2025年10月〜 | `Next.js` / `React` / `TypeScript` / `Tailwind CSS` / `Sass` |
+
+**ver.1**
+  - 設計 / デザイン作成：**62時間**  
+  - コーディング：**72時間**   
+
+**ver.2**  
+  - リニューアル／機能更新：**70時間**
+
+**合計：204時間**
+
+<br >
+
+## 🎯 制作目的
+
+- 転職活動における実績・スキルの可視化  
+- フロントエンドエンジニアとしてのポートフォリオ構築  
+- 学習・制作物を一元的に整理・公開する場として活用  
+
+<br >
+
+
+## 💡 主な特徴
+
+- **Next.js（App Router構成）** によるパフォーマンスとSEOを両立した構成  
+- **TypeScript** による型安全な開発  
+- **Atomic Design** を意識したコンポーネント設計で再利用性・保守性を向上  
+- **Sass + Tailwind CSS** 併用による柔軟なデザイン再現  
+- **Swiper.js** によるスライダー実装（Work / Likeセクションで使用）  
+- **GSAP** によるスクロールアニメーション演出  
+- **React Toastify** によるトースト通知の実装（SNSリンクなどの状態管理に活用）  
+- **Vercel** によるデプロイ・ホスティング  
+- **ESLint / Prettier** 導入によるコード品質の統一 
+
+<br >
 
 ## 🔧 使用技術
 
-- HTML / CSS / Sass
-- JavaScript（jQuery）
-- Swiper.js（スライダー）
-- GSAP（アニメーション）
-<!-- TODO更新 -->
+### 🧱 フロントエンド
+- **Next.js 15**（App Router）
+- **React 18**
+- **TypeScript**
+- **Tailwind CSS**
+- **Sass (SCSS Modules)**
 
-## 📂 ページ構成
+### 🧩 ライブラリ・ツール
+- **Swiper.js**（スライダー）
+- **GSAP**（アニメーション）
+- **React Toastify**（トースト通知）
+- **ESLint / Prettier**（静的解析）
+- **Vercel**（デプロイ）
+- **Figma / Canva**（デザイン設計）
 
-- トップページ：自己紹介、スキル紹介、制作実績、連絡先など
-- 各実績詳細ページ：`/work/` 以下に個別 HTML で構成
+<br >
 
-## 🎯 このサイトの目的
+## 👤 Author
 
-- 転職活動における実績紹介
-- Web 制作・コーディングのアウトプット
-- 今後の Web エンジニアとしての成長を記録・公開する場
+**Naoya Noguchi**  
+Web Developer / Frontend Engineer  
 
----
-
-## 📐 Breakpoints 対応表 (Sass / Tailwind)
-
-| 名前  | 使用場面           | 幅の範囲   | Sass指定           | Tailwind指定   |
-| ----- | ------------------ | ---------- | ------------------ | -------------- |
-| `ssp` | 最小画面           | 374px以下  | `@include mq(ssp)` | `max-[374px]:` |
-| `sm`  | 特殊対応（スマホ） | 640px以上  | `@include mq(sm)`  | `sm:`          |
-| `sp`  | スマホ画面         | 767px以下  | `@include mq(sp)`  | `max-[767px]:`          |
-| `pc`  | パソコン画面       | 768px以上  | `@include mq(pc)`  | `pc:`          |
-| `tb`  | タブレット画面     | 768〜899px | `@include mq(tb)`  | `tb:`          |
-
----
-
-📌 **補足**
-
-- `sm` は Sass / Tailwind 共通で **640px以上** に統一。
-- `ssp` や `sp` は **max指定**。
-- `tb` は **768〜899px** の範囲指定。
+メールアドレス： naoya.work0213@gmail.com  
+X（旧Twitter）： [@Naoya__in_web](https://x.com/Naoya__in_web)  
+ポートフォリオサイト： [https://naoyaportfolio.vercel.app](https://naoyaportfolio.vercel.app)   
+個人開発アプリ：[がまん貯金「money mindful」](https://moneymindful-gamma.vercel.app/) 　（デモアカウント　id: `demo@demo.com`　pw: `demo1234`）
