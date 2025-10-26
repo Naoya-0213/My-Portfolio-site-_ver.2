@@ -98,7 +98,17 @@ export const money_mindfulContents: WorkContentsData = {
       value: "191時間",
     },
   ],
-  tech: ["Next.js", "React", "TypeScript", "Tailwind", "Sass", "Swiper"],
+  tech: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind",
+    "Sass",
+    "Swiper",
+    "React Hook Form",
+    "zod",
+    "React Hot Toast",
+  ],
   tools: [
     {
       label: "デザイン",
@@ -122,6 +132,10 @@ export const money_mindfulContents: WorkContentsData = {
       value: [{ item: "GitHub" }, { item: "npm" }],
     },
     {
+      label: "バックエンド",
+      value: [{ item: "Supabase" }, { item: "Zustand" }],
+    },
+    {
       label: "デプロイ",
       value: [{ item: "Vercel" }],
     },
@@ -143,7 +157,7 @@ export const money_mindfulContents: WorkContentsData = {
 
   // デモアカウント情報
   account: [
-    { label: "mail address", value: "demo@demo.com" },
+    { label: "Email", value: "demo@demo.com" },
     {
       label: "PW",
       value: "demo1234",

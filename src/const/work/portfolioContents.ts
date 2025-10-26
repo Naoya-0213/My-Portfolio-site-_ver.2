@@ -45,7 +45,15 @@ export const portfolioContents: WorkContentsData = {
       value: "204時間",
     },
   ],
-  tech: ["Next.js", "React", "TypeScript", "Tailwind", "Sass", "Swiper"],
+  tech: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind",
+    "Sass",
+    "Swiper",
+    "React Hot Toast",
+  ],
   tools: [
     {
       label: "デザイン",
