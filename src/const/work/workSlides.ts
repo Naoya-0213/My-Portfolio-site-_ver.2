@@ -34,11 +34,11 @@ export const workSlides: workSlides[] = [
     pc_img: "/img/section_work/portfolio/portfolio-pc.png",
     sp_img: "/img/section_work/portfolio/portfolio.png",
   },
-  // TODO がまん貯金追加！
+  // がまん貯金
   {
     id: "money_mindful",
     href: "/work/money_mindful",
-    pc_img: "/img/section_work/coming_soon/coming_soon-pc.png",
+    pc_img: "/img/section_work/money_mindful/money_mindful-pc.png",
     sp_img: "/img/section_work/money_mindful/money_mindful.png",
   },
   // coming soon
