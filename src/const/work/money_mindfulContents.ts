@@ -148,11 +148,14 @@ export const money_mindfulContents: WorkContentsData = {
   ],
 
   // サイトURL
-  // https://moneymindful-gamma.vercel.app/　：現在停止中！
+
   links: [
     {
       label: "現在停止中...!",
-      href: "",
+
+      // 現在停止中につき、一旦下記を配置中。_20260606
+      // https://moneymindful-gamma.vercel.app/　：現在停止中！
+      href: "https://naoyaportfolio.vercel.app/",
     },
   ],
 
