@@ -148,10 +148,11 @@ export const money_mindfulContents: WorkContentsData = {
   ],
 
   // サイトURL
+  // https://moneymindful-gamma.vercel.app/　：現在停止中！
   links: [
     {
-      label: "https://moneymindful-gamma.vercel.app/",
-      href: "https://moneymindful-gamma.vercel.app/",
+      label: "現在停止中...!",
+      href: "",
     },
   ],
 
